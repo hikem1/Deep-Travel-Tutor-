@@ -1,0 +1,24 @@
+site voyage planete
+
+	-logo + nom entreprise
+
+	-4 destinations (lune, mars, venus, mercure)
+	-2 forfaits pour longues distances (vie classique à bord du vaisseaux, sommeil artificiel)
+	-formulaire reservation (prix, nb personnes, destination, date, place dispo, choix sommeil artificiel)
+	-3 types de vaisseaux (lune trajet court), (venus trajet moyen + séjour hotel),(mars et mercure trajet long)
+	
+	-espace creation compte, client
+	
+	-galerie( photo espace, vaisseaux, planete, divertissement )
+	
+	-liste activité vaisseaux + prix (bar, resto, divertissement ..)
+		°sortie extravehiculaire
+		°cour astrologie
+		°casino
+		°piscine
+			
+	-forfait premium ( vie classique dans le vaisseaux, nb place à definir ) 
+	-forfait classique (sommeil artificiel, nb de place à définir, reveil à l'approche de la planète)
+	
+		
+	
