@@ -5,8 +5,28 @@ body{
 
 header{
     background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-img{
-    width: 15%;
+header nav{
+    display: flex;
+}
+
+header nav a{
+    font-family: "copperplate";
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+header img{
+    width: 10%;
+}
+
+.setting{
+    display: flex;
+    width: 200px;
+    background-color: beige;
 }
