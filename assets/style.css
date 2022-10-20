@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 header{
@@ -26,7 +27,34 @@ header img{
 }
 
 .setting{
-    display: flex;
     width: 200px;
     background-color: beige;
+}
+
+.planet-cont{
+    display: flex;
+    justify-content: space-around;
+}
+
+#earth{
+    width: 200px;
+    object-fit: contain;
+    transition-duration: 5s;
+    cursor: pointer;
+}
+
+#earth:hover{
+    width: 5%;
+    transform: scale(500%) translate(-50px,50px) ;
+}
+
+#moon{
+    width: 100px;
+    object-fit: contain;
+    transition-duration: 5s;
+    cursor: pointer;
+
+}#moon:hover{
+    width: 5%;
+    transform: scale(500%) translate(50px,50px) ;
 }
