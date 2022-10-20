@@ -58,3 +58,18 @@ header img{
     width: 5%;
     transform: scale(500%) translate(50px,50px) ;
 }
+
+.formulaire{
+    background-color:#848486;
+    height: 600px;
+    width:100%;
+} 
+
+.titre{
+    text-align: center;
+}
+
+form{
+    width: 350px;
+    text-align: center;
+}
