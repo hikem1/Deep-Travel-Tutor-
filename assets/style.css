@@ -68,3 +68,8 @@ header img{
 .titre{
     text-align: center;
 }
+
+form{
+    width: 350px;
+    text-align: center;
+}
