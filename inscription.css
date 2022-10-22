@@ -66,6 +66,18 @@ input{
 }
 
 
+  
+img {
+    width: 10%;
+}
+
+section{
+    background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
 
 
 

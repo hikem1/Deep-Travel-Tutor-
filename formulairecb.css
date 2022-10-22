@@ -15,7 +15,7 @@
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+  background: linear-gradient(90deg, #272727 60%, #0a0a0a 40.1%);
 }
 
 .container form{
@@ -82,7 +82,7 @@
   width: 100%;
   padding:12px;
   font-size: 17px;
-  background: #27ae60;
+  background: black;
   color:#fff;
   margin-top: 5px;
   cursor: pointer;
@@ -90,4 +90,15 @@
 
 .container form .submit-btn:hover{
   background: #2ecc71;
+}
+
+header {
+  background-color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 10%;
 }
