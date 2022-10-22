@@ -11,14 +11,13 @@ h1{
 }
 
 fieldset{
-    margin-top: 70px;
     width: 35%;
     background-color: rgb(26, 26, 27);
-    box-shadow: 5px 5px 20px 1px 10px rgb(243, 237, 237);
+    box-shadow: 5px 5px 20px 1px 10px rgb(247, 247, 247);
     border: 0px;
-    padding-left: 10px;
     border-radius: 10px 10px 10px 10px;
-    color:aliceblue;
+    color:rgb(228, 234, 240);
+    margin: 1%;
 }
 
 td{letter-spacing: 1px;}
@@ -78,6 +77,9 @@ section{
     justify-content: space-between;
   }
 
+header{
+  background: linear-gradient(90deg, #272727 60%, #0a0a0a 40.1%);
+  padding: 0%;
 
-
-
+  
+}
