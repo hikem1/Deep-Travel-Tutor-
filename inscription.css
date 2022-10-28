@@ -1,0 +1,85 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    color: rgb(243, 237, 237);
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    width: 35%;
+    background-color: rgb(26, 26, 27);
+    box-shadow: 5px 5px 20px 1px 10px rgb(247, 247, 247);
+    border: 0px;
+    border-radius: 10px 10px 10px 10px;
+    color:rgb(228, 234, 240);
+    margin: 1%;
+}
+
+td{letter-spacing: 1px;}
+h1{
+    font-family: andalus;
+    letter-spacing: 3px;
+    text-align: center;
+    color: aliceblue; 
+}
+
+hr{
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 40%;
+}
+
+ul li{margin-left: 20px; color:white;}
+
+#submit{
+    margin: 20px 50px;
+    color: rgb(26, 26, 27);
+    background-color: aliceblue;
+    width: 90%;
+    font-size: 17px;
+    border-radius:30px;
+    border: 1px solid white;
+    padding: 7px;
+}
+
+#submit:hover{
+    color:white;
+    background-color: rgb(17, 111, 192);
+}
+
+input{
+    font-size: 16px;
+    border: none;
+    outline: non;
+    background: none;
+    border-bottom: 1px solid white;
+    color:white;
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+}
+
+
+  
+img {
+    width: 10%;
+}
+
+section{
+    background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+header{
+  background: linear-gradient(90deg, #272727 60%, #0a0a0a 40.1%);
+  padding: 0%;
+
+  
+}
