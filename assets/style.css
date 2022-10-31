@@ -35,12 +35,9 @@ header > img{
 
 }
 
-header > div{
-    display: flex;
-}
 
 header #icons-login-language img{
-    padding: 1rem;
+    padding: 0 1rem;
     width: 2rem;
     object-fit: contain;
     cursor: pointer;

@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(80, 80, 80);
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgba(92, 92, 92, 0.402); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /* border-right: 3px solid #949494; */
+}
+
+  .sidenav #header-sidenav{
+    height: 113px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
+
+}
+
+.sidenav #header-sidenav #close-btn{
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav nav{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.sidenav nav .sidenav-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(163, 163, 163);
+    white-space: nowrap;
+}
+
+.sidenav nav a{
+    font-family: "copperplate";
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+header{
+    background-color: black;
+    height: 80px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ff6f00,#eaff00, #4c00ff);
+}
+
+header nav{
+    display: flex;
+}
+
+header nav a{
+    font-family: "copperplate";
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid white; */
+}
+
+header .logo{
+    width: 10rem;
+    object-fit: contain;
+}
+
+
+header #icons-login-language{
+    display: flex;
+    align-items: center;
+}
+
+header #icons-login-language img{
+    padding: 0 1rem;
+    width: 2rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+header #icons-login-language #dropdown-language{
+    flex-direction: column;
+    position: absolute;
+    gap: 2rem;
+    padding: 1rem 0;
+    background-color: #000000;
+    top: 90px;
+    right: 1.9rem;
+    /* border:1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-login{
+    flex-direction: column;
+    position: absolute;
+    background-color: #000000;
+    padding: 1rem 0;;
+    top: 90px;
+    right: 7rem;
+    /* border: 1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-login .dropdown-link{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center
+}
+
+header #icons-login-language #dropdown-login .dropdown-link a{
+    font-family: "copperplate";
+    color: white;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+header #icon-burger{
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+header .links:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
+
+
+    
+
+
+@media screen and (max-width : 1200px){
+
+    header nav {
+        display: none;
+    }
+
+    header #icons-login-language{
+        padding: 1rem;
+        width: 2rem;
+        object-fit: contain;
+        display: none;
+    }
+    
+    header #icon-burger{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
