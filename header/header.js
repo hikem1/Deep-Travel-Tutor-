@@ -1,5 +1,26 @@
 'use strict';
 
+
+
+///////////////////////////// variables//////////////////////////////////
+
+const loginIcon = document.querySelector('#login-icon');
+const langueIcon = document.querySelector('#langue-icon');
+const dropdownLogin = document.querySelector('#dropdown-login');
+const connexionLink = dropdownLogin.children[0];
+const myAccountLink = dropdownLogin.children[1];
+const dropdownLanguage = document.querySelector('#dropdown-language');
+const frenchFlagIcon = dropdownLanguage.children[0];
+const EnglishFlagIcon = dropdownLanguage.children[1];
+const btnBurger = document.querySelector('#btn-burger');
+const mySidenav = document.querySelector('#mySidenav');
+const closeBtn = document.querySelector('#close-btn');
+
+
+
+
+
+
 ////////////////////////////////window/////////////////////////////////////
 
 window.addEventListener('resize', () => {
@@ -19,14 +40,12 @@ window.addEventListener('resize', () => {
 
 ////////////////////////////////header/////////////////////////////////////
 
-const loginIcon = document.getElementById('login-icon');
 loginIcon.addEventListener('click', () =>{
     
     toggleLoginContent();
 
 });
 
-const langueIcon = document.getElementById('langue-icon');
 langueIcon.addEventListener('click', () =>{
 
     toggleLangueContent();
@@ -34,11 +53,8 @@ langueIcon.addEventListener('click', () =>{
 });
 
 
-const dropdownLogin = document.getElementById('dropdown-login');
 dropdownLogin.style.display = 'none';
 
-const connexionLink = dropdownLogin.children[0];
-const myAccountLink = dropdownLogin.children[1];
 
 connexionLink.addEventListener('click', () => {
     toggleLoginContent();
@@ -48,11 +64,8 @@ myAccountLink.addEventListener('click', () => {
     toggleLoginContent();
 });
 
-const dropdownLanguage = document.getElementById('dropdown-language');
 dropdownLanguage.style.display = 'none';
 
-const frenchFlagIcon = dropdownLanguage.children[0];
-const EnglishFlagIcon = dropdownLanguage.children[1];
 frenchFlagIcon.addEventListener('click', () => {
     toggleLangueContent();
 });
@@ -61,7 +74,6 @@ EnglishFlagIcon.addEventListener('click', () => {
     toggleLangueContent();
 });
 
-const btnBurger = document.getElementById('btn-burger');
 btnBurger.addEventListener('click', () =>{
 
     showSidebar();
@@ -102,9 +114,7 @@ function toggleLangueContent() {
 
 ////////////////////////////////sidenav/////////////////////////////////////
 
-const mySidenav = document.getElementById('mySidenav');
 
-const closeBtn = document.getElementById('close-btn');
 closeBtn.addEventListener('click', () =>{
 
     hideSidebar();
