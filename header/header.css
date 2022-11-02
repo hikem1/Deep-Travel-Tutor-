@@ -4,6 +4,10 @@ body{
     background-color: rgb(80, 80, 80);
 }
 
+
+
+
+/* _________________________________________sidenav_________________________________ */
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -60,6 +64,10 @@ body{
 }
 
 
+
+
+
+/* ________________________________________________________header_________________________________________ */
 header{
     background-color: black;
     height: 80px;
@@ -163,7 +171,7 @@ header .links:hover{
 
     
 
-
+/* ____________________________________________________@media___________________________________ */
 @media screen and (max-width : 1200px){
 
     header nav {

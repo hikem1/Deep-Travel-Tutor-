@@ -1,8 +1,11 @@
 'use strict';
 
+//______________________________header & sidenav________________________________________//
 
 
-///////////////////////////// variables//////////////////////////////////
+
+
+//______________________________variables___________________________________//
 
 const loginIcon = document.querySelector('#login-icon');
 const langueIcon = document.querySelector('#langue-icon');
@@ -15,72 +18,11 @@ const EnglishFlagIcon = dropdownLanguage.children[1];
 const btnBurger = document.querySelector('#btn-burger');
 const mySidenav = document.querySelector('#mySidenav');
 const closeBtn = document.querySelector('#close-btn');
+const clickableEl = document.querySelectorAll('links');console.log(clickableEl);
 
 
 
-
-
-
-////////////////////////////////window/////////////////////////////////////
-
-window.addEventListener('resize', () => {
-    
-    hideSidebar();
-    dropdownLogin.style.display = 'none';
-    dropdownLanguage.style.display = 'none';
-    
-});
-
-
-
-
-
-
-
-
-////////////////////////////////header/////////////////////////////////////
-
-loginIcon.addEventListener('click', () =>{
-    
-    toggleLoginContent();
-
-});
-
-langueIcon.addEventListener('click', () =>{
-
-    toggleLangueContent();
-
-});
-
-
-dropdownLogin.style.display = 'none';
-
-
-connexionLink.addEventListener('click', () => {
-    toggleLoginContent();
-});
-
-myAccountLink.addEventListener('click', () => {
-    toggleLoginContent();
-});
-
-dropdownLanguage.style.display = 'none';
-
-frenchFlagIcon.addEventListener('click', () => {
-    toggleLangueContent();
-});
-
-EnglishFlagIcon.addEventListener('click', () => {
-    toggleLangueContent();
-});
-
-btnBurger.addEventListener('click', () =>{
-
-    showSidebar();
-
-});
-
-
+//______________________________fonctions___________________________________//
 
 function toggleLoginContent() {
 
@@ -105,24 +47,6 @@ function toggleLangueContent() {
     
 };
 
-
-
-
-
-
-
-
-////////////////////////////////sidenav/////////////////////////////////////
-
-
-closeBtn.addEventListener('click', () =>{
-
-    hideSidebar();
-
-});
-
-
-
 function showSidebar() {
 
     mySidenav.style.width = '300px';
@@ -140,4 +64,66 @@ function hideSidebar() {
     btnBurger.style.display = 'initial';
 
 };
+
+
+
+//______________________________events_____________________________________//
+
+dropdownLogin.style.display = 'none';
+
+dropdownLanguage.style.display = 'none';
+
+
+
+
+loginIcon.addEventListener('click', () =>{
+    
+    toggleLoginContent();
+
+});
+
+langueIcon.addEventListener('click', () =>{
+
+    toggleLangueContent();
+
+});
+
+connexionLink.addEventListener('click', () => {
+    toggleLoginContent();
+});
+
+myAccountLink.addEventListener('click', () => {
+    toggleLoginContent();
+});
+
+frenchFlagIcon.addEventListener('click', () => {
+    toggleLangueContent();
+});
+
+EnglishFlagIcon.addEventListener('click', () => {
+    toggleLangueContent();
+});
+
+btnBurger.addEventListener('click', () =>{
+
+    showSidebar();
+
+});
+
+window.addEventListener('resize', () => {
+    
+    hideSidebar();
+    dropdownLogin.style.display = 'none';
+    dropdownLanguage.style.display = 'none';
+    
+});
+
+closeBtn.addEventListener('click', () =>{
+
+    hideSidebar();
+
+});
+
+
+
 
