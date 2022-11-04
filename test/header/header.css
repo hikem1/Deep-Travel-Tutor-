@@ -2,27 +2,51 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(80, 80, 80);
+    box-sizing: border-box;
 }
 
 
 
+/* ____________________________________________________________________________ général */
 
-/* _________________________________________sidenav_________________________________ */
+.d-none{
+    display: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.links{
+    transition-duration: 0.2s;
+}
+
+.links:hover{
+    transform: scale(1.07, 1.07);
+}
+
+
+/* ____________________________________________________________________________ sidenav */
+
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     left: 0;
-    background-color: rgba(92, 92, 92, 0.402); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    /* border-right: 3px solid #949494; */
+    background-color: rgba(92, 92, 92, 0.402); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    
 }
 
   .sidenav #header-sidenav{
-    height: 113px;
+    height: 93px;
     padding: 0 2rem;
     display: flex;
     justify-content: flex-end;
@@ -38,7 +62,7 @@ body{
     color: white;
     cursor: pointer;
     opacity: 0;
-    transition: 0; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0; 
 }
 
 .sidenav nav{
@@ -56,22 +80,51 @@ body{
     white-space: nowrap;
 }
 
+.sidenav nav .dropdown-link{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: white;
+    font-style: italic;
+    white-space: nowrap;
+}
+.sidenav nav .dropdown-link img{
+    width: 0.5rem;
+    cursor: pointer;
+}
+
 .sidenav nav a{
     font-family: "copperplate";
     color: white;
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
+}
+
+.sidenav nav .dropdown{
+    height: 0px;
+    width: 100%;
+    transition: 0.3s;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
+.sidenav nav #i-login, #i-langue{
+    transition-duration: 0.3s;
 }
 
 
 
 
 
-/* ________________________________________________________header_________________________________________ */
+
+/* ____________________________________________________________________________ header */
+
 header{
     background-color: black;
-    height: 80px;
-    padding: 1rem 2rem;
+    height: 60px;
+    padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5px solid;
@@ -83,31 +136,36 @@ header nav{
     display: flex;
 }
 
-header nav a{
-    font-family: "copperplate";
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    /* border-bottom: 1px solid white; */
-}
-
 header .logo{
     width: 10rem;
     object-fit: contain;
+    cursor: pointer;
 }
 
+header nav a{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 0.5rem;
+    margin: 1rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+header nav a:hover{
+    border-bottom: 0.5px solid #ffffff58;
+}
 
 header #icons-login-language{
     display: flex;
     align-items: center;
+    gap: 2rem;
+    color: white;
 }
 
-header #icons-login-language img{
-    padding: 0 1rem;
-    width: 2rem;
-    object-fit: contain;
+header #icons-login-language i{
     cursor: pointer;
 }
 
@@ -115,12 +173,17 @@ header #icons-login-language #dropdown-language{
     flex-direction: column;
     position: absolute;
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     background-color: #000000;
-    top: 90px;
+    top: 80px;
     right: 1.9rem;
     /* border:1px solid #4b4b4b; */
     border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-language img{
+    width: 1.5rem;
+    cursor: pointer;
 }
 
 header #icons-login-language #dropdown-login{
@@ -128,8 +191,8 @@ header #icons-login-language #dropdown-login{
     position: absolute;
     background-color: #000000;
     padding: 1rem 0;;
-    top: 90px;
-    right: 7rem;
+    top: 70px;
+    right: 6rem;
     /* border: 1px solid #4b4b4b; */
     border-radius: 5px;
 }
@@ -162,16 +225,13 @@ header #icon-burger{
     cursor: pointer;
 }
 
-header .links:hover{
-    transform: scale(1.2);
-    transition-duration: 0.2s;
-}
 
 
 
     
 
-/* ____________________________________________________@media___________________________________ */
+/* ____________________________________________________________________________ @media */
+
 @media screen and (max-width : 1200px){
 
     header nav {
