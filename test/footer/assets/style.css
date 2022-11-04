@@ -1,94 +1,18 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(0, 0, 0);
-}
-header{
-    background-color: black;
-    height: 80px;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0.5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #ff6f00,#eaff00, #4c00ff);
-}
-header nav{
-    display: flex;
-}
-header nav a{
-    font-family: "copperplate";
-    color: white;
-    padding: 1rem 3rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-header > img{
-    width: 10rem;
-    object-fit: contain;
-
-}
-
-header > div{
-    display: flex;
-}
-
-header #icons-login-language img{
-    padding: 1rem;
-    padding: 0 1rem;
-    width: 2rem;
-    object-fit: contain;
-    cursor: pointer;
-}
-header #icon-burger{
-    padding: 1rem;
-    color: white;
-    border-radius: 5px;
-    display: none;
-    cursor: pointer;
-}
-@media screen and (max-width : 1354px){
-    header nav {
-        display: none;
-    }
-    header #icons-login-language{
-        padding: 1rem;
-        width: 2rem;
-        object-fit: contain;
-        display: none;
-    }
-    
-    header #icon-burger{
-        display: flex;
-        align-items: center;
-    }
-}
-.formulaire{
-    background-color:#848486;
-    height: 600px;
-    width: 100%;
-} 
-form{
-    width: 350px;
-    text-align: center;
-}
 .container{
 	max-width: 1170px;
 	margin:auto;
 }
 .row{
 	display: flex;
-	flex-wrap: wrap;
 }
 ul{
 	list-style: none;
 }
 .footer{
-    background-color: #4a4950;
+    background-color: #4d4774;
 }
 .footer-col{
-   width: 25%;
+   width: 20%;
    object-fit:cover;
 }
 .footer-col h4{
