@@ -2,22 +2,26 @@ body {
      margin: 0; 
      touch-action: none;
      box-sizing: border-box;
+     background-color: rgb(43, 43, 43);
 }
 
-canvas {
-     width: 100%; height: 100% ; touch-action: none;
-     color: #fff8e3;     
+header{
+     height: 92.5px;
+     width: 100%;
+     background-color: rgb(33, 33, 33); 
 }
 
 #info {
-     /* background-color: rgba(240, 248, 255, 0.438); */
 	position: absolute;
 	width: 100%;
      height: 100%;
-	z-index: 100;
+	z-index: -1;
      display: flex;
-     justify-content: flex-end;
+     /* justify-content: flex-end; */
+     /* background-color: rgb(236, 25, 25);  */
+
 }
+
 #info .image{
      width: 20%;
      height: 100%;
@@ -43,18 +47,25 @@ canvas {
 .left-side{
      width: 45%;
      display: flex;
-     align-items: end;
-     justify-content: center;
+     align-items: flex-end;
+     padding: 2rem 1rem;
+}
+
+.left-side i{
+     color: white;
+     cursor: pointer;
+     z-index: 1;
 }
 
 
 .card-container{
      width: 55%;
+     height: auto;
      opacity: 0;
      /* background-color: rgba(255, 255, 255, 0.09); */
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
+     /* justify-content: space-between; */
 }
 
 .card-header{
@@ -121,6 +132,7 @@ canvas {
 .card-footer{
      width: 100%;
      height:20%;
+     display: flex;
      /* background-color: rgba(206, 204, 204, 0.205); */
      /* border-top: 0.5px solid; */
      color: white;
