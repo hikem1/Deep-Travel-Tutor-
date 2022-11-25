@@ -1,0 +1,351 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(80, 80, 80);
+    box-sizing: border-box;
+}
+
+
+
+/* ____________________________________________________________________________ général */
+
+.d-none{
+    display: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.links{
+    transition-duration: 0.2s;
+}
+
+.links:hover{
+    transform: scale(1.07, 1.07);
+}
+
+
+/* ____________________________________________________________________________ sidenav */
+
+.sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: rgba(92, 92, 92, 0.402); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    
+}
+
+  .sidenav #header-sidenav{
+    height: 93px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
+
+}
+
+.sidenav #header-sidenav #close-btn{
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0; 
+}
+
+.sidenav nav{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.sidenav nav .sidenav-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(163, 163, 163);
+    white-space: nowrap;
+}
+
+.sidenav nav .dropdown-link{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: white;
+    font-style: italic;
+    white-space: nowrap;
+}
+.sidenav nav .dropdown-link img{
+    width: 0.5rem;
+    cursor: pointer;
+}
+
+.sidenav nav a{
+    font-family: "copperplate";
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sidenav nav .dropdown{
+    height: 0px;
+    width: 100%;
+    transition: 0.3s;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
+.sidenav nav #i-login, #i-langue{
+    transition-duration: 0.3s;
+}
+
+
+
+
+
+
+/* ____________________________________________________________________________ header */
+
+header{
+    background-color: black;
+    height: 60px;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ff6f00,#eaff00, #4c00ff);
+}
+
+header nav{
+    display: flex;
+}
+
+header .logo{
+    width: 10rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+header nav a{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 0.5rem;
+    margin: 1rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+header nav a:hover{
+    border-bottom: 0.5px solid #ffffff58;
+}
+
+header #icons-login-language{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+header #icons-login-language i{
+    cursor: pointer;
+}
+
+header #icons-login-language #dropdown-language{
+    flex-direction: column;
+    position: absolute;
+    gap: 2rem;
+    padding: 1rem 1rem;
+    background-color: #000000;
+    top: 80px;
+    right: 1.9rem;
+    /* border:1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-language img{
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+header #icons-login-language #dropdown-login{
+    flex-direction: column;
+    position: absolute;
+    background-color: #000000;
+    padding: 1rem 0;;
+    top: 70px;
+    right: 6rem;
+    /* border: 1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-login .dropdown-link{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center
+}
+
+header #icons-login-language #dropdown-login .dropdown-link a{
+    font-family: "copperplate";
+    color: white;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+header #icon-burger{
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+    
+
+/* ____________________________________________________________________________ @media */
+
+@media screen and (max-width : 1200px){
+
+    header nav {
+        display: none;
+    }
+
+    header #icons-login-language{
+        padding: 1rem;
+        width: 2rem;
+        object-fit: contain;
+        display: none;
+    }
+    
+    header #icon-burger{
+        display: flex;
+        align-items: center;
+    }
+}
+.container{
+	max-width: 1170px;
+
+}
+.row{
+	display: flex;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+.footer{
+    background-color: #4d4774;
+}
+.footer-col{
+   object-fit:cover;
+   font-variant: all-small-caps;
+   margin: 20px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #2c05f4;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgb(163, 158, 158);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #dce1ec;
+	background-color: #ffffff;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+img{
+    width: 230px;
+    height: 100%;
+}
+.img1{
+	height: 150px;
+    width: 250px;
+	margin: 15px;
+}
+.footer-bottom {
+    background-color: #1d1d1b;
+    color: #efeaea;
+}
+HR{
+	width: 5px;
+}
+h4{
+	margin: 20px;
+	padding: 0px;
+}
