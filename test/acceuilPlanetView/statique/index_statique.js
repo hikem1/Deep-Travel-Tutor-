@@ -1,17 +1,17 @@
-import  { gsap }  from '/node_modules/gsap/index.js';
+// import  { gsap }  from '../gsap/index.js';
 
 const infoDivEl = document.querySelector('#info');
 const cardContainer = document.querySelector('#card');
 const homeIconEl = document.querySelector('#homeIcon'); 
 
 homeIconEl.addEventListener('click', ()=> {
-    infoDivEl.style.backgroundImage = 'url("assets/img/captureAcceuilPlanet.png")';
+    infoDivEl.style.backgroundImage = 'url("img_statique/captureAcceuilPlanet.png")';
     cardEffect('origin');
     console.log('click i');
 })
 
 cardContainer.addEventListener('click', ()=> {
-    infoDivEl.style.backgroundImage = 'url("assets/img/capturePlanetSelected.png")';
+    infoDivEl.style.backgroundImage = 'url("img_statique/capturePlanetSelected.png")';
     cardEffect('example');
     console.log('click card');
 })

@@ -52,22 +52,17 @@ scene.background = sceneLoader.load('assets/img/AdobeStock_340851338.jpg')
 // ---------------- RENDU ----------------
 
 renderer = new THREE.WebGLRenderer( { antialias : true } );
-// renderer.setSize( window.innerWidth, (window.innerWidth/1.9979188345473464) );
+// renderer.setSize( window.innerWidth, window.innerHeight);
 renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
 
 // envoi de l'element HTML sur la page HTML
 document.body.appendChild( renderer.domElement ); 
-console.log('canvas height :' + renderer.domElement.clientHeight);
-console.log('inner height :' + window.innerHeight);
-console.log('diff height :' + (parseInt(window.innerHeight) - parseInt(renderer.domElement.clientHeight)));
 
 
 // ---------------- CAMERA ----------------
-// camera = new THREE.PerspectiveCamera( 50, window.innerWidth / (window.innerWidth/1.9979188345473464), 1, 10000 );
+// camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
 camera = new THREE.PerspectiveCamera( 50, window.innerWidth / (window.innerHeight-headerHeight), 1, 10000 );
-// camera.position.set( 0, 0, 1000 );
 camera.position.set( 0, 0, 1000 );
-// let originLookAt = new THREE.Vector3(0,0,0);
 let originLookAt = new THREE.Vector3(0,0,0);
 
 camera.lookAt(originLookAt);
@@ -285,10 +280,11 @@ function rotate() {
   
   // fonction d'animation pour la rotation + vitesse sur chacun des axes x,y,z pour tous les modèles
   function render(){
-  mmi.update();
-  rotate()
-  renderer.render( scene, camera );   //rendu graphique avec tous les elements
-  requestAnimationFrame( render );  //appel de la fonction render en boucle pour l'animation
+    
+    rotate()
+    renderer.render( scene, camera );   //rendu graphique avec tous les elements
+    requestAnimationFrame( render );  //appel de la fonction render en boucle pour l'animation
+    mmi.update();
 };
 
 planetsLayout();
@@ -433,8 +429,10 @@ function planetsLayout() {
     })
 
   }
-  renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
-  camera.aspect = window.innerWidth / (window.innerHeight-headerHeight);
+  // renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setSize( window.innerWidth, (window.innerHeight - headerHeight) );
+  // camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = window.innerWidth / (window.innerHeight - headerHeight);
   camera.updateProjectionMatrix();
 }
 
@@ -452,12 +450,10 @@ function planetsLayout() {
 const homeIconEl = document.querySelector('#homeIcon') 
 
 const objectsScene = scene.children
-
 const canvas = document.querySelector('canvas');
 const infoDivEl = document.querySelector('#info');
 
 window.addEventListener('scroll',() =>{
-  console.log(canvas.offsetTop);
 
 })
 window.addEventListener('resize', planetsLayout)

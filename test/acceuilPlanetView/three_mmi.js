@@ -221,8 +221,8 @@ class MouseMeshInteraction {
 		switch(e.type) {
 			case "mousemove": {
 				this.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-				// this.mouse.y = -((e.clientY-headerHeight) / (window.innerHeight-headerHeight)) * 2 + 1;////// hauteur du header a déduire ( 65 )
-				this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;////// hauteur du header a déduire ( 65 )
+				// this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+				this.mouse.y = -((e.clientY - headerHeight + window.scrollY) / (window.innerHeight - headerHeight)) * 2 + 1;////// hauteur du header a déduire ( 65 ) et la valeur du scroll Y à rajouter
 				this.updated = true;
 				this.event = 'motion';
 			}

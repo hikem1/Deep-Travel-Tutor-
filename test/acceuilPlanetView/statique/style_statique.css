@@ -14,9 +14,11 @@ header{
 #info {
 	position: absolute;
 	width: 100%;
-     height: 100%;
-	z-index: -1;
+     /* height: 100%; */
+     height: 900px;/*just for statique page  */
+	z-index: 0;
      display: flex;
+     background-image: url('img_statique/captureAcceuilPlanet.png');/*just for statique page  */
      background-size: cover;
      /* justify-content: flex-end; */
      /* background-color: rgb(236, 25, 25);  */
