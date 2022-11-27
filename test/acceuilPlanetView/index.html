@@ -6,20 +6,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
   </head>
   <script type="module" src="three.js"></script>
+  <script type="module" src="countdown.js" defer></script>
   
   
   <body>  
-    <header id="header-example"></header>
+    <header id="header-example">
+      <p id="count-down"></p>
+    </header>
     <div id="info" >
       <div class="left-side">
         <i id='homeIcon' class="fa-solid fa-house fa-2xl"></i>
       </div>
   
 
-      <!-- <div class="card-container" style="display: flex">
+      <div class="card-container" style="display: flex">
 
         <div class="card-header">
-          <h1>"La Lune"</h1>
+          <h1>" La Lune "</h1>
           <span>Notre indispensable</span>
         </div>
 
@@ -29,15 +32,28 @@
         </div>
 
         <div class="card-footer">
-          <div>
-            <span>Prochain décolage dans : </span>
-            <h2>[ 23 Jours 11:14 Min. et 30 Sec. ]</h2>
+
+          <div class="countdown">
+            <i class="fa-solid fa-hourglass-half fa-2xl"></i>
+            <div>
+              <p>Prochain décolage dans : </p>
+              <h2>[ 23 Jours 11:14 Min. et 30 Sec. ]</h2>
+            </div>
           </div>
-          <div>
-            <span>Place disponibles : </span>
-            <span>34 / 140</span>
-          </div>    
-      </div> -->
+
+          <div class="capacity">
+            <i class="fa-solid fa-shuttle-space fa-2xl"></i>
+            <div class="capacity-state">
+              <p>Place disponibles : </p>
+              <div id="progress-bar">
+                <div id="capacity-progress-bar">
+                  <span>76 / 157</span>
+                </div>
+              </div>
+            </div>
+          </div>  
+
+      </div>
 
     </div>
   </body>

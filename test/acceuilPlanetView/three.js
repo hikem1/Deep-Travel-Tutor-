@@ -456,7 +456,11 @@ const infoDivEl = document.querySelector('#info');
 window.addEventListener('scroll',() =>{
 
 })
-window.addEventListener('resize', planetsLayout)
+
+window.addEventListener('resize', ()=> {
+  infoDivEl.style.zIndex = -1;
+  planetsLayout()
+})
 
 homeIconEl.addEventListener('click', () => {
   infoDivEl.style.zIndex = -1;
@@ -485,8 +489,9 @@ objectsScene.forEach(element => {
 
     mmi.addHandler(element.name, 'click', function() {
     
-      infoDivEl.style.zIndex = 0;
-      
+      infoDivEl.style.zIndex = 1;
+      cardEffect(element.name);
+
       gsap.to(camera.position,{
         x: element.position.x + (element.geometry.boundingSphere.radius * 1.3),
         y: element.position.y,
