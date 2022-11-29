@@ -1,14 +1,14 @@
 // import * as THREE from  'https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.module.js';
 import * as THREE from '/node_modules/three/build/three.module.js';
-import  { gsap }  from '/node_modules/gsap/index.js';
-import MouseMeshInteraction from '/three_mmi.js';
+
+const headerEl = document.querySelector('header');
+const headerHeight = headerEl.clientHeight; // à déduire ici et sur three_mmi.js ligne 222 la hauteur des éléments au dessus du canvas (-92.5) car le calcul se fait a partir du coin haut gauche du viewport
 
 // Basic Threejs variables
 
 let scene;
 let camera;
 let renderer;
-let headerHeight = 92.5; // à déduire ici et sur three_mmi.js ligne 222 la hauteur des éléments au dessus du canvas (-92.5) car le calcul se fait a partir du coin haut gauche du viewport
 
 //3D planets variables
 
@@ -18,29 +18,6 @@ let venus;
 let mercure;
 let mars;
 
-
-//Variables camera position et rotation pour chaque planete + origine
-
-let originCam = {
-position: {x: 0, y: 0, z: 1000},
-rotation: {x: 0, y: 0, z: 0}};
-
-let moonCam = {
-position: {x: -150, y: 0, z: 90},
-rotation: {x: 0, y: 0.45, z: 0}};
-
-let venusCam = {
-position: {x: 0, y: 0, z: 230},
-rotation: {x: 0, y: -0.4, z: 0}};
-
-let mercureCam = {
-position: {x: 0, y: 0, z: 620},
-rotation: {x: -0.36, y: -1.12, z: 0}};
-
-let marsCam = {
-position: {x: 500, y: 160, z: 380},
-rotation: {x: 0.31, y: -0.4, z: 0}};
-         
 
 // ---------------- SCENE ----------------
 
@@ -52,7 +29,6 @@ scene.background = sceneLoader.load('assets/img/AdobeStock_340851338.jpg')
 // ---------------- RENDU ----------------
 
 renderer = new THREE.WebGLRenderer( { antialias : true } );
-// renderer.setSize( window.innerWidth, window.innerHeight);
 renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
 
 // envoi de l'element HTML sur la page HTML
@@ -60,7 +36,6 @@ document.body.appendChild( renderer.domElement );
 
 
 // ---------------- CAMERA ----------------
-// camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
 camera = new THREE.PerspectiveCamera( 50, window.innerWidth / (window.innerHeight-headerHeight), 1, 10000 );
 camera.position.set( 0, 0, 1000 );
 let originLookAt = new THREE.Vector3(0,0,0);
@@ -190,7 +165,6 @@ mars = new THREE.Mesh( marsGeometry, marsMaterial );
 mars.name = 'mars';
 
 // ---------------- POSITION mars ----------------
-  //fullscreen
 mars.position.x = 500;
 mars.position.y = 250;
 mars.position.z = 100;
@@ -198,313 +172,6 @@ mars.position.z = 100;
 
 scene.add( mars );
 
-// GSAP fonction mouvement caméra////////////////////////////////////////////
 
-function camPosition(planetName){
-  let arrayPos;
-  if (planetName === 'moon') {
-    arrayPos = moonCam;
-  }
-  else if (planetName === 'venus') {
-    arrayPos = venusCam;
-  }
-  else if (planetName === 'mercure') {
-    arrayPos = mercureCam;
-  }
-  else if (planetName === 'mars') {
-    arrayPos = marsCam;
-  }
-  else{
-    arrayPos = originCam;
-  }
 
-  gsap.to(camera.position,{
-    x: arrayPos.position.x,
-    y: arrayPos.position.y,
-    z: arrayPos.position.z,
-    duration: 2,
-    ease: "back.out(0.5)"
-    });
-
-    gsap.to(camera.rotation,{
-      x: arrayPos.rotation.x,
-      y: arrayPos.rotation.y,
-      z: arrayPos.rotation.z,
-      duration: 2,
-    });
-
-};
-
-// GSAP fonction effet //////////////////////////////////////////////////////
-
-const tl = gsap.timeline();
-
-function cardEffect(planetName) {
-  if(planetName != 'origin'){
-    gsap.fromTo(".card-container", { autoAlpha:0},{autoAlpha:1,delay:2.1});
-    gsap.fromTo("h1", { x:300},{x:0,delay:2.3});
-    gsap.fromTo(".card-body", { autoAlpha:0},{autoAlpha:1,delay:2.7,});
-  }
-  else{
-    gsap.fromTo(".card-container", { opacity:0},{autoAlpha:0,duration:2});
-  }
-};
-
-// fonction rotation des models
-
-function rotate() {
-
-    // rotation MOON//////////////////////
-    moon.rotation.x += 0.00;
-    moon.rotation.y += 0.002;
-  
-    // rotation EARTH/////////////////////
-    earth.rotation.x += 0.00;
-    earth.rotation.y += -0.0005;
-  
-    // rotation VENUS//////////////////////
-    venus.rotation.x += 0.00;
-    venus.rotation.y += 0.002;
-    venus.rotation.z += 0.0009;
-  
-    // rotation MERCURE/////////////////////
-    mercure.rotation.x += 0.002;
-    mercure.rotation.y += 0.001;
-  
-    // rotation MARS////////////////////////
-    mars.rotation.x += 0.001;
-    mars.rotation.y += 0.001;
-  
-  };
-  const mmi = new MouseMeshInteraction( scene, camera );
-  
-  // fonction d'animation pour la rotation + vitesse sur chacun des axes x,y,z pour tous les modèles
-  function render(){
-    
-    rotate()
-    renderer.render( scene, camera );   //rendu graphique avec tous les elements
-    requestAnimationFrame( render );  //appel de la fonction render en boucle pour l'animation
-    mmi.update();
-};
-
-planetsLayout();
-render();
-
-
-
-
-
-
-
-
-
-
-
-function planetsLayout() {
-
-  if (window.innerWidth <= 1440 && window.innerWidth >= 969) {
-
-    gsap.to(camera.position,{
-      x: 170,
-      y: -100,
-      z: 1300,
-      duration: 1,
-      ease: "back.out(0.5)"
-    });
-
-    gsap.to(earth.position,{
-      x: 170,
-      y: -200,
-      z: 1200,
-      duration: 3,
-    })
-
-  }
-  else if (window.innerWidth <= 970 && window.innerWidth >= 599) {
-
-    gsap.to(camera.position,{
-      x: 170,
-      y: -100,
-      z: 1500,
-      duration: 1,
-      ease: "back.out(0.5)"
-    });
-
-    gsap.to(earth.position,{
-      x: 170,
-      y: -195,
-      z: 1450,
-      duration: 3,
-    })
-
-    gsap.to(mercure.position,{
-      x: 320,
-      y: -120,
-      z: 300,
-      duration: 1,
-    })
-
-    gsap.to(mars.position,{
-      x: 500,
-      y: 250,
-      z: 100,
-      duration: 1,
-    })
-
-    gsap.to(moon.position,{
-      x: -250,
-      y: 0,
-      z: 0,
-      duration: 1,
-    })
-
-  }
-  else if (window.innerWidth <= 600){
-
-    gsap.to(camera.position,{
-      x: 170,
-      y: -100,
-      z: 1500,
-      duration: 1,
-      ease: "back.out(0.5)"
-    });
-
-    gsap.to(mercure.position,{
-      x: 200,
-      y: -300,
-      z: 300,
-      duration: 1,
-    })
-
-    gsap.to(mars.position,{
-      x: 300,
-      y: 150,
-      z: 100,
-      duration: 1,
-    })
-
-    gsap.to(moon.position,{
-      x: 0,
-      y: 300,
-      z: 0,
-      duration: 1,
-    })
-
-  } else {
-
-    gsap.to(camera.position,{
-      x: 0,
-      y: 0,
-      z: 1000,
-      duration: 1,
-      ease: "back.out(0.5)"
-    });
-
-    gsap.to(earth.position,{
-      x: -150,
-      y: 0,
-      z: 900,
-      duration: 3,
-    });
-
-    gsap.to(mercure.position,{
-      x: 320,
-      y: -120,
-      z: 300,
-      duration: 1,
-    })
-
-    gsap.to(mars.position,{
-      x: 500,
-      y: 250,
-      z: 100,
-      duration: 1,
-    })
-
-    gsap.to(moon.position,{
-      x: -250,
-      y: 0,
-      z: 0,
-      duration: 1,
-    })
-
-  }
-  // renderer.setSize( window.innerWidth, window.innerHeight );
-  renderer.setSize( window.innerWidth, (window.innerHeight - headerHeight) );
-  // camera.aspect = window.innerWidth / window.innerHeight;
-  camera.aspect = window.innerWidth / (window.innerHeight - headerHeight);
-  camera.updateProjectionMatrix();
-}
-
-
-
-
-
-
-
-
-
-
-// evenement Click bouton nom planete/////////////////////////////////////////
-
-const homeIconEl = document.querySelector('#homeIcon') 
-
-const objectsScene = scene.children
-const canvas = document.querySelector('canvas');
-const infoDivEl = document.querySelector('#info');
-
-window.addEventListener('scroll',() =>{
-
-})
-
-window.addEventListener('resize', ()=> {
-  infoDivEl.style.zIndex = -1;
-  planetsLayout()
-})
-
-homeIconEl.addEventListener('click', () => {
-  infoDivEl.style.zIndex = -1;
-  planetsLayout()
-})
-
-
-
-
-
-objectsScene.forEach(element => {
-  
-  if ( element.type === 'Mesh' && element.name != 'earth' ) {
-
-    mmi.addHandler(element.name, 'mouseenter', function() {
-      
-      canvas.style.cursor = 'pointer';
-      
-    });
-
-    mmi.addHandler(element.name, 'mouseleave', function() {
-    
-      canvas.style.cursor = 'default';
-      
-    });
-
-    mmi.addHandler(element.name, 'click', function() {
-    
-      infoDivEl.style.zIndex = 1;
-      cardEffect(element.name);
-
-      gsap.to(camera.position,{
-        x: element.position.x + (element.geometry.boundingSphere.radius * 1.3),
-        y: element.position.y,
-        z: element.position.z + (element.geometry.boundingSphere.radius * 3),
-        duration: 2,
-        ease: "back.out(0.7)"
-      })
-
-    });
-    
-  };
-
-});
-
-// window.requestAnimationFrame( render )
-
+export { scene, camera, renderer, moon, earth, venus, mars, mercure };

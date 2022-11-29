@@ -172,7 +172,8 @@
 
 import * as THREE from '/node_modules/three/build/three.module.js'
 
-let headerHeight = 92.5
+const headerEl = document.querySelector('header');
+const headerHeight = headerEl.clientHeight; // à déduire ici et sur three_mmi.js ligne 222 la hauteur des éléments au dessus du canvas (-92.5) car le calcul se fait a partir du coin haut gauche du viewport
 
 class MouseMeshInteractionHandler {
 	constructor(mesh_name, handler_function) {
