@@ -47,7 +47,6 @@ header{
 
 .left-side{
      width: 45%;
-     display: flex;
      padding: 2rem 1rem;
 }
 
@@ -143,7 +142,7 @@ header{
 
 .card-footer p{
      font-style: italic;
-     margin: 0;
+     margin: 0 0 3px 0;
 }
 
 .card-footer h2{
@@ -151,6 +150,7 @@ header{
      font-family: 'copperplate';
      font-size: 1.2rem;
      margin: 0;
+     width: 100%;
 }
 
 .card-footer i{
@@ -171,6 +171,10 @@ header{
 .card-footer .countdown, .capacity{
      display: flex;
      align-items: center;
+}
+
+.card-footer .countdown div{
+     width: 100%;
 }
 
 .card-footer .capacity-state{

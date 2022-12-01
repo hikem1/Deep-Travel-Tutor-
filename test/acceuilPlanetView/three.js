@@ -36,6 +36,7 @@ document.body.appendChild( renderer.domElement );
 
 
 // ---------------- CAMERA ----------------
+
 camera = new THREE.PerspectiveCamera( 50, window.innerWidth / (window.innerHeight-headerHeight), 1, 10000 );
 camera.position.set( 0, 0, 1000 );
 let originLookAt = new THREE.Vector3(0,0,0);
@@ -95,7 +96,6 @@ earth = new THREE.Mesh( earthGeometry, earthMaterial );
 earth.name = 'earth';
 
 // ---------------- POSITION earth ----------------
-
   //fullscreen
 earth.position.y = 0;
 earth.position.x = -150;
@@ -165,6 +165,7 @@ mars = new THREE.Mesh( marsGeometry, marsMaterial );
 mars.name = 'mars';
 
 // ---------------- POSITION mars ----------------
+//fullscreen
 mars.position.x = 500;
 mars.position.y = 250;
 mars.position.z = 100;

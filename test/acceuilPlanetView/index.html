@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
   </head>
   <script type="module" src="three.js" defer></script>
-  <script type="module" src="countdown.js" defer></script>
   <script type="module" src="mainThreeJs.js" defer></script>
   
   
@@ -33,7 +32,7 @@
         </div>
 
         <div class="card-footer">
-
+          
           <div class="countdown">
             <i class="fa-solid fa-hourglass-half fa-2xl"></i>
             <div>
@@ -48,7 +47,7 @@
               <p>Place disponibles : </p>
               <div id="progress-bar">
                 <div id="capacity-progress-bar">
-                  <span>76 / 157</span>
+                  <span><span id="reserved-place">76</span> / <span id="starship-capacity">157</span></span>
                 </div>
               </div>
             </div>
