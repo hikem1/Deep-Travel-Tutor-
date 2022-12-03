@@ -1,6 +1,6 @@
 import  { gsap }  from '/node_modules/gsap/index.js';
 import MouseMeshInteraction from '/three_mmi.js';
-import { scene, camera, renderer, moon, earth, venus, mars, mercure } from './three.js';
+import { scene, camera, renderer, moon, earth, venus, mars, mercure, visibleDestinationsPlanets } from './three.js';
 import cardPlanetText from './cardPlanetText.json' assert {type: 'json'};
 import { toggleCountDown } from './countdown.js';
 
@@ -361,7 +361,8 @@ window.addEventListener('resize', ()=> {
 })
 
 // ____________________________________________________________________________________________ init
-planetsLayoutOnStart();
+visibleDestinationsPlanets(true,false,false,false,true);
 render();  
+planetsLayoutOnStart();
 
 
