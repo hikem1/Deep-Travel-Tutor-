@@ -1,37 +1,24 @@
-.container{
+/* .container{
 	max-width: 1170px;
 
-}
-.row{
+} */
+/* .row{
 	display: flex;
 	justify-content: space-around;
 
-}
+} */
 
 ul{
 	list-style: none;
 	padding: 0px;
 }
-.footer{
-    background-color: #1f1f20;
-	WIDTH: 110%;
 
+.footer-col h4 {
+	color: white;
+	font-family: 'copperplate';
+	font-size: 1rem;
 }
-.footer-col{
-   object-fit:cover;
-   font-variant: all-small-caps;
-   margin: 10px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-}
-p.copyright-footer{
-   margin:0%;
-   height: 30px;
-}
+
 .footer-col h4 ::before{
 	content: '';
 	position: absolute;
@@ -45,6 +32,7 @@ p.copyright-footer{
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
@@ -55,85 +43,59 @@ p.copyright-footer{
 	display: block;
 	transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
 	color: #ffffff;
 	padding-left: 8px;
 }
+
 .footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgb(163, 158, 158);
+	padding: 0.3rem 0.5rem;
+	background-color: rgb(0, 0, 0);
 	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
-	color: #dce1ec;
+	color: #000000;
 	background-color: #ffffff;
 }
-img{
-    width: 150px;
-    height: 100%;
+
+.paiement{
+	width: 100%;
 }
-.img1{
-	height: 150px;
-    width: 200px;
-	margin: 15px;
-}
-.footer-bottom {
-	background-color: #1d1d1b;
-	color: #efeaea;
-	WIDTH: 110%;
+
+.plan{
+    width: 100%;
 }
 
 /*responsive*/
 
-  @media(max-width: 900px){
+  @media(max-width: 991px){
 	.footer-col{
-	  width: 100%;  
-	   text-align: center;
-  }
+	text-align: center;
+	/* border-top: 0.5px solid white; */
+  	}
   
-  .footer-bottom {
-	  background-color: #1d1d1b;
-	  color: #efeaea;
-	  width: 110%;
-  }
+  .footer-col h4 {
+	color: white;
+	font-family: 'copperplate';
+	font-size: 1.5rem;
+	}
 
+	.paiement{
+		width: 30%;
+	}
+	
+  .plan{
+	  width: 70%;
+  	}
 
-  h4{
-	  margin: 20px;
-	  padding: 0px;
-	  
-  }
-  .row{
-	  display: block;
-	  justify-content: center;
-  }
-  img{
-	  width: 250px;
-	  height: 100%;
-	  
-  }
-  .img1{
-	  height: 100px;
-	  width: 200px;
-	  margin: 15px;
-	  
-  }
-  p.copyright-footer {
-    margin: 0%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-  }
   .footer-col{
 	object-fit:cover;
 	font-variant: all-small-caps;
 
- }
-}
+	}
+  }

@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.card-destination{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid white;
+    padding: 5rem 2rem;
+}
+
+.card-infos{
+    width: 70%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.card-img{
+    width: 30%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.carousel{
+    width: 30%;
+
+}
+
+.carousel .carousel-caption{
+    background-color: rgba(52, 52, 52, 0.832);
+    border-radius: 10px;
+    padding: 1rem;
+
+}
+
+.carousel .carousel-caption h5{
+    color: #f98d1a;
+    font-family: 'copperplate';
+}
+
+.carousel .carousel-inner{
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(47, 47, 47);
+
+}
+
+.carousel .carousel-item{
+    height: 100%;
+}
+
+.carousel .carousel-item img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-infos h2{
+    color: white;
+    font-family: "copperplate";
+    font-size: 4rem;
+    margin: 0;
+}
+
+.card-info-vaisseaux, .card-info-activities{
+    display: flex;
+}
+
+.card-infos p{
+    /* width: 45%; */
+    color: white;
+    margin: 1rem 1rem;
+}
+
+.card-infos .card-info-vaisseaux a, .card-info-activities a{
+    text-align: center;
+    align-self: center;
+    margin: 1rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #384eca;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    font-family: 'copperplate';
+}
+
+.card-table-reservation table{
+    width: 100%;
+    background-color: #f0f2fe;
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border-collapse: separate;
+}
+
+
+.card-table-reservation table th{
+    background-color: rgb(255, 255, 255);
+    height: 2.5rem;
+    text-align: center;
+    color: rgb(120, 118, 118);
+}
+
+.card-table-reservation table tbody tr th a{
+    align-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #384eca;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    font-family: 'copperplate';
+}
+
+.card-table-reservation  .full{
+    background-color: #ca4b38;
+}
