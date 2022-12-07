@@ -66,10 +66,31 @@ ul{
 	color: #dce1ec;
 	background-color: #ffffff;
 }
+
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
+}
+img{
+    width: 350px;
+    height: 100%;
+}
+.img1{
+	height: 200px;
+    width: 300px;
+	margin: 15px;
+}
+.footer-bottom {
+    background-color: #1d1d1b;
+    color: #efeaea;
+}
+hr{
+	width: 5px;
+}
+h4{
+	margin: 25px;
+	padding: 0px;
 }
 }
 @media(max-width: 574px){
@@ -90,10 +111,11 @@ img{
     background-color: #1d1d1b;
     color: #efeaea;
 }
-HR{
+hr{
 	width: 5px;
 }
 h4{
 	margin: 20px;
 	padding: 0px;
 }
+
