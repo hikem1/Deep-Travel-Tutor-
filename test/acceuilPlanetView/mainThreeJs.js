@@ -361,7 +361,7 @@ window.addEventListener('resize', ()=> {
 })
 
 // ____________________________________________________________________________________________ init
-visibleDestinationsPlanets(true,false,false,false,true);
+visibleDestinationsPlanets(true,true,true,true,true);
 render();  
 planetsLayoutOnStart();
 
