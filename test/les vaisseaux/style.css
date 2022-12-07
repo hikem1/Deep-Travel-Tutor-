@@ -8,18 +8,18 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-image: url("terre.png");
-    background-size: cover;
+  /* background-image: url("terre.png");
+    background-size: cover; */
 }
-h1{
+h2{
     display: flex;
     justify-content: center;
     
 }
 .mercure{
-    height: 300px;
-    width: 500px;
-    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    
 }
 /* .terre{
     background-image: url("terre.png");
@@ -29,7 +29,178 @@ h1{
 
 .lune{
     display: flex;
-    justify-content: space-between;
     border: 3px solid yellow;
-    height: 500px;
+    height: 800px;
+}
+
+.container-lune{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.infos-lune{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.figure-vaisseau-lune{
+  display: flex;
+  justify-content: center;
+}
+.figure-vaisseau-lune-bis{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+.timeLune{
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+}
+.container-lune-2{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-lien-lune{
+   display: flex;
+   justify-items: flex-start;
+}
+.btn-lien2-lune{
+    display: flex;
+    justify-items: flex-start;
+ }
+
+ 
+
+.container-mars{
+    display: flex;
+    flex-direction: column;
+   
+}
+.container-mars-2{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-lien-mars{
+   display: flex;
+   justify-items: flex-start;
+}
+.btn-lien2-mars{
+    display: flex;
+    justify-items: flex-start;
+ }
+ 
+.figure-vaisseau-mars{
+  display: flex;
+  justify-content: center;
+}
+.figure-vaisseau-mars-bis{
+    display: flex;
+    justify-content: center; 
+}
+.infos-mars{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.timeMars{
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+}
+
+.container-venus{
+    display: flex;
+    flex-direction: column;
+   
+}
+.container-venus-2{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-lien-venus{
+   display: flex;
+   justify-items: flex-start;
+}
+.btn-lien2-venus{
+    display: flex;
+    justify-items: flex-start;
+ }
+ 
+.figure-vaisseau-venus{
+  display: flex;
+  justify-content: center;
+}
+.figure-vaisseau-venus-bis{
+    display: flex;
+    justify-content: center; 
+}
+.infos-Venus{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.timevenus{
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+}
+
+.container-mercure{
+    display: flex;
+    flex-direction: column;
+   
+}
+.container-mercure-2{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-lien-mercure{
+   display: flex;
+   justify-items: flex-start;
+}
+.btn-lien2-mercure{
+    display: flex;
+    justify-items: flex-start;
+ }
+ 
+.figure-vaisseau-mercure{
+  display: flex;
+  justify-content: center;
+}
+.figure-vaisseau-mercure-bis{
+    display: flex;
+    justify-content: center; 
+}
+.infos-Mercure{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.timemercure{
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+}
+.contourlune{
+    border: 5px solid yellow;
+    background-image: url("superlune.jpg");
+    background-size: cover;
+}
+.contourmars{
+    border: 5px solid yellow;
+    background-image: url("marsPrincipale.jpg");
+    background-size: cover;
+}
+.contourvenus{
+    border: 5px solid yellow;
+    background-image: url("VenusPrincipale.jpg");
+    background-size: cover;
+}
+.contourmercure{
+    border: 5px solid yellow;
+    background-image: url("MercurePrincipale.jpg");
+    background-size: cover;
 }
