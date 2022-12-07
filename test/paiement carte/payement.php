@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payement.css">
     <link href="http://fonts.cdnfonts.com/css/copperplate" rel="stylesheet">
 
 </head>
@@ -101,6 +101,6 @@
     </form>
 
 </div>    
-<script src="index.js"></script>
+<script src="payement.js"></script>
 </body>
 </html>
