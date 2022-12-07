@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="http://fonts.cdnfonts.com/css/copperplate" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="assets/footer.css">
         <script src="header.js" defer></script>
         <title>Deep Travel</title>
     </head>
