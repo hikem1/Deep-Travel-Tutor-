@@ -92,7 +92,7 @@ img{
 
 /*responsive*/
 
-  @media(max-width: 1000px){
+  @media(max-width: 900px){
 	.footer-col{
 	  width: 100%;  
 	   text-align: center;
@@ -130,3 +130,9 @@ img{
     display: flex;
     justify-content: center;
   }
+  .footer-col{
+	object-fit:cover;
+	font-variant: all-small-caps;
+
+ }
+}
