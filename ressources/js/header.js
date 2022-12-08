@@ -50,7 +50,7 @@ function toggleLangueContent() {
 
 function showSidebar() {
 
-    mySidenav.style.width = '300px';
+    mySidenav.style.width = '100%';
     closeBtn.style.opacity = '100';
     closeBtn.style.transitionDelay = '0.3s';
     btnBurger.style.display = 'none';
