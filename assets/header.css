@@ -33,25 +33,22 @@ body{
 /* ____________________________________________________________________________ sidenav */
 
 .sidenav {
-    height: 100%;
     width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
+    position: absolute; 
+    z-index: 3; 
     overflow-x: hidden; 
     transition: 0.5s; 
-    
+
 }
 
   .sidenav #header-sidenav{
     height: 93px;
-    padding: 0 2rem;
+    padding: 0 3.5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     box-sizing: border-box;
-    background-color: rgba(92, 92, 92, 0.753); 
+    background-color: rgba(0, 0, 0, 0.267); 
     border-bottom: 0.5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
@@ -70,13 +67,17 @@ body{
     flex-direction: column;
     padding: 2rem;
     gap: 3rem;
+    background-color: #000000fb;
+    height: 100vh;
+    border-bottom: 1px solid #2c2c2c;
+
 }
 
 .sidenav nav .sidenav-link{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgb(163, 163, 163);
+    color: white;
     white-space: nowrap;
 }
 
@@ -85,11 +86,11 @@ body{
     padding-left: 2rem;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.7rem;
     color: white;
     font-style: italic;
     white-space: nowrap;
 }
+
 .sidenav nav .dropdown-link img{
     width: 0.5rem;
     cursor: pointer;
@@ -101,6 +102,11 @@ body{
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sidenav nav a:hover{
+    font-size: 1.2rem;
 }
 
 .sidenav nav .dropdown{
@@ -110,8 +116,18 @@ body{
     overflow-x: hidden; 
     overflow-y: hidden; 
 }
+
 .sidenav nav #i-login, #i-langue{
     transition-duration: 0.3s;
+}
+
+.sidenav nav .dropdown-link a{
+    font-size: 0.7rem;
+    transition-duration: 0.2s;
+}
+
+.sidenav nav .dropdown-link a:hover{
+    font-size: 0.8rem;
 }
 
 
@@ -156,6 +172,8 @@ header nav a{
 
 header nav a:hover{
     border-bottom: 0.5px solid #ffffff58;
+    color: white;
+
 }
 
 header #icons-login-language{

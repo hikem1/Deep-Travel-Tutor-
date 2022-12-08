@@ -27,42 +27,42 @@
                 <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
-                <div class="sidenav-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="accueil.php">Acceuil</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="accueil.php">Acceuil</a>
                 </div>
-                <div class="sidenav-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a  href="destination.php">Destinations</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="destination.php">Destinations</a>
                 </div>
-                <div class="sidenav-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a  href="lesVaisseaux.php">Nos vaisseaux</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="lesVaisseaux.php">Nos vaisseaux</a>
                 </div>
-                <div class="sidenav-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a  href="vieAbord.php">Vie à bord</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="vieAbord.php">Vie à bord</a>
                 </div>
-                <div class="sidenav-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a  href="information.php">Informations</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="information.php">Informations</a>
                 </div>
 
                 <div>
-                    <div class="sidenav-link links">
+                    <div class="sidenav-link">
                         <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a id="drop-link-login">Compte</a>
                     </div>
 
                     <div id="dropdown-log" class="dropdown">
-                        <div class="dropdown-link d-flex links">
+                        <div class="dropdown-link d-flex">
                             <i class="fa-solid fa-circle fa-2xs"></i><a class="" href="connexion.php">Connexion</a>
                         </div>
-                        <div class="dropdown-link d-flex links">
+                        <div class="dropdown-link d-flex">
                             <i class="fa-solid fa-circle fa-2xs"></i><a class="" href="connexion.php">Mon compte</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <div class="sidenav-link links">
+                    <div class="sidenav-link">
                         <i id="i-langue" class="fa fa-chevron-right" aria-hidden="true"></i><a id="drop-link-langue" class="">Langue</a>
                     </div>
 
                     <div id="dropdown-langue" class="dropdown">
-                        <div class="dropdown-link d-flex links">
+                        <div class="dropdown-link d-flex">
                             <img class="" src="/assets/img/france.png" alt=""></img><a class="" href="">Français</a>
                         </div>
-                        <div class="dropdown-link d-flex links">
+                        <div class="dropdown-link d-flex">
                             <img class="" src="/assets/img/united-kingdom.png" alt=""><a class="" href="">English</a>
                         </div>
                     </div>
