@@ -13,9 +13,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/assets/header.css">
         <link rel="stylesheet" href="/assets/footer.css">
+        <link rel="stylesheet" href="/assets/acceuil.css">
         <link rel="stylesheet" href="/assets/destinations.css">
         
         <script src="/ressources/js/header.js" defer></script>
+        <script src="/ressources/js/three_deep_travel_project/three.js" type="module" defer></script>
+        <script src="/ressources/js/acceuilThreeJs.js" type="module" defer></script>
         <title>Deep Travel</title>
     </head>
     <body>
