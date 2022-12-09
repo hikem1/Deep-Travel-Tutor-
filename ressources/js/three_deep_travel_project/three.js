@@ -5,7 +5,7 @@ import * as THREE from '../three.js-master/build/three.module.js';
 // ________________________________________________________________________ HTML elements
 const headerEl = document.querySelector('header');
 const headerHeight = headerEl.clientHeight; // à déduire ici et sur three_mmi.js ligne 222 la hauteur des éléments au dessus du canvas (-92.5) car le calcul se fait a partir du coin haut gauche du viewport
-const mainEl = document.querySelector('#main-planets-layout');
+const mainEl = document.querySelector('#planet-view');
 // ________________________________________________________________________ variables
 // Basic Threejs variables
 
@@ -23,10 +23,9 @@ let mars;
 let line;
 
 // ---------------- SCENE ----------------
-
 scene = new THREE.Scene();
 const sceneLoader = new THREE.TextureLoader()
-scene.background = sceneLoader.load('../../assets/img/AdobeStock_340851338.jpg')
+scene.background = sceneLoader.load('/ressources/js/three_deep_travel_project/AdobeStock_340851338.jpg')
 
 // ________________________________________________________________________ environment functions
 function createRenderer() {
@@ -82,7 +81,7 @@ const moonLoader = new THREE.TextureLoader();
 // ---------------- TEXTURE moon ----------------
 
 const moonMaterial = new THREE.MeshLambertMaterial({
-map: moonLoader.load('../../assets/img/texturePlanets/2k_moon.jpg')});
+map: moonLoader.load('/ressources/js/three_deep_travel_project/texturePlanets/2k_moon.jpg')});
 moon = new THREE.Mesh( moonGeometry, moonMaterial );
 moon.name = 'moon';
 
@@ -108,7 +107,7 @@ function createEarth() {
   // ---------------- TEXTURE earth ----------------
   
   const earthMaterial = new THREE.MeshLambertMaterial({
-  map: earthLoader.load('../../assets/img/texturePlanets/1_earth_2k.png')});
+  map: earthLoader.load('/ressources/js/three_deep_travel_project/texturePlanets/1_earth_2k.png')});
   earth = new THREE.Mesh( earthGeometry, earthMaterial );
   earth.name = 'earth';
   
@@ -134,7 +133,7 @@ function createVenus() {
   // ---------------- TEXTURE venus ----------------
   
   const venusMaterial = new THREE.MeshLambertMaterial({
-  map: venusLoader.load('../../assets/img/texturePlanets/2k_venus_surface.jpg')});
+  map: venusLoader.load('/ressources/js/three_deep_travel_project/texturePlanets/2k_venus_surface.jpg')});
   venus = new THREE.Mesh( venusGeometry, venusMaterial );
   venus.name = 'venus';
   
@@ -160,7 +159,7 @@ function createMercure() {
   // ---------------- TEXTURE mercure ----------------
   
   const mercureMaterial = new THREE.MeshLambertMaterial({
-  map: mercureLoader.load('../../assets/img/texturePlanets/2k_mercury.jpg')});
+  map: mercureLoader.load('/ressources/js/three_deep_travel_project/texturePlanets/2k_mercury.jpg')});
   mercure = new THREE.Mesh( mercureGeometry, mercureMaterial );
   mercure.name = 'mercure';
   
@@ -186,7 +185,7 @@ function createMars() {
   // ---------------- TEXTURE mars ----------------
   
   const marsMaterial = new THREE.MeshLambertMaterial({
-  map: marsLoader.load('../../assets/img/texturePlanets/2k_mars.jpg')});
+  map: marsLoader.load('/ressources/js/three_deep_travel_project/texturePlanets/2k_mars.jpg')});
   mars = new THREE.Mesh( marsGeometry, marsMaterial );
   mars.name = 'mars';
   
