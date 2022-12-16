@@ -19,8 +19,8 @@ const progressBarEl = document.querySelector('.card-footer #capacity-progress-ba
 const objectsScene = scene.children;
 const headerHeight = headerEl.clientHeight; // à déduire ici et sur three_mmi.js ligne 222 la hauteur des éléments au dessus du canvas (-92.5) car le calcul se fait a partir du coin haut gauche du viewport
 const mmi = new MouseMeshInteraction( scene, camera );
+let scrollbarWidth = window.innerWidth - document.body.scrollWidth;
 let reserved = 78;
-
 // ____________________________________________________________________________________________ fonctions 
 
 
@@ -151,8 +151,8 @@ function planetsLayoutOnStart() {
         moon.position.z = 0
 
     }
-    renderer.setSize( window.innerWidth, (window.innerHeight - headerHeight) );
-    camera.aspect = window.innerWidth / (window.innerHeight - headerHeight);
+    renderer.setSize( window.innerWidth - scrollbarWidth, (window.innerHeight - headerHeight) );
+    camera.aspect = (window.innerWidth - scrollbarWidth)  / (window.innerHeight - headerHeight);
     camera.updateProjectionMatrix();
 }
 
@@ -286,9 +286,9 @@ function planetsLayoutResponsive() {
 
   }
   // renderer.setSize( window.innerWidth, window.innerHeight );
-  renderer.setSize( window.innerWidth, (window.innerHeight - headerHeight) );
+  renderer.setSize( window.innerWidth - scrollbarWidth, (window.innerHeight - headerHeight) );
   // camera.aspect = window.innerWidth / window.innerHeight;
-  camera.aspect = window.innerWidth / (window.innerHeight - headerHeight);
+  camera.aspect = (window.innerWidth - scrollbarWidth) / (window.innerHeight - headerHeight);
   camera.updateProjectionMatrix();
 }
 

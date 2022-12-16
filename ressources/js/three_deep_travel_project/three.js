@@ -33,7 +33,7 @@ function createRenderer() {
   // ---------------- RENDU ----------------
   
   renderer = new THREE.WebGLRenderer( { antialias : true } );
-  renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
+  // renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
   
   // envoi de l'element HTML sur la page HTML
   mainEl.appendChild( renderer.domElement ); 
