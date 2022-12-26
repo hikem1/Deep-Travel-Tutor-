@@ -51,7 +51,7 @@ function cardEffect(planetName) {
 
     infoDivEl.style.zIndex = 1;
     gsap.fromTo(".card-container", {autoAlpha:0},{autoAlpha:1,delay:2.1});
-    gsap.fromTo("h1", {x:300},{x:0,delay:2.3});
+    // gsap.fromTo("h1", {x:200},{x:0,delay:2.3});
     gsap.fromTo(".card-body", {autoAlpha:0},{autoAlpha:1,delay:2.7,});
 
   } else{
@@ -63,9 +63,14 @@ function cardEffect(planetName) {
 }
 // ____________________________________________________________________________________________ 3D fonctions
 function planetPresentationVue(planetEl){
+  let offsetVueRatio = 1.3;
 
+  if(window.innerWidth < 781){
+    offsetVueRatio = 0;
+  }
+  
   gsap.to(camera.position,{
-    x: planetEl.position.x + (planetEl.geometry.boundingSphere.radius * 1.3),
+    x: planetEl.position.x + (planetEl.geometry.boundingSphere.radius * offsetVueRatio),
     y: planetEl.position.y,
     z: planetEl.position.z + (planetEl.geometry.boundingSphere.radius * 3),
     duration: 2,
@@ -369,7 +374,7 @@ homeIconEl.addEventListener('click', () => {
 
 window.addEventListener('resize', ()=> {
   infoDivEl.style.zIndex = -1;
-  planetsLayoutResponsive()
+  planetsLayoutResponsive();
   toggleCountDown(0);
 })
 

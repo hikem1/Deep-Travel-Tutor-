@@ -116,3 +116,14 @@
 .card-table-reservation  .full{
     background-color: #ca4b38;
 }
+
+.gridCont{
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 2fr 1fr 2fr 1fr;
+}
+
+.gridCont .lune{
+    grid-area: 1 / 1 / 8 / 2
+}
