@@ -25,8 +25,7 @@
 }
 
 .carousel{
-    width: 30%;
-
+    width: 100%;
 }
 
 .carousel .carousel-caption{
@@ -117,13 +116,197 @@
     background-color: #ca4b38;
 }
 
+
+
+
+
+
+
 .gridCont{
-    height: 500px;
     width: 100%;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 2fr 1fr 2fr 1fr;
+    height: 1000px;
+    grid-template: 1fr 3fr 3fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+    gap: 1rem;;
+    padding: 3rem 1rem;
 }
 
 .gridCont .lune{
     grid-area: 1 / 1 / 8 / 2
+}
+
+.gridCont h2{
+    color: white;
+    font-family: "copperplate";
+    font-size: 4rem;
+    margin: 0;
+}
+
+.gridCont p{
+    /* width: 45%; */
+    color: white;
+    margin: 1rem 1rem;
+    text-align: justify;
+}
+
+.gridCont .test-title{
+    grid-area: 1/2/2/3;
+}
+
+.gridCont .test-info-vaisseaux{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/2/3/3;
+}
+
+.gridCont .test-info-activities{
+    display: flex;
+    flex-direction: column;
+    grid-area: 3/2/4/3;
+}
+
+.gridCont .test-table-reservation{
+    grid-area: 4/2/8/3;
+}
+
+.gridCont .test-table-reservation table{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f2fe;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border-collapse: separate;
+}
+
+.gridCont .test-info-vaisseaux a, .gridCont .test-info-activities a{
+    text-align: center;
+    align-self: center;
+    margin: 1rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #384eca;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    font-family: 'copperplate';
+}
+
+.gridCont .test-info-vaisseaux a{
+    align-self: start;
+}
+
+.gridCont .test-info-activities a{
+    align-self: end;
+}
+
+.gridCont .test-table-reservation table th{
+    background-color: rgb(255, 255, 255);
+    height: 2.5rem;
+    text-align: center;
+    color: rgb(120, 118, 118);
+}
+
+.gridCont .test-table-reservation table tbody tr th a{
+    align-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #384eca;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    font-family: 'copperplate';
+}
+
+.gridCont .test-table-reservation  .full{
+    background-color: #ca4b38;
+}
+
+@media screen and (min-width:771px) and (max-width:1200px) {
+
+    .gridCont{
+        height: fit-content;
+        grid-template: 100px 350px 350px 1fr 1fr 1fr 1fr / 1fr 1fr;
+    }
+    
+    .gridCont .test-title{
+        grid-area: 1/1/2/3;
+        text-align: center;
+    }
+    
+    .gridCont .lune{
+        grid-area: 2/1/4/2;
+
+    }
+
+    .gridCont .test-info-vaisseaux{
+        grid-area: 2/2/5/3;
+    }
+    
+    .gridCont .test-info-activities{
+        grid-area: 3/2/6/3;
+    }
+    
+    .gridCont .test-table-reservation{
+        grid-area: 4/1/8/3;
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+
+    .gridCont{
+        height: fit-content;
+        grid-template: 40px 150px 350px 1fr 1fr 1fr 1fr / 1fr 1fr;
+    }
+
+    
+    .gridCont .test-title{
+        grid-area: 1/1/2/3;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .gridCont .lune{
+        grid-area: 2/1/4/3;
+    }
+
+
+    .gridCont .test-info-vaisseaux{
+        grid-area: 4/1/5/3;
+    }
+
+    .gridCont .test-info-activities{
+        grid-area: 5/1/6/3;
+    }
+
+    .gridCont .test-table-reservation{
+        grid-area: 6/1/8/3;
+    }
+
+    .gridCont .test-info-vaisseaux a, .gridCont .test-info-activities a{
+        text-align: center;
+        align-self: center;
+    }
+
+    .gridCont .test-table-reservation table{
+        height: 50%;
+    }
+
+    
+    .gridCont .test-table-reservation table th{
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        height: 0.5rem;
+        font-size: 0.7rem;
+        color: rgb(120, 118, 118);
+    }
+
+    .gridCont .test-table-reservation table tbody tr th a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: #384eca;
+        padding: 0.5rem ;
+        font-family: 'copperplate';
+    }
+    
+    
+    
 }
