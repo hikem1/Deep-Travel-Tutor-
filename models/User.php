@@ -9,7 +9,7 @@ class User {
     private string $email;
     private string $phone;
     private string $medicalCertificat;
-    private DateTime $dob;
+    private string $dob;
     protected string $pass;
 
 
@@ -144,7 +144,7 @@ class User {
     /**
      * Get the value of dob
      */ 
-    public function getDob():DateTime
+    public function getDob():string
     {
         return $this->dob;
     }
@@ -154,7 +154,7 @@ class User {
      *
      * @return  self
      */ 
-    public function setDob(DateTime $dob):void
+    public function setDob(string $dob):void
     {
         $this->dob = $dob;
 
