@@ -1,0 +1,80 @@
+body{
+    background-color: black;
+    color: aliceblue;
+}
+
+.titre-center{
+    text-align: center;
+    font-family: "copperplate";
+}
+
+.slot-machine p{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+    
+}
+.poker p{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+    
+}
+.slot-machine p{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+    
+}
+.blackjack p{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+    
+}
+.gambling p{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+    
+}
+.container_poker{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 4em;
+     width: 100%;
+
+}
+.container_blackjack{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 4rem;
+     width: 100%;
+}
+
+.container_slot{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    gap: 4em;
+     width: 100%;
+}
+
+.container_gambling{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+     width: 100%;
+}
+
+.wellness-center{
+    display: flex;
+    gap: 1em;
+}
