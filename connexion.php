@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="button-area">
-                    <button type="submit" class="login-btn">connection </button>
+                    <button type="submit" class="login-btn">connexion </button>
                 </div>
             </form>
 
