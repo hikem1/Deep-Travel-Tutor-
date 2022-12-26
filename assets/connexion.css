@@ -17,6 +17,10 @@ body {
     background-size:contain;
     background-position: center;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
 }
 
 .container {
@@ -261,6 +265,376 @@ header{
 .logo span{
     color: #f77a04;
 }
+
+/* __header__________________________________________________________________________ général */
+
+.d-none{
+    display: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.links{
+    transition-duration: 0.2s;
+}
+
+.links:hover{
+    transform: scale(1.07, 1.07);
+}
+
+
+/* ____________________________________________________________________________ sidenav */
+
+.sidenav {
+    width: 0; 
+    position: absolute; 
+    z-index: 3; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+
+}
+
+  .sidenav #header-sidenav{
+    height: 93px;
+    padding: 0 3.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.267); 
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
+
+}
+
+.sidenav #header-sidenav #close-btn{
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0; 
+}
+
+.sidenav nav{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+    background-color: #000000fb;
+    height: 100vh;
+    border-bottom: 1px solid #2c2c2c;
+
+}
+
+.sidenav nav .sidenav-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.sidenav nav .dropdown-link{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.sidenav nav .dropdown-link img{
+    width: 0.5rem;
+    cursor: pointer;
+}
+
+.sidenav nav a{
+    font-family: "copperplate";
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sidenav nav a:hover{
+    font-size: 1.2rem;
+}
+
+.sidenav nav .dropdown{
+    height: 0px;
+    width: 100%;
+    transition: 0.3s;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
+
+.sidenav nav #i-login, #i-langue{
+    transition-duration: 0.3s;
+}
+
+.sidenav nav .dropdown-link a{
+    font-size: 0.7rem;
+    transition-duration: 0.2s;
+}
+
+.sidenav nav .dropdown-link a:hover{
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+/* ____________________________________________________________________________ header */
+
+header{
+    background-color: black;
+    height: 93px;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ff6f00,#eaff00, #4c00ff);
+}
+
+header nav{
+    display: flex;
+}
+
+header .logo{
+    width: 10rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+header nav a{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 0.5rem;
+    margin: 1rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+header nav a:hover{
+    border-bottom: 0.5px solid #ffffff58;
+    color: white;
+
+}
+
+header #icons-login-language{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+header #icons-login-language i{
+    cursor: pointer;
+}
+
+header #icons-login-language #dropdown-language{
+    flex-direction: column;
+    position: absolute;
+    gap: 2rem;
+    padding: 1rem 1rem;
+    background-color: #000000;
+    top: 80px;
+    right: 1.9rem;
+    /* border:1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-language img{
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+header #icons-login-language #dropdown-login{
+    flex-direction: column;
+    position: absolute;
+    background-color: #000000;
+    padding: 1rem 0;;
+    top: 70px;
+    right: 6rem;
+    /* border: 1px solid #4b4b4b; */
+    border-radius: 5px;
+}
+
+header #icons-login-language #dropdown-login .dropdown-link{
+    font-family: "copperplate";
+    color: white;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center
+}
+
+header #icons-login-language #dropdown-login .dropdown-link a{
+    font-family: "copperplate";
+    color: white;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+header #icon-burger{
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+    
+
+/* ____________________________________________________________________________ @media */
+
+@media screen and (max-width : 1200px){
+
+    header nav {
+        display: none;
+    }
+
+    header #icons-login-language{
+        padding: 1rem;
+        width: 2rem;
+        object-fit: contain;
+        display: none;
+    }
+    
+    header #icon-burger{
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* _______footer_____________________________________________________________________*/
+
+/* .container{
+	max-width: 1170px;
+
+} */
+/* .row{
+	display: flex;
+	justify-content: space-around;
+
+} */
+
+ul{
+	list-style: none;
+	padding: 0px;
+}
+
+.footer-col h4 {
+	color: white;
+	font-family: 'copperplate';
+	font-size: 1rem;
+}
+
+.footer-col h4 ::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #0b0b0c;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	padding: 0.3rem 0.5rem;
+	background-color: rgb(0, 0, 0);
+	margin:0 10px 10px 0;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.paiement{
+	width: 100%;
+}
+
+.plan{
+    width: 100%;
+}
+
+/*responsive*/
+
+  @media(max-width: 991px){
+	.footer-col{
+	text-align: center;
+	/* border-top: 0.5px solid white; */
+  	}
+  
+  .footer-col h4 {
+	color: white;
+	font-family: 'copperplate';
+	font-size: 1.5rem;
+	}
+
+	.paiement{
+		width: 30%;
+	}
+	
+  .plan{
+	  width: 70%;
+  	}
+
+  .footer-col{
+	object-fit:cover;
+	font-variant: all-small-caps;
+
+	}
+  }
+
+
+
+
 
 
 
