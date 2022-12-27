@@ -4,26 +4,30 @@ include_once './partial/header.php';
 ?>
 
 <?php
-include_once './repository/MainRepository.php';
-$connect = new MainRepository;
-var_dump($connect->testFind());
-
-
+include_once './repository/UserRepository.php';
 include_once './models/User.php';
-$user = new User();
-$user->setFirstname($_POST['firstname']);
-$user->setLastname($_POST['lastname']);
-$user->setAddress($_POST['address']);
-$user->setEmail($_POST['email']);
-$user->setPhone($_POST['phone']);
-$user->setMedicalCertificat($_POST['medicalCertificat']);
-$user->setDob($_POST['dob']);
-$user->setPass($_POST['pass']);
-var_dump($user);
+
+$userRepo = new UserRepository();
+
+if(isset($_POST) && !empty($_POST)){
+    $newUser = new User();
+    $newUser->setFirstname($_POST['firstname']);
+    $newUser->setLastname($_POST['lastname']);
+    $newUser->setAddress($_POST['address']);
+    $newUser->setEmail($_POST['email']);
+    $newUser->setPhone($_POST['phone']);
+    $newUser->setMedicalCertificat($_POST['medicalCertificat']);
+    $newUser->setDob($_POST['dob']);
+    $newUser->setPass($_POST['pass']);
+
+    $userRepo->addUser($newUser);
+}
+
+var_dump($userRepo->findAll());
 ?>
 
 <div class="container">
-    <label style="color: white" class="mt-2" for="add-data">Choisissez du contenu à ajouter</label>
+    <label style="color: white" class="mt-2" for="add-data">Choisissez du contenu à ajouter sur votre site</label>
     <select class="form-select" name="add-data" id="">
         <option value="">Utilisateur</option>
         <option value="">Activité</option>

@@ -24,8 +24,9 @@ class User {
     /**
      * Set the value of id
      *
-     * @return  self
-     */ 
+     * @param int $id
+     * @return void
+     */
     public function setId(int $id):void
     {
         $this->id = $id;
@@ -42,8 +43,9 @@ class User {
     /**
      * Set the value of firstname
      *
-     * @return  self
-     */ 
+     * @param string $firstname
+     * @return void
+     */
     public function setFirstname(string $firstname):void
     {
         $this->firstname = $firstname;
@@ -60,8 +62,9 @@ class User {
     /**
      * Set the value of lastname
      *
-     * @return  self
-     */ 
+     * @param string $lastname
+     * @return void
+     */
     public function setLastname(string $lastname):void
     {
         $this->lastname = $lastname;
@@ -78,8 +81,9 @@ class User {
     /**
      * Set the value of address
      *
-     * @return  self
-     */ 
+     * @param string $address
+     * @return void
+     */
     public function setAddress(string $address):void
     {
         $this->address = $address;
@@ -96,8 +100,9 @@ class User {
     /**
      * Set the value of email
      *
-     * @return  self
-     */ 
+     * @param string $email
+     * @return void
+     */
     public function setEmail(string $email):void
     {
         $this->email = $email;
@@ -115,8 +120,9 @@ class User {
     /**
      * Set the value of phone
      *
-     * @return  self
-     */ 
+     * @param string $phone
+     * @return void
+     */
     public function setPhone(string $phone):void
     {
         $this->phone = $phone;
@@ -134,8 +140,9 @@ class User {
     /**
      * Set the value of medicalCertificat
      *
-     * @return  self
-     */ 
+     * @param string $medicalCertificat
+     * @return void
+     */
     public function setMedicalCertificat(string $medicalCertificat):void
     {
         $this->medicalCertificat = $medicalCertificat;
@@ -152,8 +159,9 @@ class User {
     /**
      * Set the value of dob
      *
-     * @return  self
-     */ 
+     * @param string $dob
+     * @return void
+     */
     public function setDob(string $dob):void
     {
         $this->dob = $dob;
@@ -171,8 +179,9 @@ class User {
     /**
      * Set the value of pass
      *
-     * @return  self
-     */ 
+     * @param string $pass
+     * @return void
+     */
     public function setPass(string $pass):void
     {
         $this->pass = $pass;
