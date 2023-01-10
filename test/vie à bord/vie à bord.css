@@ -2,7 +2,13 @@ body{
     background-color: black;
     color: aliceblue;
 }
-
+h2{
+    color: rgb(235, 174, 174);
+}
+.T{
+    
+     text-align: center;
+}
 .titre-center{
     text-align: center;
     font-family: "copperplate";
@@ -31,6 +37,7 @@ body{
     justify-content: center;
     gap: 4rem;
      width: 100%;
+     margin: auto;
 }
 
 
@@ -95,6 +102,9 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.poker-poker,.blacjack-BJ,.roulette-R,.litle-container-slot{
+margin: auto 0;
+}
 
 @media screen and (max-width: 862px) {
     
@@ -120,11 +130,17 @@ body{
      justify-content: center;
         
     }
-   .poker,.blackjack,.gambling{
-
-    
-    gap: none;
-   }
+    .poker p,.blackjack p,.gambling p,.slot-machine p{
+        width: 500px;
+        height: 200px;
+        border: 2px solid black;
+        overflow-y: hidden;
+         
+    }
+    .container_blackjack,.container_slot,.container_poker,.container_gambling{
+       gap:0;
+       margin-bottom: 3em;
+    }
 
 
     }
