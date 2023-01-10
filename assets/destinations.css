@@ -19,8 +19,7 @@
 }
 
 .card-img{
-    width: 30%;
-    padding: 2rem;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -219,7 +218,7 @@
     background-color: #ca4b38;
 }
 
-@media screen and (min-width:771px) and (max-width:1200px) {
+@media screen and (min-width:993px) and (max-width:1200px) {
 
     .gridCont{
         height: fit-content;
@@ -254,10 +253,9 @@
 
     .gridCont{
         height: fit-content;
-        grid-template: 40px 150px 350px 1fr 1fr 1fr 1fr / 1fr 1fr;
+        grid-template: 40px 150px 550px 1fr 1fr 1fr 1fr / 1fr 1fr;
     }
 
-    
     .gridCont .test-title{
         grid-area: 1/1/2/3;
         text-align: center;
@@ -266,8 +264,9 @@
 
     .gridCont .lune{
         grid-area: 2/1/4/3;
+        width: 70%;
+        margin: 0 auto;
     }
-
 
     .gridCont .test-info-vaisseaux{
         grid-area: 4/1/5/3;
@@ -290,7 +289,7 @@
         height: 50%;
     }
 
-    
+
     .gridCont .test-table-reservation table th{
         background-color: rgb(255, 255, 255);
         text-align: center;
@@ -306,7 +305,14 @@
         padding: 0.5rem ;
         font-family: 'copperplate';
     }
-    
-    
+
     
 }
+@media screen and (max-width:770px) {
+
+    .gridCont .lune{
+        width: 100%;
+    }
+
+}
+

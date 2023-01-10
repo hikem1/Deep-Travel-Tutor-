@@ -389,7 +389,7 @@ include './partial/header.php';
 </div> -->
 
 <div class="container gridCont" >
-    <div class="carousel slide lune" data-bs-ride="false">
+    <div id="carouselLune" class="carousel slide lune" data-bs-ride="false">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselLune" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselLune" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -397,21 +397,21 @@ include './partial/header.php';
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/assets/img/" class="" alt="...">
+                <img src="../assets/img/lune/ComputerHotline_-_Sud-lune_(by).jpg" class="card-img" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Distance Terre Lune</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="superlune.jpg" class="" alt="...">
+                <img src="../assets/img/lune/surface-lune-seismes.jpeg" class="card-img" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Durée du voyage</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="superlune.jpg" class="" alt="...">
+                <img src="" class="card-img" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Vaisseaux "Moya"</h5>
                     <p>Some representative placeholder content for the third slide.</p>
