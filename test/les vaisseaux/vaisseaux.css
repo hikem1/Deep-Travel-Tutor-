@@ -14,7 +14,18 @@ body {
 h2{
     display: flex;
     justify-content: center;
-    
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 3rem;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    background-color: blue;
 }
 .mercure{
     height: 200px;
@@ -63,17 +74,15 @@ h2{
   display: flex;
   justify-content: space-around;
 }
-.btn-lien-lune{
-   display: flex;
-   justify-items: flex-start;
+.btn-lien-lune {
+    display: flex;
+    float: left; 
 }
 .btn-lien2-lune{
     display: flex;
-    justify-items: flex-start;
- }
-
- 
-
+    float: left; 
+}
+   
 .container-mars{
     display: flex;
     flex-direction: column;
@@ -84,12 +93,12 @@ h2{
   justify-content: space-around;
 }
 .btn-lien-mars{
-   display: flex;
-   justify-items: flex-start;
+    display: flex;
+    float: left; 
 }
 .btn-lien2-mars{
     display: flex;
-    justify-items: flex-start;
+    float: left; 
  }
  
 .figure-vaisseau-mars{
@@ -121,12 +130,12 @@ h2{
   justify-content: space-around;
 }
 .btn-lien-venus{
-   display: flex;
-   justify-items: flex-start;
+    display: flex;
+    float: left; 
 }
 .btn-lien2-venus{
     display: flex;
-    justify-items: flex-start;
+    float: left;
  }
  
 .figure-vaisseau-venus{
@@ -158,12 +167,12 @@ h2{
   justify-content: space-around;
 }
 .btn-lien-mercure{
-   display: flex;
-   justify-items: flex-start;
+    display: flex;
+    float: left; 
 }
 .btn-lien2-mercure{
     display: flex;
-    justify-items: flex-start;
+    float: left; 
  }
  
 .figure-vaisseau-mercure{
@@ -188,6 +197,7 @@ h2{
     border: 5px solid yellow;
     background-image: url("lune.jpg");
     background-size: cover;
+    
 }
 .contourmars{
     border: 5px solid yellow;
@@ -204,7 +214,9 @@ h2{
     background-image: url("Mercure.jpg");
     background-size: cover;
 }
-
-p{
-    background-color: blue;
+button{
+    background-color: crimson;
+}
+a{
+    color: white;
 }
