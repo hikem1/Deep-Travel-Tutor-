@@ -124,7 +124,7 @@
 
 .container .card-container .back{
     position: absolute;
-    top:0; 
+    top:0;
     width: 370px;
     background:linear-gradient(45deg, rgb(169, 197, 10), rgb(136, 171, 9));
     border-radius: 5px;
