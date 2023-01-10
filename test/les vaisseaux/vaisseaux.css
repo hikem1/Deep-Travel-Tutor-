@@ -186,21 +186,21 @@ h2{
 }
 .contourlune{
     border: 5px solid yellow;
-    background-image: url("superlune.jpg");
+    background-image: url("lune.jpg");
     background-size: cover;
 }
 .contourmars{
     border: 5px solid yellow;
-    background-image: url("marsPrincipale.jpg");
+    background-image: url("mars.jpg");
     background-size: cover;
 }
 .contourvenus{
     border: 5px solid yellow;
-    background-image: url("VenusPrincipale.jpg");
+    background-image: url("Venus.jpg");
     background-size: cover;
 }
 .contourmercure{
     border: 5px solid yellow;
-    background-image: url("MercurePrincipale.jpg");
+    background-image: url("Mercure.jpg");
     background-size: cover;
 }
