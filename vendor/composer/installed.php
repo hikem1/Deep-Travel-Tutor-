@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'utilisateur/deep_travel_tutor',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '867094f8e268ac4d4328a08d668e6f451f235fb8',
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.27.0',
+            'version' => '1.27.0.0',
+            'reference' => '8ad114f6b39e2c98a8b0e3bd907732c207c2b534',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'symfony/var-dumper' => array(
+            'pretty_version' => 'v6.2.3',
+            'version' => '6.2.3.0',
+            'reference' => 'fdbadd4803bc3c96ef89238c9c9e2ebe424ec2e0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'utilisateur/deep_travel_tutor' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '867094f8e268ac4d4328a08d668e6f451f235fb8',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
