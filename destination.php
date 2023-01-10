@@ -397,21 +397,22 @@ include './partial/header.php';
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../assets/img/lune/ComputerHotline_-_Sud-lune_(by).jpg" class="card-img" alt="...">
+                <img src="./assets/img/lune/ComputerHotline_-_Sud-lune_(by).jpg" class="card-img" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Distance Terre Lune</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="../assets/img/lune/surface-lune-seismes.jpeg" class="card-img" alt="...">
+                <img src="./assets/img/lune/surface-lune-seismes.jpeg" class="card-img" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Durée du voyage</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="" class="card-img" alt="...">
+                <img src="./assets/img/lune/natural-moon-half-moon-night-preview.jpg" class="card-img" alt="...">
+                <img src="./assets/img/spaceships/moon-spaceship.png" class="card-img spaceship" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Vaisseaux "Moya"</h5>
                     <p>Some representative placeholder content for the third slide.</p>
