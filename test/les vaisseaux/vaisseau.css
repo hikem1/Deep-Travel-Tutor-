@@ -47,8 +47,8 @@ p{
     
 }
 .figure-vaisseau{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    position: relative;
 }
 .figure-vaisseau-bis{
     display: flex;
@@ -96,7 +96,7 @@ p{
 
 }
 img {
-    WIDTH: 31rem;
+    WIDTH: 25rem;
 }
 
 
