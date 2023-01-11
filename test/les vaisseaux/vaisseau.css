@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    color: aliceblue;
+}
+button{
+    background-color: crimson;
+}
+a{
+    color: white;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 3rem;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    background-color: blue;
+}
+.figures-vaisseaux{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* background-image: url("terre.png");
+      background-size: cover; */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.infos{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.time{
+    display: flex;
+    justify-content: end;
+    padding-right: 2em;
+}
+.figure-vaisseau{
+    display: flex;
+    justify-content: center;
+}
+.figure-vaisseau-bis{
+    display: flex;
+    justify-content: center;   
+}
+.container-2{
+    display: flex;
+    justify-content: space-around;
+}
+.détail-vaisseaux{
+    display: flex;
+    flex-direction:column;
+}
+.bar{
+    display: flex;
+    flex-direction:column; 
+}
+.btn-lien {
+    display: flex;
+    float: left; 
+}
+.btn-lien2{
+    display: flex;
+    float: left; 
+}
+.contour{
+    border: 5px solid yellow;
+    background-image: url("lune.jpg");
+    flex-direction: center;
+}
+.contour1{
+    border: 5px solid yellow;
+    background-image: url("mars.jpg");
+    flex-direction: center;
+}
+.contour2{
+    border: 5px solid yellow;
+    background-image: url("venus.jpg");
+    flex-direction: center;
+}
+.contour3{
+    border: 5px solid yellow;
+    background-image: url("Mercure.jpg");
+    flex-direction: center;
+}
+img {
+    WIDTH: 31rem;
+}
