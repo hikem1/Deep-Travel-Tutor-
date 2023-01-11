@@ -39,12 +39,12 @@ p{
 .infos{
     display: flex;
     justify-content: end;
-    padding: 2em;
+    
 }
 .time{
     display: flex;
     justify-content: end;
-    padding-right: 2em;
+    
 }
 .figure-vaisseau{
     display: flex;
