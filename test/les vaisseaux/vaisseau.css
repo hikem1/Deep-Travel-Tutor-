@@ -68,7 +68,7 @@ p{
 }
 .btn-lien {
     display: flex;
-    float: left; 
+    float: right; 
 }
 .btn-lien2{
     display: flex;
@@ -77,23 +77,28 @@ p{
 .contour{
     border: 5px solid yellow;
     background-image: url("lune.jpg");
-    flex-direction: center;
+    background-size: cover;
+    
 }
 .contour1{
     border: 5px solid yellow;
     background-image: url("mars.jpg");
-    flex-direction: center;
+
 }
 .contour2{
     border: 5px solid yellow;
     background-image: url("venus.jpg");
-    flex-direction: center;
+    
 }
 .contour3{
     border: 5px solid yellow;
     background-image: url("Mercure.jpg");
-    flex-direction: center;
+
 }
 img {
     WIDTH: 31rem;
 }
+
+
+
+
