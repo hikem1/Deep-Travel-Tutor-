@@ -1,130 +1,18 @@
-
-.card-destination{
-    width: 100%;
-    background-color: black;
-    display: flex;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-bottom: 0.5px solid white;
-    padding: 5rem 2rem;
+.h-65{
+    height: 65%;
 }
 
-.card-infos{
-    width: 70%;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem
+.top-40{
+    top: 40%;
 }
 
-.card-img{
-    width: 100%;
-    border-radius: 10px;
-    padding: 1rem;
-    position: absolute;
+.left-25{
+    left: 35%;
 }
 
-.spaceship{
-    object-fit: cover;
+.left-70{
+    left: -70%;
 }
-
-.carousel{
-    width: 100%;
-}
-
-.carousel .carousel-caption{
-    background-color: rgba(52, 52, 52, 0.832);
-    border-radius: 10px;
-    padding: 1rem;
-
-}
-
-.carousel .carousel-caption h5{
-    color: #f98d1a;
-    font-family: 'copperplate';
-}
-
-.carousel .carousel-inner{
-    height: 100%;
-    border-radius: 10px;
-    border: 1px solid rgb(47, 47, 47);
-
-}
-
-.carousel .carousel-item{
-    height: 100%;
-}
-
-.carousel .carousel-item img{
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-infos h2{
-    color: white;
-    font-family: "copperplate";
-    font-size: 4rem;
-    margin: 0;
-}
-
-.card-info-vaisseaux, .card-info-activities{
-    display: flex;
-}
-
-.card-infos p{
-    /* width: 45%; */
-    color: white;
-    margin: 1rem 1rem;
-}
-
-.card-infos .card-info-vaisseaux a, .card-info-activities a{
-    text-align: center;
-    align-self: center;
-    margin: 1rem 0;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: #384eca;
-    padding: 0.5rem 3rem;
-    border-radius: 10px;
-    font-family: 'copperplate';
-}
-
-.card-table-reservation table{
-    width: 100%;
-    background-color: #f0f2fe;
-    border-radius: 10px;
-    margin-top: 2rem;
-    padding: 0.5rem;
-    border-collapse: separate;
-}
-
-
-.card-table-reservation table th{
-    background-color: rgb(255, 255, 255);
-    height: 2.5rem;
-    text-align: center;
-    color: rgb(120, 118, 118);
-}
-
-.card-table-reservation table tbody tr th a{
-    align-self: center;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: #384eca;
-    padding: 0.5rem 3rem;
-    border-radius: 10px;
-    font-family: 'copperplate';
-}
-
-.card-table-reservation  .full{
-    background-color: #ca4b38;
-}
-
-
-
-
-
 
 
 .gridCont{
@@ -132,12 +20,81 @@
     display: grid;
     height: 1000px;
     grid-template: 1fr 3fr 3fr 1fr 1fr 1fr 1fr / 1fr 1fr;
-    gap: 1rem;;
-    padding: 3rem 1rem;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    margin-bottom: 5rem;
 }
 
-.gridCont .lune{
+.gridCont .carousel-left-side{
     grid-area: 1 / 1 / 8 / 2
+}
+
+.gridCont .carousel-right-side{
+    grid-area: 1 / 2 / 8 / 3
+}
+
+.gridCont .title-right{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.gridCont .title-left{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.gridCont .vaisseaux-right{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.gridCont .vaisseaux-left{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.gridCont .activities-right{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.gridCont .activities-left{
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.gridCont .table-reservation-right{
+    grid-area: 4 / 2 / 8 / 3;
+}
+
+.gridCont .table-reservation-left{
+    grid-area: 4 / 1 / 8 / 2;
+}
+
+.gridCont .carousel{
+    width: 100%;
+}
+
+.gridCont .carousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(47, 47, 47);
+}
+
+.gridCont .carousel .carousel-inner .carousel-item{
+    position: relative;
+    height: 100%;
+}
+
+.gridCont .carousel .carousel-inner .carousel-item .carousel-caption{
+    background-color: rgba(52, 52, 52, 0.832);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.gridCont .carousel .carousel-inner .carousel-item .carousel-caption h5{
+    color: #f98d1a;
+    font-family: 'copperplate';
+}
+
+.gridCont .info{
+    display: flex;
+    flex-direction: column;
 }
 
 .gridCont h2{
@@ -145,36 +102,16 @@
     font-family: "copperplate";
     font-size: 4rem;
     margin: 0;
+    text-align: center;
 }
 
 .gridCont p{
-    /* width: 45%; */
     color: white;
     margin: 1rem 1rem;
     text-align: justify;
 }
 
-.gridCont .test-title{
-    grid-area: 1/2/2/3;
-}
-
-.gridCont .test-info-vaisseaux{
-    display: flex;
-    flex-direction: column;
-    grid-area: 2/2/3/3;
-}
-
-.gridCont .test-info-activities{
-    display: flex;
-    flex-direction: column;
-    grid-area: 3/2/4/3;
-}
-
-.gridCont .test-table-reservation{
-    grid-area: 4/2/8/3;
-}
-
-.gridCont .test-table-reservation table{
+.gridCont table{
     width: 100%;
     height: 100%;
     background-color: #f0f2fe;
@@ -183,7 +120,7 @@
     border-collapse: separate;
 }
 
-.gridCont .test-info-vaisseaux a, .gridCont .test-info-activities a{
+.gridCont .info a{
     text-align: center;
     align-self: center;
     margin: 1rem 0;
@@ -195,22 +132,22 @@
     font-family: 'copperplate';
 }
 
-.gridCont .test-info-vaisseaux a{
+.gridCont .info .link-left{
     align-self: start;
 }
 
-.gridCont .test-info-activities a{
+.gridCont .info .link-right{
     align-self: end;
 }
 
-.gridCont .test-table-reservation table th{
+.gridCont table th{
     background-color: rgb(255, 255, 255);
     height: 2.5rem;
     text-align: center;
     color: rgb(120, 118, 118);
 }
 
-.gridCont .test-table-reservation table tbody tr th a{
+.gridCont table tbody tr th a{
     align-self: center;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -220,83 +157,94 @@
     font-family: 'copperplate';
 }
 
-.gridCont .test-table-reservation  .full{
+.gridCont table .full{
     background-color: #ca4b38;
 }
 
-@media screen and (min-width:993px) and (max-width:1200px) {
+@media screen and (min-width:992px) and (max-width:1200px) {
 
     .gridCont{
         height: fit-content;
         grid-template: 100px 350px 350px 1fr 1fr 1fr 1fr / 1fr 1fr;
     }
-    
-    .gridCont .test-title{
-        grid-area: 1/1/2/3;
-        text-align: center;
-    }
-    
-    .gridCont .lune{
-        grid-area: 2/1/4/2;
 
+    .gridCont .carousel-left-side{
+        grid-area: 2 / 1 / 4 / 2;
     }
 
-    .gridCont .test-info-vaisseaux{
-        grid-area: 2/2/5/3;
+    .gridCont .carousel-right-side{
+        grid-area: 2 / 2 / 4 / 3;
+    }
+
+    .gridCont .title{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .gridCont .vaisseaux-right{
+        grid-area: 2 / 2 / 5 / 3;
+    }
+
+    .gridCont .vaisseaux-left{
+        grid-area: 2 / 1 / 5 / 2;
+    }
+
+    .gridCont .activities-right{
+        grid-area: 3 / 2 / 6 / 3;
+    }
+
+    .gridCont .activities-left{
+        grid-area: 3 / 1 / 6 / 2;
     }
     
-    .gridCont .test-info-activities{
-        grid-area: 3/2/6/3;
+    .gridCont .table{
+        grid-area: 4 / 1 / 8 / 3;
     }
-    
-    .gridCont .test-table-reservation{
-        grid-area: 4/1/8/3;
-    }
-    
+
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:991px) {
 
     .gridCont{
         height: fit-content;
-        grid-template: 40px 150px 550px 1fr 1fr 1fr 1fr / 1fr 1fr;
+        grid-template: 40px 150px 550px 1fr 1fr 1fr / 1fr 1fr;
     }
 
-    .gridCont .test-title{
-        grid-area: 1/1/2/3;
-        text-align: center;
-        font-size: 2.5rem;
+    .gridCont .carousel{
+        grid-area: 2 / 1 / 4 / 3;
     }
 
-    .gridCont .lune{
-        grid-area: 2/1/4/3;
+    .gridCont .title{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .gridCont .vaisseaux{
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .gridCont .activities{
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+    .gridCont .table{
+        grid-area: 6 / 1 / 8 / 3;
+    }
+
+    .gridCont .carousel{
         width: 70%;
         margin: 0 auto;
     }
 
-    .gridCont .test-info-vaisseaux{
-        grid-area: 4/1/5/3;
+    .gridCont h2{
+        text-align: center;
+        font-size: 2.5rem;
     }
 
-    .gridCont .test-info-activities{
-        grid-area: 5/1/6/3;
-    }
-
-    .gridCont .test-table-reservation{
-        grid-area: 6/1/8/3;
-    }
-
-    .gridCont .test-info-vaisseaux a, .gridCont .test-info-activities a{
+    .gridCont .info a{
         text-align: center;
         align-self: center;
     }
 
-    .gridCont .test-table-reservation table{
-        height: 50%;
-    }
-
-
-    .gridCont .test-table-reservation table th{
+    .gridCont table th{
         background-color: rgb(255, 255, 255);
         text-align: center;
         height: 0.5rem;
@@ -304,7 +252,7 @@
         color: rgb(120, 118, 118);
     }
 
-    .gridCont .test-table-reservation table tbody tr th a{
+    .gridCont table tbody tr th a{
         color: rgb(255, 255, 255);
         text-decoration: none;
         background-color: #384eca;
@@ -312,11 +260,11 @@
         font-family: 'copperplate';
     }
 
-    
 }
-@media screen and (max-width:770px) {
 
-    .gridCont .lune{
+@media screen and (max-width:767px) {
+
+    .gridCont .carousel{
         width: 100%;
     }
 
