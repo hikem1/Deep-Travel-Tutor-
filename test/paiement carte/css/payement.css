@@ -10,14 +10,13 @@
 }
 
 .container{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-image: url("../image/comete.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    padding-bottom: 60px;
+    flex-direction: column;
+    height: 100VH;
 }
 
 .container form{
@@ -25,7 +24,6 @@
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(252, 243, 243, 0.1);
     padding: 20px;
-    width: 600px;
     padding-top: 160px;
 }
 
@@ -37,6 +35,7 @@
     display: block;
     color:#999;
     padding-bottom: 5px;
+    font-size: 0.7rem;
 }
 
 .container form .inputBox input,
@@ -75,16 +74,13 @@
 }
 
 .container .card-container{
-    margin-bottom: -150px;
-    position: relative;
-    height: 250px;
-    width: 400px;
+    margin-bottom: -150px; 
+    /* position: relative; */
+   
 }
 
 .container .card-container .front{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 370px;
     top: 0; left: 0;
     background:linear-gradient(45deg, rgb(186, 177, 17), rgb(159, 167, 10));
     border-radius: 5px;
@@ -107,8 +103,7 @@
 }
 
 .container .card-container .front .card-number-box{
-    padding:30px 0;
-    font-size: 22px;
+    font-size: 15px;
     color:#fff;
 }
 
@@ -127,14 +122,13 @@
 
 .container .card-container .back{
     position: absolute;
-    top:0; left: 0;
-    height: 100%;
-    width: 100%;
+    top:0;
+    width: 370px;
     background:linear-gradient(45deg, rgb(169, 197, 10), rgb(136, 171, 9));
     border-radius: 5px;
     padding: 20px 0;
     text-align: right;
-    backface-visibility: hidden;
+    backface-visibility:hidden;
     box-shadow: 0 15px 25px rgba(251, 245, 245, 0.2);
     transform:perspective(1000px) rotateY(180deg);
     transition:transform .4s ease-out;
@@ -143,7 +137,6 @@
 .container .card-container .back .stripe{
     background: #000;
     width: 100%;
-    margin: 10px 0;
     height: 50px;
 }
 
@@ -170,18 +163,22 @@
     margin-top: 30px;
     height: 30px;
 }
+span{
+    font-size: 15px;
+    color: #fff;
+}
 
-@media screen and (min-width : 670px){
+@media screen and (max-width : 520px){
     .container{
-        min-height: 50vh;
         background-image: url("../image/comete.jpg");
         background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-flow: column;
-        padding-bottom: 30px;
     }
     
 }
+
+
 
