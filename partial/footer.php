@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="border-top border-dark">
         <div class="container mt-5">
             <div class="row">
                 <div class="footer-col col-md-6 col-lg-2 py-3">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-3 bg-dark">
+        <div class="mt-3 bg-black border-top border-dark">
             <p class="copyright-footer fw-bold text-center text-white p-2 m-0">©Copyright Deep Travel 2022</p>
         </div>
     </footer>

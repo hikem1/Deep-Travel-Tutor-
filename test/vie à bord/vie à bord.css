@@ -2,48 +2,28 @@ body{
     background-color: black;
     color: aliceblue;
 }
-
+h2{
+    color: rgb(235, 174, 174);
+}
+.T{
+    
+     text-align: center;
+}
 .titre-center{
     text-align: center;
     font-family: "copperplate";
 }
 
-.slot-machine p{
+
+.poker p,.blackjack p,.gambling p,.slot-machine p{
     width: 500px;
     height: 200px;
     border: 2px solid black;
-    overflow: scroll;
+    overflow-y: auto;
     
 }
-.poker p{
-    width: 500px;
-    height: 200px;
-    border: 2px solid black;
-    overflow: scroll;
-    
-}
-.slot-machine p{
-    width: 500px;
-    height: 200px;
-    border: 2px solid black;
-    overflow: scroll;
-    
-}
-.blackjack p{
-    width: 500px;
-    height: 200px;
-    border: 2px solid black;
-    overflow: scroll;
-    
-}
-.gambling p{
-    width: 500px;
-    height: 200px;
-    border: 2px solid black;
-    overflow: scroll;
-    
-}
-.container_poker{
+
+.container_poker,.container_gambling{
      display: flex;
      flex-direction: row;
      justify-content: center;
@@ -51,30 +31,116 @@ body{
      width: 100%;
 
 }
-.container_blackjack{
+.container_blackjack,.container_slot{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 4rem;
      width: 100%;
+     margin: auto;
 }
 
-.container_slot{
-    display: flex;
-    flex-direction:row-reverse;
-    justify-content: center;
-    gap: 4em;
-     width: 100%;
-}
 
-.container_gambling{
-    display: flex;
-    justify-content: center;
-    gap: 4em;
-     width: 100%;
+.border-wellness{
+    height: 300px;
+    width: 100%;
+    border-top: 2px solid rgb(230, 85, 177);
+    margin-top: 4em;
+   
 }
-
 .wellness-center{
     display: flex;
     gap: 1em;
 }
+.wellness-area p{
+    display: flex;
+    justify-content: center;
+}
+.border-food{
+    height: 500px;
+    width: 100%;
+    border-top: 2px solid rgb(230, 85, 177);
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.Block-food p,.liste,.sommeil,.Cours-astro-extra{
+    display: flex;
+    justify-content: center;
+}
+
+.container-food{
+
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    height: 300px;
+    width: 100%;
+    border-bottom: 2px solid rgb(170, 202, 244);
+    margin-bottom: 3em;
+}
+.border-sommeil{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.capsule-S{
+    justify-content: center;
+    text-align: center;
+}
+.sortie-et-cours{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    height: 400px;
+}
+
+
+.sortie-and-telescope{
+    display: flex;
+    justify-content: space-around;
+}
+.poker-poker,.blacjack-BJ,.roulette-R,.litle-container-slot{
+margin: auto 0;
+}
+
+@media screen and (max-width: 862px) {
+    
+    .container_slot,.container_gambling,.container_blackjack,.container_poker{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+
+    .litle-container-slot,.poker-poker,.blacjack-BJ,.roulette-R{
+        /* height: 200px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       
+    }
+    .slot-machine,.poker,.blackjack,.gambling{
+        
+     /* height: 200px; */
+     width: 100%;
+     display: flex;
+     justify-content: center;
+        
+    }
+    .poker p,.blackjack p,.gambling p,.slot-machine p{
+        width: 500px;
+        height: 200px;
+        border: 2px solid black;
+        overflow-y: hidden;
+         
+    }
+    .container_blackjack,.container_slot,.container_poker,.container_gambling{
+       gap:0;
+       margin-bottom: 3em;
+    }
+
+
+    }
