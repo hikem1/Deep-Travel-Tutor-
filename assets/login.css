@@ -192,9 +192,13 @@ form {
     color: #384eca;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 650px) {
     .title h1 {
         font-size: 2.6rem;
+    }
+
+    .form-cont{
+        width: 80%;
     }
 
     .login-wrap,
