@@ -23,6 +23,7 @@ body{
 
 .links{
     transition-duration: 0.2s;
+    color: white;
 }
 
 .links:hover{
@@ -173,65 +174,6 @@ header nav a{
 header nav a:hover{
     border-bottom: 0.5px solid #ffffff58;
     color: white;
-
-}
-
-header #icons-login-language{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    color: white;
-}
-
-header #icons-login-language i{
-    cursor: pointer;
-}
-
-header #icons-login-language #dropdown-language{
-    flex-direction: column;
-    position: absolute;
-    gap: 2rem;
-    padding: 1rem 1rem;
-    background-color: #000000;
-    top: 80px;
-    right: 1.9rem;
-    /* border:1px solid #4b4b4b; */
-    border-radius: 5px;
-}
-
-header #icons-login-language #dropdown-language img{
-    width: 1.5rem;
-    cursor: pointer;
-}
-
-header #icons-login-language #dropdown-login{
-    flex-direction: column;
-    position: absolute;
-    background-color: #000000;
-    padding: 1rem 0;;
-    top: 70px;
-    right: 6rem;
-    /* border: 1px solid #4b4b4b; */
-    border-radius: 5px;
-}
-
-header #icons-login-language #dropdown-login .dropdown-link{
-    font-family: "copperplate";
-    color: white;
-    padding: 0 2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center
-}
-
-header #icons-login-language #dropdown-login .dropdown-link a{
-    font-family: "copperplate";
-    color: white;
-    padding: 1rem 0.5rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
 
 }
 

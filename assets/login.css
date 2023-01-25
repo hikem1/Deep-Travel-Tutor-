@@ -3,25 +3,25 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'copperplate', sans-serif;
 }
 
-body {
-    display: flex;
+.cont {
     width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('comete.jpg');
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/comete.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 
-.container {
+.form-cont {
     position: relative;
+    width: 600px;
     height: 600px;
     flex-basis: 390px;
+    margin: auto;
 }
 
 .login-wrap,
@@ -40,7 +40,7 @@ body {
     transition: all 0.4s ease;
 }
 
-.active {
+.active-input {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -53,6 +53,8 @@ body {
     color: #fff;
     font-size: 2.8rem;
     text-align: center;
+    font-family: 'copperplate', sans-serif;
+
 }
 
 .title h1::before {
@@ -63,7 +65,7 @@ body {
     transform: translateX(-50%);
     height: 0.8rem;
     width: 7rem;
-    background: #55aadb;
+    background: #384eca;
     border-radius: 1rem;
     clip-path: polygon(0 0, 0% 100%, 100% 0);
 }
@@ -133,7 +135,7 @@ form {
 }
 
 .forgot-pass a:hover {
-    color: skyblue;
+    color: #384eca;
 }
 
 .button-area {
@@ -143,7 +145,7 @@ form {
     place-items: center;
 }
 
-button {
+.button-area button {
     width: 8rem;
     height: 3rem;
     border: none;
@@ -152,12 +154,14 @@ button {
     font-size: 1.4rem;
     cursor: pointer;
     border: 2px solid transparent;
-    border-radius: 2rem;
-    background: steelblue;
+    border-radius: 10px;
+    background: #384eca;
     transition: all 0.3s ease;
+    font-family: 'copperplate', sans-serif;
+
 }
 
-button:hover {
+.button-area button:hover {
     width: 50%;
     letter-spacing: 2px;
     background: transparent;
@@ -177,6 +181,7 @@ button:hover {
 }
 
 .form-toggle-area p span {
+    font-size: 1.5rem;
     color: #eff;
     cursor: pointer;
     text-decoration: none;
@@ -184,7 +189,7 @@ button:hover {
 }
 
 .form-toggle-area p span:hover {
-    color: skyblue;
+    color: #384eca;
 }
 
 @media screen and (max-width: 360px) {

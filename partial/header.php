@@ -15,7 +15,8 @@
         <link rel="stylesheet" href="/assets/footer.css">
         <link rel="stylesheet" href="/assets/acceuil.css">
         <link rel="stylesheet" href="/assets/destinations.css">
-        
+        <link rel="stylesheet" href="/assets/login.css">
+
         <script src="/ressources/js/header.js" defer></script>
         <script src="/ressources/js/three_deep_travel_project/three.js" type="module" defer></script>
         <script src="/ressources/js/acceuilThreeJs.js" type="module" defer></script>
@@ -43,34 +44,9 @@
 
                 <div>
                     <div class="sidenav-link">
-                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a id="drop-link-login">Compte</a>
-                    </div>
-
-                    <div id="dropdown-log" class="dropdown">
-                        <div class="dropdown-link d-flex">
-                            <i class="fa-solid fa-circle fa-2xs"></i><a class="" href="connexion.php">Connexion</a>
-                        </div>
-                        <div class="dropdown-link d-flex">
-                            <i class="fa-solid fa-circle fa-2xs"></i><a class="" href="connexion.php">Mon compte</a>
-                        </div>
+                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a href="login.php" id="drop-link-login">Connexion</a>
                     </div>
                 </div>
-
-                <div>
-                    <div class="sidenav-link">
-                        <i id="i-langue" class="fa fa-chevron-right" aria-hidden="true"></i><a id="drop-link-langue" class="">Langue</a>
-                    </div>
-
-                    <div id="dropdown-langue" class="dropdown">
-                        <div class="dropdown-link d-flex">
-                            <img class="" src="/assets/img/france.png" alt=""></img><a class="" href="">Français</a>
-                        </div>
-                        <div class="dropdown-link d-flex">
-                            <img class="" src="/assets/img/united-kingdom.png" alt=""><a class="" href="">English</a>
-                        </div>
-                    </div>
-                </div>
-
             </nav>
         </div>
 
@@ -85,22 +61,9 @@
                 <a href="vieAbord.php">Vie à bord</a>
                 <a href="information.php">Informations</a>
             </nav>
-            <div id="icons-login-language">
+            <div id="icons-login">
                 <div>
-                    <i id="login-icon" class="fa-solid fa-user-astronaut fa-xl links"></i>
-                    <div id="dropdown-login" class="d-none">
-                        <div class="dropdown-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="connexion.php">Connexion</a>
-                        </div>
-                        <div class="dropdown-link links"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="connexion.php">Mon Compte</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <i id="langue-icon" class="fa-solid fa-earth-oceania fa-xl links"></i>
-                    <div id="dropdown-language" class="d-none">
-                        <img class="links" src="/assets/img/france.png" alt=""></img>
-                        <img class="links" src="/assets/img/united-kingdom.png" alt=""></img>
-                    </div>
+                    <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl links"></i></a>
                 </div>
             </div>
             <div id="icon-burger">

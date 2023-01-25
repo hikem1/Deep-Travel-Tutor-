@@ -6,8 +6,18 @@ include_once './partial/header.php';
 <?php
 include_once './repository/UserRepository.php';
 include_once './models/User.php';
-
+include_once './repository/SpaceShipRepository.php';
+include_once './models/SpaceShip.php';
+include_once './repository/DestinationRepository.php';
+include_once './models/Destination.php';
 $userRepo = new UserRepository();
+var_dump($userRepo->findAll());
+
+$spaceShipRepo = new SpaceShipRepository();
+var_dump($spaceShipRepo->findAll());
+
+$destinationRepo = new DestinationRepository();
+var_dump($destinationRepo->findAll());
 
 if(isset($_POST) && !empty($_POST)){
     $newUser = new User();
@@ -23,7 +33,7 @@ if(isset($_POST) && !empty($_POST)){
     $userRepo->addUser($newUser);
 }
 
-var_dump($userRepo->findAll());
+
 ?>
 
 <div class="container">
@@ -76,7 +86,7 @@ var_dump($userRepo->findAll());
         <div class="mt-2">
             <input class="success"type="submit" value="Valider">
         </div>
-</form>
+    </form>
 
 </div>
 

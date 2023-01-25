@@ -8,7 +8,7 @@ class User {
     private string $address;
     private string $email;
     private string $phone;
-    private string $medicalCertificat;
+    private ?string $medicalCertificat = null;
     private string $dob;
     protected string $pass;
 
