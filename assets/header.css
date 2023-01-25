@@ -35,21 +35,22 @@ body{
 
 .sidenav {
     width: 0; 
-    position: absolute; 
+    position: fixed;
     z-index: 3; 
-    overflow-x: hidden; 
-    transition: 0.5s; 
-
+    transition: 0.5s;
+    height: 100%;
+    overflow: hidden;
 }
 
-  .sidenav #header-sidenav{
+.sidenav #header-sidenav{
+    z-index: 1;
     height: 93px;
     padding: 0 3.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.267); 
+    background-color: rgba(0, 0, 0);
     border-bottom: 0.5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
@@ -64,12 +65,13 @@ body{
 }
 
 .sidenav nav{
+
     display: flex;
     flex-direction: column;
     padding: 2rem;
     gap: 3rem;
     background-color: #000000fb;
-    height: 100vh;
+    height: 100%;
     border-bottom: 1px solid #2c2c2c;
 
 }
@@ -153,7 +155,7 @@ header nav{
     display: flex;
 }
 
-header .logo{
+header .logo, .sidenav .logo{
     width: 10rem;
     object-fit: contain;
     cursor: pointer;
@@ -169,6 +171,10 @@ header nav a{
     align-items: center;
     transition-duration: 0.5s;
     cursor: pointer;
+}
+
+header #icon-login{
+    margin: auto 0;
 }
 
 header nav a:hover{
@@ -198,7 +204,7 @@ header #icon-burger{
         display: none;
     }
 
-    header #icons-login-language{
+    header #icon-login{
         padding: 1rem;
         width: 2rem;
         object-fit: contain;

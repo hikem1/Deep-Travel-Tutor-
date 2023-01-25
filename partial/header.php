@@ -28,6 +28,7 @@
 
         <div id="mySidenav" class="sidenav">
             <div id="header-sidenav">
+                <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
                 <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
@@ -61,7 +62,7 @@
                 <a href="vieAbord.php">Vie à bord</a>
                 <a href="information.php">Informations</a>
             </nav>
-            <div id="icons-login">
+            <div id="icon-login">
                 <div>
                     <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl links"></i></a>
                 </div>
