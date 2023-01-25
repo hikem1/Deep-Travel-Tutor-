@@ -82,6 +82,7 @@ p{
     border: 5px solid yellow;
     background-image: url("lune.jpg");
     background-size: cover;
+    display: block;
     
     
 }
@@ -100,6 +101,7 @@ p{
     border: 5px solid yellow;
     background-image: url("Mercure.jpg");
     background-size: cover;
+
 
 }
 img {
