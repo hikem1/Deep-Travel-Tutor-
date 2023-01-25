@@ -6,13 +6,13 @@ let signupToggleBtn = document.querySelector('#toggle-signup');
 let loginToggleBtn = document.querySelector('#toggle-login');
 
 signupToggleBtn.onclick = () => {
-    loginForm.classList.remove('active');
-    signupForm.classList.add('active');
+    loginForm.classList.remove('active-input');
+    signupForm.classList.add('active-input');
     title.textContent = 'Signup form';
 }
 
 loginToggleBtn.onclick = () => {
-    signupForm.classList.remove('active');
-    loginForm.classList.add('active');
+    signupForm.classList.remove('active-input');
+    loginForm.classList.add('active-input');
     title.textContent = 'Login form';
 }

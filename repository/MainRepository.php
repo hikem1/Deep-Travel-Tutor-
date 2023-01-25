@@ -21,8 +21,8 @@ abstract class MainRepository{
      */
     public function findAll():array{
         $query = $this->pdo->query('SELECT * FROM ' . $this->toLowerCaseClassName);
-        $users = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
-        return $users;
+        $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
+        return $data;
     }
 
 

@@ -8,15 +8,15 @@ class DestinationRepository extends MainRepository
         parent::__construct(Destination::class);
     }
 
-    public function addDestination(Destination $user):Destination {
+    public function addDestination(Destination $destination):Destination {
         $query = $this->pdo->prepare('INSERT INTO destination VALUE(null, ?, ?, ?, ?, ?)');
-        $query->bindValue(1, $user->getName());
-        $query->bindValue(2, $user->getDistance());
-        $query->bindValue(3, $user->getDescription());
-        $query->bindValue(4, $user->getTripDuration());
-        $query->bindValue(5, $user->getUnitPrice());
+        $query->bindValue(1, $destination->getName());
+        $query->bindValue(2, $destination->getDistance());
+        $query->bindValue(3, $destination->getDescription());
+        $query->bindValue(4, $destination->getTripDuration());
+        $query->bindValue(5, $destination->getUnitPrice());
         $query->execute();
-        $user->setId($this->pdo->lastInsertId());
-        return $user;
+        $destination->setId($this->pdo->lastInsertId());
+        return $destination;
     }
 }

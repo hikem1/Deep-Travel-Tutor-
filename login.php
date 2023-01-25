@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link href="http://fonts.cdnfonts.com/css/copperplate" rel="stylesheet">
-    <title>Login Form</title>
-</head>
 
 <body>
-    <div class="container">
+<?php
+include_once './partial/header.php';
+?>
+<div class="cont">
+    <div class="form-cont mt-5">
         <!-- login form -->
-        <div class="login-wrap active">
+        <div class="login-wrap active-input">
             <div class="title">
                 <h1>Login</h1>
             </div>
@@ -76,7 +70,11 @@
         </div>
     </div>
 
-    <script src="login.js"></script>
-</body>
+    <script src="ressources/js/login.js"></script>
+</div>
 
+</body>
+<?php
+include_once './partial/footer.php';
+?>
 </html>
