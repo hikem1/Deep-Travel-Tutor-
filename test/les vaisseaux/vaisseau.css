@@ -7,7 +7,7 @@ button{
     padding: 16px;
     margin: 10%;
 }
-}
+
 a{
     color: white;
 }
@@ -26,6 +26,7 @@ p{
     font-style: italic;
     font-weight: bold;
     background-color: #11111359;
+    padding: 9px;
 }
 .figures-vaisseaux{
     display: flex;
@@ -82,20 +83,23 @@ p{
     background-image: url("lune.jpg");
     background-size: cover;
     
+    
 }
 .contour1{
     border: 5px solid yellow;
     background-image: url("mars.jpg");
+    background-size: cover;
 
 }
 .contour2{
     border: 5px solid yellow;
     background-image: url("venus.jpg");
-    
+    background-size: cover;
 }
 .contour3{
     border: 5px solid yellow;
     background-image: url("Mercure.jpg");
+    background-size: cover;
 
 }
 img {
