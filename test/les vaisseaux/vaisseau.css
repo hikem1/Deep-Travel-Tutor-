@@ -81,6 +81,7 @@ p{
 .contour{
     border: 5px solid yellow;
     background-image: url("lune.jpg");
+    background-size: cover;
 }
 .contour1{
     border: 5px solid yellow;
@@ -95,17 +96,50 @@ p{
     border: 5px solid yellow;
     background-image: url("Mercure.jpg");
 }
-img {
-    WIDTH: 25rem;
+.moya{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.arcadia{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.Serenity{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.Avalon{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
 }
 
-@media (max-width: 991px){
-    img {
-    WIDTH: 21rem;
-    display: flex;
-}
+@media (max-width: 370px){
 .infos {
     display: flex;
     justify-content: center;
+}
+.moya{
+    width: 19rem;
+}
+.arcadia{
+    width: 19rem;
+}
+.Serenity{
+    width: 19rem;
+}
+.Avalon{
+    width: 19rem;
+}
+img{
+    WIDTH: 100%;
+    height: 100%;
 }
 }
