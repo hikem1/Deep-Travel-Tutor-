@@ -81,28 +81,19 @@ p{
 .contour{
     border: 5px solid yellow;
     background-image: url("lune.jpg");
-    background-size: cover;
-    display: block;
-    
-    
 }
 .contour1{
     border: 5px solid yellow;
     background-image: url("mars.jpg");
-    background-size: cover;
 
 }
 .contour2{
     border: 5px solid yellow;
     background-image: url("venus.jpg");
-    background-size: cover;
 }
 .contour3{
     border: 5px solid yellow;
     background-image: url("Mercure.jpg");
-    background-size: cover;
-
-
 }
 img {
     WIDTH: 25rem;
