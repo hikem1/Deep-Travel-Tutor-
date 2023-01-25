@@ -1,6 +1,5 @@
 
 
-<body>
 <?php
 include_once './partial/header.php';
 ?>
@@ -73,7 +72,6 @@ include_once './partial/header.php';
     <script src="ressources/js/login.js"></script>
 </div>
 
-</body>
 <?php
 include_once './partial/footer.php';
 ?>

@@ -2,7 +2,7 @@
 include './partial/header.php';
 ?>
 <section id="planet-view">
-    <div id="info" >
+    <div id="info">
         <div class="left-side">
             <i id='homeIcon' class="fa-solid fa-house fa-2xl"></i>
         </div>
