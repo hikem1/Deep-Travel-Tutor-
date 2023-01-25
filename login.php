@@ -1,6 +1,5 @@
-
-
 <?php
+$page = 'login';
 include_once './partial/header.php';
 var_dump($_POST)
 ?>

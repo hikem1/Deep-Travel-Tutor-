@@ -1,5 +1,6 @@
 <?php 
 include_once './models/User.php';
+include_once './models/Destination.php';
 abstract class MainRepository{
 
     protected PDO $pdo;
@@ -19,8 +20,17 @@ abstract class MainRepository{
     /**
      * @return array
      */
-    public function findAll():array{
+    public function findAll(): array{
         $query = $this->pdo->query('SELECT * FROM ' . $this->toLowerCaseClassName);
+        $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
+        return $data;
+    }
+
+    public function findByName(string $name): array{
+        $query = $this->pdo->prepare('SELECT * FROM ' . $this->toLowerCaseClassName .' WHERE name LIKE :name');
+        $like = '%'.$name.'%';
+        $query->bindParam(':name', $like);
+        $query->execute();
         $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
         return $data;
     }

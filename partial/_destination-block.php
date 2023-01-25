@@ -1,23 +1,30 @@
+<?php
+require_once './models/Destination.php';
+require_once './repository/DestinationRepository.php';
+$destinationRepo = new DestinationRepository();
+$destination = $destinationRepo->findByName($_GET['destination']);
+
+?>
 <div class="container gridCont" >
-    <div id="<?= $destinations[$i]->getName()?>" class="carousel slide <?= ($i%2 == 1) ? 'carousel-right-side' : 'carousel-left-side'?>" data-bs-ride="false">
+    <div id="<?= $destination[0]->getName()?>" class="carousel slide <?= ($destination[0]->getId()%2 == 1) ? 'carousel-right-side' : 'carousel-left-side'?>" data-bs-ride="false">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#<?= $destinations[$i]->getName()?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#<?= $destinations[$i]->getName()?>" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#<?= $destinations[$i]->getName()?>" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#<?= $destination[0]->getName()?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#<?= $destination[0]->getName()?>" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#<?= $destination[0]->getName()?>" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="./assets/img/lune/ComputerHotline_-_Sud-lune_(by).jpg" class="position-absolute h-65" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Distance Terre <?= $destinations[$i]->getName()?></h5>
-                    <p class="text-center"><?= $destinations[$i]->getDistance()?> km</p>
+                    <h5>Distance Terre <?= $destination[0]->getName()?></h5>
+                    <p class="text-center"><?= $destination[0]->getDistance()?> km</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="./assets/img/lune/surface-lune-seismes.jpeg" class="position-absolute h-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Durée du voyage</h5>
-                    <p class="text-center"><?= $destinations[$i]->getTripDuration()?> ms</p>
+                    <p class="text-center"><?= $destination[0]->getTripDuration()?> ms</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -29,25 +36,25 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#<?= $destinations[$i]->getName()?>" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#<?= $destination[0]->getName()?>" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#<?= $destinations[$i]->getName()?>" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#<?= $destination[0]->getName()?>" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <h2 class="title <?= ($i%2 == 1) ? 'title-left' : 'title-right'?>">" <?= $destinations[$i]->getName()?> "</h2>
-    <div class="info vaisseaux <?= ($i%2 == 1) ? 'vaisseaux-left' : 'vaisseaux-right'?>">
+    <h2 class="title <?= ($destination[0]->getId()%2 == 1) ? 'title-left' : 'title-right'?>">" <?= $destination[0]->getName()?> "</h2>
+    <div class="info vaisseaux <?= ($destination[0]->getId()%2 == 1) ? 'vaisseaux-left' : 'vaisseaux-right'?>">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestias sequi ducimus enim exercitationem corporis ratione corrupti aliquid obcaecati, minima, rerum sed voluptatibus atque voluptatum nesciunt labore assumenda iste officia ipsum! Nobis non officia illo, ex voluptatibus rem cum reprehenderit aliquid, impedit consectetur magni veniam architecto sint laboriosam iure assumenda.</p>
         <a class="link-left" href="#">Le vaisseaux</a>
     </div>
-    <div class="info activities <?= ($i%2 == 1) ? 'activities-left' : 'activities-right'?>">
+    <div class="info activities <?= ($destination[0]->getId()%2 == 1) ? 'activities-left' : 'activities-right'?>">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestias sequi ducimus enim exercitationem corporis ratione corrupti aliquid obcaecati, minima, rerum sed voluptatibus atque voluptatum nesciunt labore assumenda iste officia ipsum! Nobis non officia illo, ex voluptatibus rem cum reprehenderit aliquid, impedit consectetur magni veniam architecto sint laboriosam iure assumenda.</p>
         <a class="link-right" href="#">Les activités</a>
     </div>
-    <div class="table <?= ($i%2 == 1) ? 'table-reservation-left' : 'table-reservation-right'?>">
+    <div class="table <?= ($destination[0]->getId()%2 == 1) ? 'table-reservation-left' : 'table-reservation-right'?>">
         <table>
             <thead>
                 <tr>
@@ -61,7 +68,7 @@
                 <tr>
                     <th>24/12/2022</th>
                     <th>0</th>
-                    <th><?= $destinations[$i]->getUnitPrice()?> €</th>
+                    <th><?= $destination[0]->getUnitPrice()?> €</th>
                     <th><a class="full" href="#">Complet</a></th>
                 </tr>
                 <tr>

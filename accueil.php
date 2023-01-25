@@ -1,4 +1,5 @@
-<?php 
+<?php
+$page = 'acceuil';
 include './partial/header.php';
 ?>
 <section id="planet-view">

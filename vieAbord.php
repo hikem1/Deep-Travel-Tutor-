@@ -1,4 +1,5 @@
 <?php
+$page = 'vieABord';
 include_once './partial/header.php';
 var_dump($_POST)
 ?>
