@@ -44,6 +44,7 @@ include './partial/header.php';
         </div>
     </div>
 </section>
-<?php 
+<?php
+
 include './partial/footer.php';
 ?>

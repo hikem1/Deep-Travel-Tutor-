@@ -3,7 +3,7 @@ include_once './models/User.php';
 abstract class MainRepository{
 
     protected PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deeptravelspace';
+    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
     private string $username = 'root';
     private string $pass = '';
     protected string $className;
