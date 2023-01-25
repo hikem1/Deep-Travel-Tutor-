@@ -3,7 +3,9 @@
 <body>
 <?php
 include_once './partial/header.php';
+var_dump($_POST)
 ?>
+
 <div class="cont">
     <div class="form-cont mt-5">
         <!-- login form -->
@@ -12,15 +14,16 @@ include_once './partial/header.php';
                 <h1>Login</h1>
             </div>
 
-            <form action="#">
+            <form method="post" action="#">
                 <div class="input-area">
-                    <input type="email" id="email" autocomplete="off" required>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
                     <label for="email">Email</label>
                 </div>
 
                 <div class="input-area">
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
+                    
                 </div>
 
                 <div class="forgot-pass">
@@ -38,24 +41,26 @@ include_once './partial/header.php';
         </div>
 
         <!-- signup form -->
+
         <div class="signup-wrap">
             <div class="title">
                 <h1>Signup</h1>
             </div>
 
-            <form action="#">
+            <form method="post" action="#">
                 <div class="input-area">
-                    <input type="text" id="name" autocomplete="off" required>
+                    <input type="text" id="name" name="name" autocomplete="off" required>
                     <label for="name">Name</label>
+                    
                 </div>
 
                 <div class="input-area">
-                    <input type="email" id="email" autocomplete="off" required>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
                     <label for="email">Email</label>
                 </div>
 
                 <div class="input-area">
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
                 </div>
 
@@ -73,8 +78,6 @@ include_once './partial/header.php';
     <script src="ressources/js/login.js"></script>
 </div>
 
-</body>
 <?php
 include_once './partial/footer.php';
 ?>
-</html>

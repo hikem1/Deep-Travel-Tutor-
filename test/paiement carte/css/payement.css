@@ -89,6 +89,7 @@
     padding:20px;
     transform:perspective(1000px) rotateY(0deg);
     transition:transform .4s ease-out;
+    margin-top: 45px;
 }
 
 .container .card-container .front .image{
