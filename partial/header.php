@@ -14,24 +14,13 @@
         <link rel="stylesheet" href="/assets/header.css">
         <script src="/ressources/js/header.js" defer></script>
         <link rel="stylesheet" href="/assets/footer.css">
+        <?='<link rel="stylesheet" href="/assets/'.$page.'.css">'?>
 
-        <?php
-            if($page === 'acceuil'){?>
-                <link rel="stylesheet" href="/assets/acceuil.css">
+        <?php if($page === 'acceuil'){?>
                 <script src="/ressources/js/three_deep_travel_project/three.js" type="module" defer></script>
                 <script src="/ressources/js/acceuilThreeJs.js" type="module" defer></script>
-        <?php
-            }elseif ($page === 'destination'){?>
-                <link rel="stylesheet" href="/assets/destinations.css">
-        <?php
-            }elseif ($page === 'login'){?>
-                <link rel="stylesheet" href="/assets/login.css">
-        <?php
-            }elseif ($page === 'order'){?>
-                <link rel="stylesheet" href="/assets/payement.css">
-        <?php
-            }
-        ?>
+        <?php }?>
+
         <title>Deep Travel</title>
     </head>
     <body>
@@ -46,7 +35,17 @@
             <nav id="sidenav-links">
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="accueil.php">Acceuil</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="destination.php">Destinations</a>
+                <div class="">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <a class="menu-link" id="dropdownMenuButtonNav" data-bs-toggle="dropdown" ">Destinations</a>
+                    <div id="dropdown-sideNav" class="d-none">
+                        <ul class="bg-black p-3" aria-labelledby="dropdownMenuButtonNav">
+                            <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
+                            <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
+                            <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
+                            <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="lesVaisseaux.php">Nos vaisseaux</a>
                 </div>
@@ -69,13 +68,13 @@
             <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
             <nav>
                 <a class="menu-link" href="accueil.php" >Acceuil</a>
-                <a class="menu-link" href="destination.php" id="dropdownMenuButton1" data-bs-toggle="dropdown" ">Destinations</a>
+                <a class="menu-link" id="dropdownMenuButton1" data-bs-toggle="dropdown" ">Destinations</a>
                 <div class="dropdown">
                     <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
-                        <li class="p-2"><a class="text-white" href="destination.php?destination=lune">Lune</a></li>
-                        <li class="p-2"><a class="text-white" href="destination.php?destination=venus">Venus</a></li>
-                        <li class="p-2"><a class="text-white" href="destination.php?destination=mars">Mars</a></li>
-                        <li class="p-2"><a class="text-white" href="destination.php?destination=mercure">Mercure</a></li>
+                        <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
+                        <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
+                        <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
+                        <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
                     </ul>
                 </div>
                 <a class="menu-link" href="lesVaisseaux.php">Nos vaisseaux</a>

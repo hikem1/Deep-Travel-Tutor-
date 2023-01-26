@@ -26,12 +26,12 @@ abstract class MainRepository{
         return $data;
     }
 
-    public function findByName(string $name): array{
+    public function findByName(string $name): mixed{
         $query = $this->pdo->prepare('SELECT * FROM ' . $this->toLowerCaseClassName .' WHERE name LIKE :name');
         $like = '%'.$name.'%';
         $query->bindParam(':name', $like);
         $query->execute();
-        $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
+        $data = $query->fetchObject($this->className);
         return $data;
     }
 

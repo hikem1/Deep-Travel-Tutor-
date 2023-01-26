@@ -108,21 +108,16 @@ body{
     transition-duration: 0.2s;
 }
 
+.sidenav nav a{
+    font-family: 'copperplate';
+    text-decoration: none;
+    color: white;
+}
+
 .sidenav nav a:hover{
-    font-size: 1.2rem;
-}
+     font-size: 1.2rem;
+ }
 
-.sidenav nav .dropdown{
-    height: 0px;
-    width: 100%;
-    transition: 0.3s;
-    overflow-x: hidden; 
-    overflow-y: hidden; 
-}
-
-.sidenav nav #i-login, #i-langue{
-    transition-duration: 0.3s;
-}
 
 .sidenav nav .dropdown-link a{
     font-size: 0.7rem;
