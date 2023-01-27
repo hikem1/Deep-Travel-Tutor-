@@ -1,7 +1,44 @@
 <?php
-$page = 'login';
+session_start();
+$message = '';
+
+if(isset($_POST)){
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+
+        $login = $_POST['email'];
+        $password = $_POST['password'];
+
+        require_once './models/User.php';
+        require_once './repository/UserRepository.php';
+        $userRepo = new UserRepository();
+        $usersObject = $userRepo->findAll('user');
+
+        foreach($usersObject as $user){
+
+            if($user->getEmail() === $login && password_verify($password,$user->getPass())){
+                $_SESSION['login'] = $login;
+                $_SESSION['password'] = $user->getPass();
+                $_SESSION['role'] = $user->getRole();
+                $message = 'vous etes connecté';
+                header('location: accueil.php');
+
+
+            } else {
+
+                $message = 'utilisateur ou password inconnu';
+
+            }
+
+        }
+    }
+    else {
+        $message = 'post est vide ou pas totalement renseigné';
+    }
+}
+
+$page ='login';
 include_once './partial/header.php';
-var_dump($_POST)
 ?>
 
 <div class="cont">
@@ -12,9 +49,9 @@ var_dump($_POST)
                 <h1>Login</h1>
             </div>
 
-            <form method="post" action="#">
+            <form method="post" action="">
                 <div class="input-area">
-                    <input type="email" id="email" name="email" autocomplete="off" required>
+                    <input type="email" id="email" name="email" autocomplete="on" required>
                     <label for="email">Email</label>
                 </div>
 

@@ -1,5 +1,6 @@
 <?php
-$page = 'acceuil';
+session_start();
+$page = 'accueil';
 include './partial/header.php';
 ?>
 <section id="planet-view">

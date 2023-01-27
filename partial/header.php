@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_SESSION) && !empty($_SESSION)){
+    $isAuthenticated = true;
+    $login = $_SESSION['login'];
+    $role = $_SESSION['role'];
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -15,12 +23,10 @@
         <script src="/ressources/js/header.js" defer></script>
         <link rel="stylesheet" href="/assets/footer.css">
         <?='<link rel="stylesheet" href="/assets/'.$page.'.css">'?>
-
-        <?php if($page === 'acceuil'){?>
+        <?php if($page === 'accueil'){?>
                 <script src="/ressources/js/three_deep_travel_project/three.js" type="module" defer></script>
                 <script src="/ressources/js/acceuilThreeJs.js" type="module" defer></script>
         <?php }?>
-
         <title>Deep Travel</title>
     </head>
     <body>
@@ -33,6 +39,31 @@
                 <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x icon" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle p-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon me-3"></i><span><?= isset($login) ? $login : '' ?></span>
+                    </button>
+                    <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
+                        <?php
+                        if(isset($isAuthenticated) && $isAuthenticated){?>
+                            <li class="p-2"><a class="text-white links" href="#">Mon Compte</a></li>
+                            <li class="p-2"><a class="text-white links" href="logout.php">Déconnexion</a></li>
+                        <?php }else{?>
+                            <li class="p-2"><a class="text-white links" href="login.php">Connexion</a></li>
+                        <?php }?>
+                        <?php
+                        if(isset($isAuthenticated) && $isAuthenticated && isset($role) && $role === 'ROLE_ADMIN'){?>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
+                            <li class="p-2"><a class="text-white links" href="#">Users</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
+                        <?php }?>
+                    </ul>
+                </div>
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="accueil.php">Acceuil</a>
                 </div>
                 <div class="">
@@ -54,11 +85,6 @@
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="information.php">Informations</a>
                 </div>
 
-                <div>
-                    <div class="sidenav-link">
-                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="login.php" id="drop-link-login">Connexion</a>
-                    </div>
-                </div>
             </nav>
         </div>
 
@@ -82,8 +108,33 @@
                 <a class="menu-link" href="information.php">Informations</a>
             </nav>
             <div id="icon-login">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle p-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon me-3"></i><span><?= isset($login) ? $login : '' ?></span>
+                    </button>
+                    <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
+                        <?php
+                            if(isset($isAuthenticated) && $isAuthenticated){?>
+                                <li class="p-2"><a class="text-white links" href="#">Mon Compte</a></li>
+                                <li class="p-2"><a class="text-white links" href="logout.php">Déconnexion</a></li>
+                            <?php }else{?>
+                                <li class="p-2"><a class="text-white links" href="login.php">Connexion</a></li>
+                            <?php }?>
+                        <?php
+                            if(isset($isAuthenticated) && $isAuthenticated && isset($role) && $role === 'ROLE_ADMIN'){?>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
+                                <li class="p-2"><a class="text-white links" href="#">Users</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
+                        <?php }?>
+                    </ul>
+                </div>
                 <div>
-                    <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon"></i></a>
+
                 </div>
             </div>
             <div id="icon-burger">
