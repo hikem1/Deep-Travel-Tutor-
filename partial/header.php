@@ -29,34 +29,34 @@
 
         <div id="mySidenav" class="sidenav">
             <div id="header-sidenav">
-                <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
-                <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x" aria-hidden="true"></i>
+                <a href="accueil.php"><img class="logo" src="/assets/img/logoDetoureComp.png" alt=""></a>
+                <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x icon" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="accueil.php">Acceuil</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="accueil.php">Acceuil</a>
                 </div>
                 <div class="">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    <a class="menu-link" id="dropdownMenuButtonNav" data-bs-toggle="dropdown" ">Destinations</a>
+                    <a class="menu-link links" id="dropdownMenuButtonNav" data-bs-toggle="dropdown" ">Destinations</a>
                     <div id="dropdown-sideNav" class="d-none">
                         <ul class="bg-black p-3" aria-labelledby="dropdownMenuButtonNav">
-                            <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
-                            <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
-                            <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
-                            <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
+                            <li class="p-2"><a class="text-white links" href="lune.php">Lune</a></li>
+                            <li class="p-2"><a class="text-white links" href="venus.php">Venus</a></li>
+                            <li class="p-2"><a class="text-white links" href="mars.php">Mars</a></li>
+                            <li class="p-2"><a class="text-white links" href="mercure.php">Mercure</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="lesVaisseaux.php">Nos vaisseaux</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="lesVaisseaux.php">Nos vaisseaux</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="vieAbord.php">Vie à bord</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="vieAbord.php">Vie à bord</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="information.php">Informations</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="information.php">Informations</a>
                 </div>
 
                 <div>
                     <div class="sidenav-link">
-                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a href="login.php" id="drop-link-login">Connexion</a>
+                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="login.php" id="drop-link-login">Connexion</a>
                     </div>
                 </div>
             </nav>
@@ -65,16 +65,16 @@
 <!-- ______________________________________________________header_____________________________________________________ -->
 
         <header>
-            <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
+            <a href="accueil.php"><img class="logo icon" src="/assets/img/logoDetoureComp.png" alt=""></a>
             <nav>
                 <a class="menu-link" href="accueil.php" >Acceuil</a>
                 <a class="menu-link" id="dropdownMenuButton1" data-bs-toggle="dropdown" ">Destinations</a>
                 <div class="dropdown">
                     <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
-                        <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
-                        <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
-                        <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
-                        <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
+                        <li class="p-2"><a class="text-white links" href="lune.php">Lune</a></li>
+                        <li class="p-2"><a class="text-white links" href="venus.php">Venus</a></li>
+                        <li class="p-2"><a class="text-white links" href="mars.php">Mars</a></li>
+                        <li class="p-2"><a class="text-white links" href="mercure.php">Mercure</a></li>
                     </ul>
                 </div>
                 <a class="menu-link" href="lesVaisseaux.php">Nos vaisseaux</a>
@@ -83,11 +83,11 @@
             </nav>
             <div id="icon-login">
                 <div>
-                    <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl links"></i></a>
+                    <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon"></i></a>
                 </div>
             </div>
             <div id="icon-burger">
-                <i id="btn-burger" class="fa fa-bars fa-2x links" aria-hidden="true"></i>
+                <i id="btn-burger" class="fa fa-bars fa-2x icon" aria-hidden="true"></i>
             </div>
         </header>
 
