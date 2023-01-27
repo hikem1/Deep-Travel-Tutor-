@@ -11,6 +11,23 @@ class User {
     private ?string $medicalCertificat = null;
     private string $dob;
     protected string $pass;
+    private string $role;
+
+    /**
+     * @return string
+     */
+    public function getRole(): string
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param string $role
+     */
+    public function setRole(string $role): void
+    {
+        $this->role = $role;
+    }
 
 
     /**

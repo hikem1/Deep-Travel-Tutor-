@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_SESSION) && !empty($_SESSION)){
+    $isAuthenticated = true;
+    $login = $_SESSION['login'];
+    $role = $_SESSION['role'];
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -15,12 +23,10 @@
         <script src="/ressources/js/header.js" defer></script>
         <link rel="stylesheet" href="/assets/footer.css">
         <?='<link rel="stylesheet" href="/assets/'.$page.'.css">'?>
-
-        <?php if($page === 'acceuil'){?>
+        <?php if($page === 'accueil'){?>
                 <script src="/ressources/js/three_deep_travel_project/three.js" type="module" defer></script>
                 <script src="/ressources/js/acceuilThreeJs.js" type="module" defer></script>
         <?php }?>
-
         <title>Deep Travel</title>
     </head>
     <body>
@@ -29,52 +35,72 @@
 
         <div id="mySidenav" class="sidenav">
             <div id="header-sidenav">
-                <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
-                <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x" aria-hidden="true"></i>
+                <a href="accueil.php"><img class="logo" src="/assets/img/logoDetoureComp.png" alt=""></a>
+                <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x icon" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="accueil.php">Acceuil</a>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle p-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon me-3"></i><span><?= isset($login) ? $login : '' ?></span>
+                    </button>
+                    <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
+                        <?php
+                        if(isset($isAuthenticated) && $isAuthenticated){?>
+                            <li class="p-2"><a class="text-white links" href="#">Mon Compte</a></li>
+                            <li class="p-2"><a class="text-white links" href="logout.php">Déconnexion</a></li>
+                        <?php }else{?>
+                            <li class="p-2"><a class="text-white links" href="login.php">Connexion</a></li>
+                        <?php }?>
+                        <?php
+                        if(isset($isAuthenticated) && $isAuthenticated && isset($role) && $role === 'ROLE_ADMIN'){?>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
+                            <li class="p-2"><a class="text-white links" href="#">Users</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
+                            <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
+                        <?php }?>
+                    </ul>
+                </div>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="accueil.php">Acceuil</a>
                 </div>
                 <div class="">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    <a class="menu-link" id="dropdownMenuButtonNav" data-bs-toggle="dropdown" ">Destinations</a>
+                    <a class="menu-link links" id="dropdownMenuButtonNav" data-bs-toggle="dropdown" ">Destinations</a>
                     <div id="dropdown-sideNav" class="d-none">
                         <ul class="bg-black p-3" aria-labelledby="dropdownMenuButtonNav">
-                            <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
-                            <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
-                            <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
-                            <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
+                            <li class="p-2"><a class="text-white links" href="lune.php">Lune</a></li>
+                            <li class="p-2"><a class="text-white links" href="venus.php">Venus</a></li>
+                            <li class="p-2"><a class="text-white links" href="mars.php">Mars</a></li>
+                            <li class="p-2"><a class="text-white links" href="mercure.php">Mercure</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="lesVaisseaux.php">Nos vaisseaux</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="lesVaisseaux.php">Nos vaisseaux</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="vieAbord.php">Vie à bord</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="vieAbord.php">Vie à bord</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a href="information.php">Informations</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="information.php">Informations</a>
                 </div>
 
-                <div>
-                    <div class="sidenav-link">
-                        <i id="i-login" class="fa fa-chevron-right" aria-hidden="true"></i><a href="login.php" id="drop-link-login">Connexion</a>
-                    </div>
-                </div>
             </nav>
         </div>
 
 <!-- ______________________________________________________header_____________________________________________________ -->
 
         <header>
-            <img class="logo links" src="/assets/img/logoDetoureComp.png" alt="">
+            <a href="accueil.php"><img class="logo icon" src="/assets/img/logoDetoureComp.png" alt=""></a>
             <nav>
                 <a class="menu-link" href="accueil.php" >Acceuil</a>
                 <a class="menu-link" id="dropdownMenuButton1" data-bs-toggle="dropdown" ">Destinations</a>
                 <div class="dropdown">
                     <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
-                        <li class="p-2"><a class="text-white" href="lune.php">Lune</a></li>
-                        <li class="p-2"><a class="text-white" href="venus.php">Venus</a></li>
-                        <li class="p-2"><a class="text-white" href="mars.php">Mars</a></li>
-                        <li class="p-2"><a class="text-white" href="mercure.php">Mercure</a></li>
+                        <li class="p-2"><a class="text-white links" href="lune.php">Lune</a></li>
+                        <li class="p-2"><a class="text-white links" href="venus.php">Venus</a></li>
+                        <li class="p-2"><a class="text-white links" href="mars.php">Mars</a></li>
+                        <li class="p-2"><a class="text-white links" href="mercure.php">Mercure</a></li>
                     </ul>
                 </div>
                 <a class="menu-link" href="lesVaisseaux.php">Nos vaisseaux</a>
@@ -82,12 +108,37 @@
                 <a class="menu-link" href="information.php">Informations</a>
             </nav>
             <div id="icon-login">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle p-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i id="login-icon" class="fa-solid fa-user-astronaut fa-xl icon me-3"></i><span><?= isset($login) ? $login : '' ?></span>
+                    </button>
+                    <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">
+                        <?php
+                            if(isset($isAuthenticated) && $isAuthenticated){?>
+                                <li class="p-2"><a class="text-white links" href="#">Mon Compte</a></li>
+                                <li class="p-2"><a class="text-white links" href="logout.php">Déconnexion</a></li>
+                            <?php }else{?>
+                                <li class="p-2"><a class="text-white links" href="login.php">Connexion</a></li>
+                            <?php }?>
+                        <?php
+                            if(isset($isAuthenticated) && $isAuthenticated && isset($role) && $role === 'ROLE_ADMIN'){?>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
+                                <li class="p-2"><a class="text-white links" href="#">Users</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
+                                <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
+                        <?php }?>
+                    </ul>
+                </div>
                 <div>
-                    <a href="login.php"><i id="login-icon" class="fa-solid fa-user-astronaut fa-xl links"></i></a>
+
                 </div>
             </div>
             <div id="icon-burger">
-                <i id="btn-burger" class="fa fa-bars fa-2x links" aria-hidden="true"></i>
+                <i id="btn-burger" class="fa fa-bars fa-2x icon" aria-hidden="true"></i>
             </div>
         </header>
 
