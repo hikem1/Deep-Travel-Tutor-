@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e6283b-ada5-4a36-a5d4-b90d1c2422ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/vie à bord.css" beforeDir="false" afterPath="$PROJECT_DIR$/vie à bord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barlune.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/barmars.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/barmercure.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/barvenus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blacjkack.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capsule.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casinomachinesous.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hamman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/piscine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roulette.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sortie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spa1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/telescope.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vie à bord.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Utilisateur/Documents/projetdeeptravel/Deep_Travel_Tutor/test/vie à bord",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Utilisateur/Documents/projetdeeptravel/Deep_Travel_Tutor/test/vie à bord&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674809996908</updated>
       <workItem from="1674809998044" duration="315000" />
+      <workItem from="1674831179672" duration="10000" />
     </task>
     <servers />
   </component>
