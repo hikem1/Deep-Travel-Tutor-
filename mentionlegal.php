@@ -1,5 +1,4 @@
 <?php
-$page = 'order';
 include_once './partial/header.php';
 var_dump($_POST)
 ?>
