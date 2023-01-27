@@ -12,7 +12,8 @@ const headerLogo = document.querySelector('header img');
 const btnBurger = document.querySelector('#btn-burger');
 const mySidenav = document.querySelector('#mySidenav');
 const closeBtn = document.querySelector('#close-btn');
-const iLogin = document.querySelector('#icon-login');
+const destinationSidenavLink = document.querySelector('#dropdownMenuButtonNav');
+const destinationSidenavDropdown = document.querySelector('#dropdown-sideNav');
 
 // ____________________________________________________________________________ functions
 
@@ -67,6 +68,12 @@ headerNavA.forEach(element => {
     });
 
 });
+
+destinationSidenavLink.addEventListener('click', ()=> {
+
+    destinationSidenavDropdown.classList.toggle('d-none')
+
+})
 
 btnBurger.addEventListener('click', () => {
 
