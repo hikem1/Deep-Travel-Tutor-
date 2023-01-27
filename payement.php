@@ -50,7 +50,7 @@ var_dump($_POST)
         <div class="flexbox">
             <div class="inputBox">
                 <span>expiration</span>
-                <select name="months" id="#" class="month-input">
+                <select name="months" id="months" class="month-input">
                     <option value="month" selected disabled>mois</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -68,7 +68,7 @@ var_dump($_POST)
             </div>
             <div class="inputBox">
                 <span>expiration </span>
-                <select name="years" id="#" class="year-input">
+                <select name="years" id="years" class="year-input">
                     <option value="year" selected disabled>annees</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
