@@ -1,10 +1,3 @@
-
-<?php
-$page = 'order';
-include_once './partial/header.php';
-var_dump($_POST)
-?>
-
 <div class="container">
 
     <div class="card-container">

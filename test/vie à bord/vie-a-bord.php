@@ -51,7 +51,7 @@ include_once './partial/header.php';
       </p>
     </div>
     <div class="litle-container-slot">
-      <img src="assets/img/vie-a-bord/casinomachinesous.jpg" alt="machine à sous" class="image_slot_machine" />
+      <img src="../../assets/img/vie-a-bord/casinomachinesous.jpg" alt="machine à sous" class="image_slot_machine" />
     </div>
   </div>
 
@@ -79,7 +79,7 @@ include_once './partial/header.php';
         </p>
       </div>
       <div class="poker-poker">
-        <img src="assets/img/vie-a-bord/poker.jpg" alt="poker" class="image_poker" />
+        <img src="../../assets/img/vie-a-bord/poker.jpg" alt="poker" class="image_poker" />
       </div>
     </div>
 
@@ -105,7 +105,7 @@ include_once './partial/header.php';
         </p>
       </div>
       <div class="blacjack-BJ">
-        <img src="assets/img/vie-a-bord/blacjkack.jpg" class="image_blackjack" />
+        <img src="../../assets/img/vie-a-bord/blacjkack.jpg" class="image_blackjack" />
       </div>
     </div>
 
@@ -133,7 +133,7 @@ include_once './partial/header.php';
         </p>
       </div>
       <div class="roulette-R">
-        <img src="assets/img/vie-a-bord/roulette.jpg" class="image_gambling" />
+        <img src="../../assets/img/vie-a-bord/roulette.jpg" class="image_gambling" />
       </div>
     </div>
   </div>
@@ -155,18 +155,18 @@ include_once './partial/header.php';
     <div class="wellness-center">
       <div class="swim-spa">
         <div>
-          <img src="assets/img/vie-a-bord/piscine.jpg" width="100%" height="100%" />
+          <img src="../../assets/img/vie-a-bord/piscine.jpg" width="100%" height="100%" />
         </div>
         <div>
-          <img src="assets/img/vie-a-bord/spa.jpg" width="100%" height="100%" />
+          <img src="../../assets/img/vie-a-bord/spa.jpg" width="100%" height="100%" />
         </div>
       </div>
       <div class="spa1-hammam">
         <div>
-          <img src="assets/img/vie-a-bord/spa1.jpg" width="100%" height="100%" />
+          <img src="../../assets/img/vie-a-bord/spa1.jpg" width="100%" height="100%" />
         </div>
         <div>
-          <img src="assets/img/vie-a-bord/hamman.jpg" width="100%" height="100%" />
+          <img src="../../assets/img/vie-a-bord/hamman.jpg" width="100%" height="100%" />
         </div>
       </div>
     </div>
@@ -197,22 +197,22 @@ include_once './partial/header.php';
 
     <div class="container-food">
       <div>
-        <img src="assets/img/vie-a-bord/barlune.jpg" width="100%" height="150px" />
+        <img src="../../assets/img/vie-a-bord/barlune.jpg" width="100%" height="150px" />
         <p>le bar/restaurant du vaisseau moya</p>
       </div>
 
       <div>
-        <img src="assets/img/vie-a-bord/barmars.jpg" width="100%" height="150px" />
+        <img src="../../assets/img/vie-a-bord/barmars.jpg" width="100%" height="150px" />
         <p>le bar/restaurant du vaisseau arcadia</p>
       </div>
 
       <div>
-        <img src="assets/img/vie-a-bord/barmercure.jpg" width="100%" height="150px" />
+        <img src="../../assets/img/vie-a-bord/barmercure.jpg" width="100%" height="150px" />
         <p>le bar/restaurant du vaisseau avalon</p>
       </div>
 
       <div>
-        <img src="assets/img/vie-a-bord/barvenus.jpg" width="100%" height="150px" />
+        <img src="../../assets/img/vie-a-bord/barvenus.jpg" width="100%" height="150px" />
         <p>le bar/restaurant du vaisseau serenity</p>
       </div>
     </div>
@@ -229,7 +229,7 @@ include_once './partial/header.php';
       On vous propose un sommeil artificiel pour la durée du voyage.
     </p>
     <div class="capsule-S">
-      <img src="assets/img/vie-a-bord/capsule.jpg" />
+      <img src="../../assets/img/vie-a-bord/capsule.jpg" />
       <p>
         Vous serez réveillé pour la visite de la planète et vous restaurer
       </p>
@@ -251,10 +251,10 @@ include_once './partial/header.php';
     </p>
     <div class="sortie-and-telescope">
       <div>
-        <img src="assets/img/vie-a-bord/sortie.jpg" />
+        <img src="../../assets/img/vie-a-bord/sortie.jpg" />
       </div>
       <div>
-        <img src="assets/img/vie-a-bord/telescope.jpg" />
+        <img src="../../assets/img/vie-a-bord/telescope.jpg" />
       </div>
     </div>
   </div>

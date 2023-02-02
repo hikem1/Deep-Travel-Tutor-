@@ -24,13 +24,24 @@ body{
 .links{
     transition-duration: 0.2s;
     color: white;
+    font-family: 'copperplate';
+    text-decoration: none;
 }
 
 .links:hover{
     transform: scale(1.07, 1.07);
+    color: white;
 }
 
+.icon{
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
 
+.icon:hover{
+    transform: scale(1.07, 1.07);
+}
 /* ____________________________________________________________________________ sidenav */
 
 .sidenav {
@@ -54,18 +65,9 @@ body{
     border-bottom: 0.5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
-
-}
-
-.sidenav #header-sidenav #close-btn{
-    color: white;
-    cursor: pointer;
-    opacity: 0;
-    transition: 0; 
 }
 
 .sidenav nav{
-
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -73,30 +75,17 @@ body{
     background-color: #000000fb;
     height: 100%;
     border-bottom: 1px solid #2c2c2c;
+}
 
+.sidenav nav i{
+    color: white;
 }
 
 .sidenav nav .sidenav-link{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
     white-space: nowrap;
-}
-
-.sidenav nav .dropdown-link{
-    padding-top: 1.5rem;
-    padding-left: 2rem;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    font-style: italic;
-    white-space: nowrap;
-}
-
-.sidenav nav .dropdown-link img{
-    width: 0.5rem;
-    cursor: pointer;
 }
 
 .sidenav nav .menu-link{
@@ -105,32 +94,7 @@ body{
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    transition-duration: 0.2s;
 }
-
-.sidenav nav a{
-    font-family: 'copperplate';
-    text-decoration: none;
-    color: white;
-}
-
-.sidenav nav a:hover{
-     font-size: 1.2rem;
- }
-
-
-.sidenav nav .dropdown-link a{
-    font-size: 0.7rem;
-    transition-duration: 0.2s;
-}
-
-.sidenav nav .dropdown-link a:hover{
-    font-size: 0.8rem;
-}
-
-
-
-
 
 
 /* ____________________________________________________________________________ header */
