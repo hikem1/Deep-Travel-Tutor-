@@ -69,12 +69,12 @@ body{
     /* height: 500px;
     width: 100%; */
     display: flex;
-<<<<<<<< HEAD:assets/vie-a-bord.css
+
     flex-direction: row;
     margin-left: 2em;
-========
+
     /* flex-direction: row; */
->>>>>>>> main:assets/vie à bord.css
+
     
     gap: 1em;
 }
@@ -183,38 +183,38 @@ margin: auto 0;
        gap:0;
        margin-bottom: 3em;
     }
- .wellness-center{
-    display: flex;
-<<<<<<<< HEAD:assets/vie-a-bord.css
-    flex-wrap: wrap;
-   
-    
-========
-    /* flex-direction: column; */
->>>>>>>> main:assets/vie à bord.css
-    
+ .wellness-center {
+     display: flex;
+
+     flex-wrap: wrap;
+
  }
+
+    /* flex-direction: column; */
+
+    
+
  /* .swim-spa,.spa1-hammam{
     display: flex;
     justify-content: center;
-<<<<<<<< HEAD:assets/vie-a-bord.css
+
  } */
-========
+
     flex-direction: column;
  }
->>>>>>>> main:assets/vie à bord.css
+
  
 .container-food{
     display: flex;
     flex-wrap: wrap;
 }
 
-    }
 
 
-<<<<<<<< HEAD:assets/vie-a-bord.css
+
+
     
-========
+
     /* @media screen and (max-width: 702px){
      
         .swim-spa,.spa1-hammam{
@@ -225,4 +225,3 @@ margin: auto 0;
        
 
     } */
->>>>>>>> main:assets/vie à bord.css
