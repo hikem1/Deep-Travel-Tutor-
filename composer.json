@@ -1,15 +1,14 @@
 {
-    "name": "utilisateur/deep_travel_tutor",
-    "type": "project",
+    "name": "hikem/deep_travel_tutor",
     "autoload": {
         "psr-4": {
-            "DeepTravelTutor\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "salmon",
-            "email": "jimtisswood@hotmail.fr"
+            "name": "Fabien Rouchon",
+            "email": "hikem1@hotmail.fr"
         }
     ],
     "require-dev": {

@@ -1,0 +1,2 @@
+INSERT INTO `session` (`id`, `destination_id`, `spaceship_id`, `date`) VALUE (NULL, '1', '1', '2023-04-12 17:39:08')
+INSERT INTO `activity` (`id`, `name`, `age_limit_access`, `unit_price`) VALUE (NULL, 'casino', '18', '220')

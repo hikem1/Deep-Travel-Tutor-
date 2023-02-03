@@ -1,6 +1,7 @@
-<?php 
-
-class User {
+<?php
+namespace App\models;
+class User
+{
 
     private int $id;
     private string $firstname;
@@ -9,22 +10,48 @@ class User {
     private string $email;
     private string $phone;
     private ?string $medicalCertificat = null;
-    private string $dob;
-    protected string $pass;
-    private string $role;
+    private ?string $dob;
+    protected ?string $pass;
+    private ?string $role;
 
     /**
-     * @return string
+     * @var Order[] $orders
      */
-    public function getRole(): string
+    private array $orders = [];
+
+    public function __construct()
+    {
+    }
+
+    /**
+     * @return array
+     */
+    public function getOrders(): array
+    {
+        return $this->orders;
+    }
+
+    /**
+     * @param array $orders
+     */
+    public function setOrders(array $orders): void
+    {
+        $this->orders = $orders;
+    }
+
+
+    /**
+     * @return string|null
+     */
+    public function getRole(): string|null
     {
         return $this->role;
     }
 
     /**
-     * @param string $role
+     * @param string|null $role
      */
-    public function setRole(string $role): void
+    public function setRole(string|null $role): void
     {
         $this->role = $role;
     }
@@ -32,8 +59,8 @@ class User {
 
     /**
      * Get the value of id
-     */ 
-    public function getId():int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
@@ -44,15 +71,15 @@ class User {
      * @param int $id
      * @return void
      */
-    public function setId(int $id):void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
 
     /**
      * Get the value of firstname
-     */ 
-    public function getFirstname():string
+     */
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
@@ -63,15 +90,15 @@ class User {
      * @param string $firstname
      * @return void
      */
-    public function setFirstname(string $firstname):void
+    public function setFirstname(string $firstname): void
     {
         $this->firstname = $firstname;
     }
 
     /**
      * Get the value of lastname
-     */ 
-    public function getLastname():string
+     */
+    public function getLastname(): string
     {
         return $this->lastname;
     }
@@ -82,15 +109,15 @@ class User {
      * @param string $lastname
      * @return void
      */
-    public function setLastname(string $lastname):void
+    public function setLastname(string $lastname): void
     {
         $this->lastname = $lastname;
     }
 
     /**
      * Get the value of address
-     */ 
-    public function getAddress():string
+     */
+    public function getAddress(): string
     {
         return $this->address;
     }
@@ -101,15 +128,15 @@ class User {
      * @param string $address
      * @return void
      */
-    public function setAddress(string $address):void
+    public function setAddress(string $address): void
     {
         $this->address = $address;
     }
 
     /**
      * Get the value of email
-     */ 
-    public function getEmail():string
+     */
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -120,7 +147,7 @@ class User {
      * @param string $email
      * @return void
      */
-    public function setEmail(string $email):void
+    public function setEmail(string $email): void
     {
         $this->email = $email;
 
@@ -128,8 +155,8 @@ class User {
 
     /**
      * Get the value of phone
-     */ 
-    public function getPhone():string
+     */
+    public function getPhone(): string
     {
         return $this->phone;
     }
@@ -140,7 +167,7 @@ class User {
      * @param string $phone
      * @return void
      */
-    public function setPhone(string $phone):void
+    public function setPhone(string $phone): void
     {
         $this->phone = $phone;
 
@@ -148,8 +175,8 @@ class User {
 
     /**
      * Get the value of medicalCertificat
-     */ 
-    public function getMedicalCertificat():string
+     */
+    public function getMedicalCertificat(): string|null
     {
         return $this->medicalCertificat;
     }
@@ -157,18 +184,18 @@ class User {
     /**
      * Set the value of medicalCertificat
      *
-     * @param string $medicalCertificat
+     * @param string|null $medicalCertificat
      * @return void
      */
-    public function setMedicalCertificat(string $medicalCertificat):void
+    public function setMedicalCertificat(string|null $medicalCertificat): void
     {
         $this->medicalCertificat = $medicalCertificat;
     }
 
     /**
      * Get the value of dob
-     */ 
-    public function getDob():string
+     */
+    public function getDob(): string|null
     {
         return $this->dob;
     }
@@ -176,10 +203,10 @@ class User {
     /**
      * Set the value of dob
      *
-     * @param string $dob
+     * @param string|null $dob
      * @return void
      */
-    public function setDob(string $dob):void
+    public function setDob(string|null $dob): void
     {
         $this->dob = $dob;
 
@@ -187,8 +214,8 @@ class User {
 
     /**
      * Get the value of pass
-     */ 
-    public function getPass():string
+     */
+    public function getPass(): string
     {
         return $this->pass;
     }
@@ -199,9 +226,9 @@ class User {
      * @param string $pass
      * @return void
      */
-    public function setPass(string $pass):void
+    public function setPass(string $pass): void
     {
-        $this->pass = $pass;
+        $this->pass = password_hash($pass, PASSWORD_DEFAULT);
 
     }
 }
