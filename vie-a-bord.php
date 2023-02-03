@@ -222,12 +222,15 @@ include_once './partial/header.php';
 <section>
   <div class="border-sommeil">
     <h2 class="sommeil">Le sommeil artificiel</h2>
-    <p>
-      Pour les personnes avec moins de moyens mais souhaitant voyager, pour
-      aller sur les destinations suivante; Mars avec le vaisseau arcadia et
-      mercure avec le vaisseau serenity.<br />
-      On vous propose un sommeil artificiel pour la durée du voyage.
-    </p>
+
+          <p class="text-night">
+              Pour les personnes avec moins de moyens mais souhaitant voyager, pour
+              aller sur les destinations suivante;<br> Mars avec le vaisseau arcadia et
+              mercure avec le vaisseau serenity.<br />
+              On vous propose un sommeil artificiel pour la durée du voyage.
+          </p>
+
+
     <div class="capsule-S">
       <img src="assets/img/vie-a-bord/capsule.jpg" />
       <p>
