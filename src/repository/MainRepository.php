@@ -1,7 +1,9 @@
-<?php 
-include_once './models/User.php';
-include_once './models/Destination.php';
-abstract class MainRepository{
+<?php
+namespace App\repository;
+
+use \PDO;
+abstract class MainRepository
+{
 
     protected PDO $pdo;
     private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
@@ -20,16 +22,26 @@ abstract class MainRepository{
     /**
      * @return array
      */
-    public function findAll(): array{
+    public function findAll(): array
+    {
         $query = $this->pdo->query('SELECT * FROM ' . $this->toLowerCaseClassName);
         $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
         return $data;
     }
 
-    public function findByName(string $name): mixed{
-        $query = $this->pdo->prepare('SELECT * FROM ' . $this->toLowerCaseClassName .' WHERE name LIKE :name');
-        $like = '%'.$name.'%';
-        $query->bindParam(':name', $like);
+    public function findBy(string $columnName, int $value): mixed
+    {
+        $query = $this->pdo->prepare('SELECT * FROM ' . $this->toLowerCaseClassName . ' WHERE ' . $columnName . ' = :value');
+        $query->bindParam(':value', $value);
+        $query->execute();
+        $data = $query->fetchAll(PDO::FETCH_CLASS, $this->className);
+        return $data;
+    }
+
+    public function findOneById(int $id): mixed
+    {
+        $query = $this->pdo->prepare('SELECT * FROM ' . $this->toLowerCaseClassName . ' WHERE id = :id');
+        $query->bindParam(':id', $id);
         $query->execute();
         $data = $query->fetchObject($this->className);
         return $data;

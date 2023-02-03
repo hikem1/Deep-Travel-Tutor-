@@ -1,18 +1,16 @@
 <?php
 session_start();
-$message = '';
+require 'vendor/autoload.php';
 
+use App\models\User;
+use App\repository\UserRepository;
+$className = (new \ReflectionClass(new User()))->getShortName();
 if(isset($_POST)){
-
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-
         $login = $_POST['email'];
         $password = $_POST['password'];
-
-        require_once './models/User.php';
-        require_once './repository/UserRepository.php';
         $userRepo = new UserRepository();
-        $usersObject = $userRepo->findAll('user');
+        $usersObject = $userRepo->findAll();
 
         foreach($usersObject as $user){
 

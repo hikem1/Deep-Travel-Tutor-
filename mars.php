@@ -1,6 +1,6 @@
 <?php
 $page = 'destinations';
-$destination = 'mars';
+$destinationId = 3;
 include './partial/destinations/_destinationGetObjectBlock.php';
 include './partial/header.php';
 ?>

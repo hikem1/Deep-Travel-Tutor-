@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'name' => 'utilisateur/deep_travel_tutor',
+        'name' => 'hikem/deep_travel_tutor',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '867094f8e268ac4d4328a08d668e6f451f235fb8',
-        'type' => 'project',
+        'reference' => '299a001ba8be29e43eac66faa94b551934e2686b',
+        'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'hikem/deep_travel_tutor' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '299a001ba8be29e43eac66faa94b551934e2686b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'v1.27.0',
             'version' => '1.27.0.0',
@@ -20,22 +29,13 @@
             'dev_requirement' => true,
         ),
         'symfony/var-dumper' => array(
-            'pretty_version' => 'v6.2.3',
-            'version' => '6.2.3.0',
-            'reference' => 'fdbadd4803bc3c96ef89238c9c9e2ebe424ec2e0',
+            'pretty_version' => 'v6.2.5',
+            'version' => '6.2.5.0',
+            'reference' => '44b7b81749fd20c1bdf4946c041050e22bc8da27',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'dev_requirement' => true,
-        ),
-        'utilisateur/deep_travel_tutor' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '867094f8e268ac4d4328a08d668e6f451f235fb8',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
     ),
 );
