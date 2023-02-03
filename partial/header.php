@@ -76,7 +76,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
                 </div>
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="lesVaisseaux.php">Nos vaisseaux</a>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="vieAbord.php">Vie à bord</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="vie-a-bord.php">Vie à bord</a>
                 </div>
                 <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="information.php">Informations</a>
                 </div>
@@ -100,7 +100,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
                     </ul>
                 </div>
                 <a class="menu-link" href="lesVaisseaux.php">Nos vaisseaux</a>
-                <a class="menu-link" href="vieAbord.php">Vie à bord</a>
+                <a class="menu-link" href="vie-a-bord.php">Vie à bord</a>
                 <a class="menu-link" href="information.php">Informations</a>
             </nav>
             <div id="icon-login">
