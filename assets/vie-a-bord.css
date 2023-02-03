@@ -2,24 +2,41 @@ body{
     background-color: black;
     color: aliceblue;
 }
-h2{
-    color: rgb(235, 174, 174);
-}
-.T{
-    
+
+.T h4{
+    font-size: 20px;
      text-align: center;
+    color: #f98d1a;
+    
+
 }
-.titre-center{
+.text{
+    text-align: center;
+}
+.titre-center h4{
+    font-size: 20px
+
+}
+.titre-center, h1,.Cours-astro-extra,.sommeil{
     text-align: center;
     font-family: "copperplate";
+    color:#384eca;
+    margin-top: 1rem;
 }
 
 
 .poker p,.blackjack p,.gambling p,.slot-machine p{
-    width: 500px;
+    width: 100%;
     height: 200px;
-    border: 2px solid rgb(175, 173, 233);
-    /* overflow-y: auto; */
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+        box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.15);
+        padding-top: 1rem;
+        padding-left: 1rem;
+        
+        
+     
+   
     
 }
 
@@ -44,7 +61,7 @@ h2{
 .border-wellness{
     /* height: 300px; */
     width: 100%;
-    border-top: 2px solid rgb(230, 85, 177);
+    border-top: 2px solid #f98d1a;
     margin-top: 4em;
    
 }
@@ -52,9 +69,10 @@ h2{
     /* height: 500px;
     width: 100%; */
     display: flex;
+    flex-direction: row;
     /* flex-direction: row; */
-    
     gap: 1em;
+    justify-content: center;
 }
 .spa1-hammam{ 
     display: flex;
@@ -74,7 +92,7 @@ h2{
 .border-food{
     /* height: 500px; */
     width: 100%;
-    border-top: 2px solid rgb(230, 85, 177);
+    border-top: 2px solid #f98d1a;
     margin-top: 4em;
     margin-bottom: 4em;
 }
@@ -90,11 +108,11 @@ h2{
     gap: 2em;
     /* height: 300px; */
     width: 100%;
-    border-bottom: 2px solid rgb(170, 202, 244);
+    border-bottom: 2px solid #f98d1a;
     margin-bottom: 3em;
 }
 .border-sommeil{
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
     margin-bottom: 3em;
 }
@@ -107,9 +125,12 @@ h2{
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
-    height: 400px;
+    border-top: 2px solid #f98d1a;
+    /* height: 400px; */
+}
+.text-night p{
+    display: flex;
+    text-align: center;
 }
 
 
@@ -121,67 +142,79 @@ h2{
 margin: auto 0;
 }
 
-@media screen and (max-width: 862px) {
-    
-    .container_slot,.container_gambling,.container_blackjack,.container_poker{
+.slot-machine p,.poker p,.blackjack p,.gambling p{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .container_slot, .container_gambling, .container_blackjack, .container_poker {
         display: flex;
         flex-direction: column;
-        
-    }
-    
 
-    .litle-container-slot,.poker-poker,.blacjack-BJ,.roulette-R{
+    }
+
+
+    .litle-container-slot, .poker-poker, .blacjack-BJ, .roulette-R {
         /* height: 200px; */
         width: 100%;
         display: flex;
         justify-content: center;
-       
+
     }
-    .slot-machine,.poker,.blackjack,.gambling{
-        
-     /* height: 200px; */
-     width: 100%;
-     display: flex;
-     justify-content: center;
-        
+
+    .slot-machine, .poker, .blackjack, .gambling {
+
+        /* height: 200px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
     }
-    .poker p,.blackjack p,.gambling p,.slot-machine p{
+
+    .poker p, .blackjack p, .gambling p, .slot-machine p {
         width: 500px;
         height: 200px;
         border: 2px solid black;
         overflow-y: hidden;
-         
+
     }
-    .container_blackjack,.container_slot,.container_poker,.container_gambling{
-       gap:0;
-       margin-bottom: 3em;
+
+    .container_blackjack, .container_slot, .container_poker, .container_gambling {
+        gap: 0;
+        margin-bottom: 3em;
     }
- .wellness-center{
-    display: flex;
+
+    .wellness-center {
+        display: flex;
+
+        flex-wrap: wrap;
+
+    }
+
     /* flex-direction: column; */
-    
- }
- .swim-spa,.spa1-hammam{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
- }
- 
-.container-food{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-    }
-
-
-    /* @media screen and (max-width: 702px){
-     
-        .swim-spa,.spa1-hammam{
-            display: flex;
-            flex-direction: column;
-            object-fit: ;
-         }
-       
+    /* .swim-spa,.spa1-hammam{
+       display: flex;
+       justify-content: center;
 
     } */
+    .container-food {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 630px){
+
+    .swim-spa,.spa1-hammam{
+        display: flex;
+        flex-direction: column;
+     }
+
+
+}
