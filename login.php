@@ -5,7 +5,6 @@ require 'vendor/autoload.php';
 use App\models\User;
 use App\repository\UserRepository;
 $className = (new \ReflectionClass(new User()))->getShortName();
-dump($className);
 if(isset($_POST)){
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $login = $_POST['email'];
