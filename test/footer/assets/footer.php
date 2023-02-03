@@ -37,7 +37,7 @@
                     <ul>
                         <li><a href="#">RGPD</a></li>
                         <li><a href="#">CVG</a></li>
-                        <li><a href="#">MENTION LEGAL</a></li>
+                        <li><a href="..\mentionlegal.php">MENTION LEGAL</a></li>
                     </ul>
                 </div>
                 <div class="footer-colc col-lg-2">
