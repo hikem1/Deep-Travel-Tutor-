@@ -57,7 +57,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
                             <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
                             <li class="p-2"><a class="text-white links" href="#">Users</a></li>
                             <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
-                            <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                            <li class="p-2"><a class="text-white links" href="lesvaisseaux.php">Vaisseaux</a></li>
                             <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
                             <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
                             <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
@@ -126,7 +126,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
                                 <li class="bg-dark text-center links"><span><strong>Admin</strong></span></li>
                                 <li class="p-2"><a class="text-white links" href="#">Users</a></li>
                                 <li class="p-2"><a class="text-white links" href="#">Destinations</a></li>
-                                <li class="p-2"><a class="text-white links" href="#">Vaisseaux</a></li>
+                                <li class="p-2"><a class="text-white links" href="lesvaisseaux">Vaisseaux</a></li>
                                 <li class="p-2"><a class="text-white links" href="#">Activités</a></li>
                                 <li class="p-2"><a class="text-white links" href="#">Photos</a></li>
                                 <li class="p-2"><a class="text-white links" href="#">Sessions</a></li>
