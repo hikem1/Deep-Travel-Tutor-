@@ -1,6 +1,7 @@
 <?php
-
-class Photo {
+namespace App\models;
+class Photo
+{
 
     private int $id;
     private string $name;
@@ -11,8 +12,8 @@ class Photo {
 
     /**
      * Get the value of id
-     */ 
-    public function getId():int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
@@ -21,16 +22,16 @@ class Photo {
      * Set the value of id
      *
      * @return  self
-     */ 
-    public function setId(int $id):void
+     */
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
 
     /**
      * Get the value of name
-     */ 
-    public function getName():string
+     */
+    public function getName(): string
     {
         return $this->name;
     }
@@ -39,16 +40,16 @@ class Photo {
      * Set the value of name
      *
      * @return  self
-     */ 
-    public function setName(string $name):void
+     */
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
     /**
      * Get the value of link
-     */ 
-    public function getLink():string
+     */
+    public function getLink(): string
     {
         return $this->link;
     }
@@ -57,16 +58,16 @@ class Photo {
      * Set the value of link
      *
      * @return  self
-     */ 
-    public function setLink(string $link):void
+     */
+    public function setLink(string $link): void
     {
         $this->link = $link;
     }
 
     /**
      * Get the value of id_spaceship
-     */ 
-    public function getId_spaceship():int
+     */
+    public function getId_spaceship(): int
     {
         return $this->id_spaceship;
     }
@@ -75,16 +76,16 @@ class Photo {
      * Set the value of id_spaceship
      *
      * @return  self
-     */ 
-    public function setId_spaceship(int $id_spaceship):void
+     */
+    public function setId_spaceship(int $id_spaceship): void
     {
         $this->id_spaceship = $id_spaceship;
     }
 
     /**
      * Get the value of id_destination
-     */ 
-    public function getId_destination():int
+     */
+    public function getId_destination(): int
     {
         return $this->id_destination;
     }
@@ -93,16 +94,16 @@ class Photo {
      * Set the value of id_destination
      *
      * @return  self
-     */ 
-    public function setId_destination(int $id_destination):void
+     */
+    public function setId_destination(int $id_destination): void
     {
         $this->id_destination = $id_destination;
     }
 
     /**
      * Get the value of id_activity
-     */ 
-    public function getId_activity():int
+     */
+    public function getId_activity(): int
     {
         return $this->id_activity;
     }
@@ -111,8 +112,8 @@ class Photo {
      * Set the value of id_activity
      *
      * @return  self
-     */ 
-    public function setId_activity(int $id_activity):void
+     */
+    public function setId_activity(int $id_activity): void
     {
         $this->id_activity = $id_activity;
     }

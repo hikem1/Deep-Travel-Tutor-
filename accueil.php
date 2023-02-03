@@ -1,5 +1,8 @@
 <?php
 session_start();
+require 'vendor/autoload.php';
+
+
 $page = 'accueil';
 include './partial/header.php';
 ?>

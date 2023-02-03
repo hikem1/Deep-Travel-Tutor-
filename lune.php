@@ -1,6 +1,6 @@
 <?php
 $page = 'destinations';
-$destination = 'lune';
+$destinationId = 1;
 include './partial/destinations/_destinationGetObjectBlock.php';
 include './partial/header.php';
 ?>

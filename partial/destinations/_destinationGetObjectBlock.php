@@ -1,5 +1,6 @@
 <?php
-require_once './models/Destination.php';
-require_once './repository/DestinationRepository.php';
+require 'vendor/autoload.php';
+use App\repository\DestinationRepository;
+
 $destinationRepo = new DestinationRepository();
-$destinationObject = $destinationRepo->findByName($destination);
+$destinationObject = $destinationRepo->findOneById($destinationId);
