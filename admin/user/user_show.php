@@ -53,11 +53,11 @@ include_once '../../partial/header.php';
     <table class="mt-4">
         <thead>
         <tr>
-            <th>N° Commande</th>
-            <th>N° ticket</th>
-            <th>Date session</th>
-            <th>Destination</th>
-            <th class="text-end">Prix total</th>
+            <th class="bg-dark">N° Commande</th>
+            <th class="bg-dark">N° ticket</th>
+            <th class="bg-dark">Date session</th>
+            <th class="bg-dark">Destination</th>
+            <th class="bg-dark text-end">Prix total</th>
         </tr>
         </thead>
         <tbody>
@@ -82,7 +82,7 @@ include_once '../../partial/header.php';
             }?>
 
             <tr>
-                <th class="text-end" colspan="5">Total commande : <?= $totalOrder . ' €';?></th>
+                <th class="bg-dark text-end" colspan="5">Total commande : <?= $totalOrder . ' €';?></th>
             </tr>
 
         <?php }?>

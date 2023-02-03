@@ -1,4 +1,7 @@
 <?php
+session_start();
+require 'vendor/autoload.php';
+
 $page = 'vie-a-bord';
 include_once './partial/header.php';
 ?>

@@ -53,7 +53,7 @@ class UserRepository
 
     public function deleteOneById(int $id): void
     {
-        $query = $this->pdo->prepare('DELETE FROM user WHERE `user`.`id` = :id');
+        $query = $this->pdo->prepare('DELETE FROM `user` WHERE `user`.`id` = :id');
         $query->bindParam(':id', $id);
         $query->execute();
     }

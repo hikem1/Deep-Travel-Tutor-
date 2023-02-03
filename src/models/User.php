@@ -4,15 +4,15 @@ class User
 {
 
     private int $id;
-    private string $firstname;
-    private string $lastname;
-    private string $address;
+    private ?string $firstname = null;
+    private ?string $lastname = null;
+    private ?string $address = null;
     private string $email;
-    private string $phone;
+    private ?string $phone = null;
     private ?string $medicalCertificat = null;
-    private ?string $dob;
+    private ?string $dob = null;
     protected ?string $pass;
-    private ?string $role;
+    private ?string $role = null;
 
     /**
      * @var Order[] $orders
@@ -79,7 +79,7 @@ class User
     /**
      * Get the value of firstname
      */
-    public function getFirstname(): string
+    public function getFirstname(): string|null
     {
         return $this->firstname;
     }
@@ -87,10 +87,10 @@ class User
     /**
      * Set the value of firstname
      *
-     * @param string $firstname
+     * @param string|null$firstname
      * @return void
      */
-    public function setFirstname(string $firstname): void
+    public function setFirstname(string|null $firstname): void
     {
         $this->firstname = $firstname;
     }
@@ -98,7 +98,7 @@ class User
     /**
      * Get the value of lastname
      */
-    public function getLastname(): string
+    public function getLastname(): string|null
     {
         return $this->lastname;
     }
@@ -106,10 +106,10 @@ class User
     /**
      * Set the value of lastname
      *
-     * @param string $lastname
+     * @param string|null $lastname
      * @return void
      */
-    public function setLastname(string $lastname): void
+    public function setLastname(string|null $lastname): void
     {
         $this->lastname = $lastname;
     }
@@ -117,7 +117,7 @@ class User
     /**
      * Get the value of address
      */
-    public function getAddress(): string
+    public function getAddress(): string|null
     {
         return $this->address;
     }
@@ -125,10 +125,10 @@ class User
     /**
      * Set the value of address
      *
-     * @param string $address
+     * @param string|null $address
      * @return void
      */
-    public function setAddress(string $address): void
+    public function setAddress(string|null $address): void
     {
         $this->address = $address;
     }
@@ -156,7 +156,7 @@ class User
     /**
      * Get the value of phone
      */
-    public function getPhone(): string
+    public function getPhone(): string|null
     {
         return $this->phone;
     }
@@ -215,7 +215,7 @@ class User
     /**
      * Get the value of pass
      */
-    public function getPass(): string
+    public function getPass(): string|null
     {
         return $this->pass;
     }
@@ -223,10 +223,10 @@ class User
     /**
      * Set the value of pass
      *
-     * @param string $pass
+     * @param string|null $pass
      * @return void
      */
-    public function setPass(string $pass): void
+    public function setPass(string|null $pass): void
     {
         $this->pass = password_hash($pass, PASSWORD_DEFAULT);
 

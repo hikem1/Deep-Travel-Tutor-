@@ -30,6 +30,7 @@ table th{
     height: 2.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
+    padding: 0.5rem;
 }
 
 table tbody tr th a{

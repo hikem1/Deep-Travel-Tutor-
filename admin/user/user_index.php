@@ -13,13 +13,13 @@ include_once '../../partial/header.php';
 <div class="admin-container my-5">
     <a class="text-decoration-none text-light" href="../index.php"><i class="me-2 fa-sharp fa-solid fa-circle-chevron-left fa-xl"></i>Tableau de bord</a>
     <table class="mt-5 white">
-        <thead class="fs-5 copperplate">
-            <tr>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Actions</th>
+        <thead class="fs-5 copperplate ">
+            <tr class="bg-dark">
+                <th class="bg-dark">Nom</th>
+                <th class="bg-dark">Prénom</th>
+                <th class="bg-dark">Email</th>
+                <th class="bg-dark">Role</th>
+                <th class="bg-dark">Actions</th>
             </tr>
         </thead>
         <tbody>
