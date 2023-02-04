@@ -4,7 +4,6 @@ require 'vendor/autoload.php';
 
 use App\models\User;
 use App\repository\UserRepository;
-$className = (new \ReflectionClass(new User()))->getShortName();
 
 
 if(isset($_POST)){
@@ -14,7 +13,7 @@ if(isset($_POST)){
                 $login = $_POST['email'];
                 $password = $_POST['password'];
                 $userRepo = new UserRepository();
-                $usersObject = $userRepo->findAll();
+                $usersObject = $userRepo->findAll($userRepo->getDataCount(), 0);
 
                 foreach($usersObject as $user){
 

@@ -4,7 +4,15 @@ require '../../vendor/autoload.php';
 use App\repository\UserRepository;
 
 $userRepo = new UserRepository();
-$users = $userRepo->findAll();
+$usersCount = $userRepo->getDataCount();
+
+
+$paginator = new Nette\Utils\Paginator;
+$paginator->setItemCount($usersCount);
+$paginator->setItemsPerPage(10);
+$paginator->setPage($_GET['page']);
+
+$users = $userRepo->findAll($paginator->getLength(), $paginator->getOffset());
 
 $page = 'admin';
 include_once '../../partial/header.php';
@@ -39,7 +47,13 @@ include_once '../../partial/header.php';
         <?php }?>
         </tbody>
     </table>
-</div>
+    <div class="d-flex justify-content-center">
+        <?php for ($i = 0; $i < $paginator->getPageCount(); $i++){?>
+            <a class="mt-3 mx-2 btn border rounded" href="user_index.php?page=<?= $i + 1 ?>"><?= $i + 1 ?></a>
+        <?php }?>
+    </div>
+    </div>
+
 
 <?php
 $modalTextContent = 'Etes vous sur de vouloir supprimer l\'Utilisateur N° ';
