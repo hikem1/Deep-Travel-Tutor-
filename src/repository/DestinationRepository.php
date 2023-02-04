@@ -3,15 +3,11 @@ namespace App\repository;
 
 use App\models\Destination;
 use \PDO;
-class DestinationRepository
+class DestinationRepository extends MainRepository
 {
-    private PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
-    private string $username = 'root';
-    private string $pass = '';
     public function __construct()
     {
-        $this->pdo = new PDO($this->url, $this->username, $this->pass);
+        parent::__construct(Destination::class);
     }
 
     public function addDestination(Destination $destination): Destination
@@ -27,13 +23,4 @@ class DestinationRepository
         return $destination;
     }
 
-    public function findOneById(int $id): mixed
-    {
-        //$query = $this->pdo->prepare('SELECT user.*, (order.id) AS orders FROM `user` INNER JOIN `order` ON  (order.user_id) =20 WHERE user.id = 20');
-        $query = $this->pdo->prepare('SELECT * FROM `destination` WHERE destination.id = :id');
-        $query->bindParam(':id', $id);
-        $query->execute();
-        $data = $query->fetchObject(Destination::class);
-        return $data;
-    }
 }

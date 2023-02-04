@@ -4,17 +4,11 @@ namespace App\repository;
 use App\models\User;
 use \PDO;
 
-class UserRepository
+class UserRepository extends MainRepository
 {
-    private PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
-    private string $username = 'root';
-    private string $pass = '';
     public function __construct()
     {
-        $this->pdo = new PDO($this->url, $this->username, $this->pass);
-
-        $className = (new \ReflectionClass(new User()))->getShortName();
+        parent::__construct(User::class);
     }
 
     public function addUser(User $user): User
@@ -32,23 +26,6 @@ class UserRepository
         $query->execute();
         $user->setId($this->pdo->lastInsertId());
         return $user;
-    }
-
-    public function findAll(): array
-    {
-        $query = $this->pdo->query('SELECT * FROM `user`');
-        $data = $query->fetchAll(PDO::FETCH_CLASS, User::class);
-        return $data;
-    }
-
-    public function findOneById(int $id): mixed
-    {
-        //$query = $this->pdo->prepare('SELECT user.*, (order.id) AS orders FROM `user` INNER JOIN `order` ON  (order.user_id) =20 WHERE user.id = 20');
-        $query = $this->pdo->prepare('SELECT * FROM `user` WHERE user.id = :id');
-        $query->bindParam(':id', $id);
-        $query->execute();
-        $data = $query->fetchObject(User::class);
-        return $data;
     }
 
     public function deleteOneById(int $id): void
