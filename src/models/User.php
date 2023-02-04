@@ -12,7 +12,7 @@ class User
     private ?string $medicalCertificat = null;
     private ?string $dob = null;
     protected ?string $pass;
-    private ?string $role = null;
+    private ?string $role = 'ROLE_USER';
 
     /**
      * @var Order[] $orders

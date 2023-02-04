@@ -64,7 +64,7 @@ body{
     background-color: rgba(0, 0, 0);
     border-bottom: 0.5px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to left,#eaff00, #4c00ff);
+    border-image-source: linear-gradient(90deg, rgba(76,0,255,1) 35%, rgba(234,255,0,1) 50%, rgba(255,111,0,1) 65%);
 }
 
 .sidenav nav{
@@ -107,7 +107,7 @@ header{
     justify-content: space-between;
     border-bottom: 0.5px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #ff6f00,#eaff00, #4c00ff);
+    border-image-source: linear-gradient(90deg, rgba(76,0,255,1) 35%, rgba(234,255,0,1) 50%, rgba(255,111,0,1) 65%);
 }
 
 header nav{

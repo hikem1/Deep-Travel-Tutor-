@@ -48,8 +48,6 @@ if(isset($_POST)){
                 else{
                     $ErrorSignUp = 'Cet utilisateur existe déjà !';
                 }
-            } else{
-                $ErrorSignUp = 'Vos mot de passe son différents !';
             }
         }
     }
@@ -62,24 +60,24 @@ include_once './partial/header.php';
 <div class="cont">
     <div class="form-cont mt-5">
         <!-- login form -->
-        <div class="login-wrap active-input">
+        <div id="login-wrap">
             <div class="title">
                 <h1>Connexion</h1>
             </div>
-            <?= isset($ErrorSignIn) ? '<p>' . $ErrorSignIn . '</p>' : '' ?>
+
             <form method="post" action="">
 
                 <input type="hidden" name="action" value="signIn">
-
+                <?= isset($ErrorSignIn) ? '<p class="text-danger text-center">' . $ErrorSignIn . '</p>' : '' ?>
                 <div class="input-area">
                     <input type="email" id="email" name="email" autocomplete="on" required>
                     <label for="email">Email</label>
                 </div>
 
                 <div class="input-area">
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password-login" name="password" required>
                     <label for="password">Mot de passe</label>
-                    
+
                 </div>
 
                 <div class="forgot-pass">
@@ -98,34 +96,34 @@ include_once './partial/header.php';
 
         <!-- signup form -->
 
-        <div class="signup-wrap">
+        <div id="signup-wrap">
             <div class="title">
                 <h1>Inscription</h1>
             </div>
-            <?= isset($ErrorSignUp) ? '<p>' . $ErrorSignUp . '</p>' : '' ?>
-            <form method="post" action="#">
+            <form <?= isset($ErrorSignUp) ? 'validity="invalid"' : 'validity="valid"' ?> id="sign-up-form" method="post" action="#">
 
                 <input type="hidden" name="action" value="signUp">
 
+                <?= isset($ErrorSignUp) ? '<p class="text-danger text-center">' . $ErrorSignUp . '</p>' : '' ?>
                 <div class="input-area">
-                    <input type="email" id="email" name="email" autocomplete="off" required>
+                    <input type="email" id="email-signup" name="email" autocomplete="off" required>
                     <label for="email">Email</label>
                 </div>
 
                 <div class="input-area">
-                    <input type="password" id="password" name="pass" required>
+                    <input type="password" id="password-signup" name="pass" required>
                     <label for="password">Mot de passe</label>
                 </div>
 
                 <div class="input-area">
                     <input type="password" id="pass-confirm" name="pass-confirm" required>
-                    <label for="pass-confirm">Confirmation mot de passe</label>
+                    <label id="pass-confirm-label" for="pass-confirm">Confirmation mot de passe</label>
                 </div>
 
-                <div class="button-area">
-                    <button type="submit" class="signup-btn">Inscription</button>
-                </div>
             </form>
+            <div class="button-area">
+                <button id="signup-btn" class="signup-btn">Inscription</button>
+            </div>
 
             <div class="form-toggle-area">
                 <p>Déjà un compte ? <span id="toggle-login">Se connecter</span></p>

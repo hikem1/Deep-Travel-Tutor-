@@ -42,8 +42,8 @@ include_once '../../partial/header.php';
         </div>
         <div class="d-flex flex-column justify-content-end">
             <div>
-                <a class="btn btn-primary me-1" href="./user_update.php?id=<?= $user->getId() ?>"><i class="fa-solid fa-pen fa-lg"></i></a>
-                <a id="" user="<?= $user->getId() ?>" class="btn btn-danger delete-btn" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-trash fa-xl"></i></a>
+                <a class="btn btn-warning mx-2 rounded-circle" href="./user_update.php?id=<?= $user->getId() ?>"><i class="fa-solid fa-pen fa-l"></i></a>
+                <a id="" user="<?= $user->getId() ?>" class="btn btn-danger delete-btn rounded-circle" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-trash fa-l"></i></a>
             </div>
         </div>
     </div>

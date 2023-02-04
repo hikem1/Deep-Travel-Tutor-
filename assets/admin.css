@@ -1,3 +1,7 @@
+body{
+    background: linear-gradient(40deg, rgba(0,0,0,1) 40%, rgba(7,7,36,1) 60%, rgba(0,0,0,1) 70%);
+}
+
 .form-container {
     width: 600px;
     margin: auto;
@@ -14,6 +18,17 @@
 
 .copperplate{
     font-family: 'copperplate';
+}
+
+input, select{
+    background: linear-gradient(90deg, rgba(100,100,100,0.1) 20%, rgba(255,255,255,0.2) 100%)!important;
+    color: white!important;
+    padding: 0.7rem 1.4rem!important;
+    font-size: 1.2rem!important;
+    border-radius: 1.2rem!important;
+    border-bottom: 2px solid #525252 !important;
+    border: none!important;
+    margin-bottom: 2rem;
 }
 
 table{
