@@ -33,6 +33,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
         <title>Deep Travel</title>
     </head>
     <body>
+    <div class="main">
 
 <!-- ________________________________________________________sidebar______________________________________________ -->
 

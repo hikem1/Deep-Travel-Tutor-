@@ -70,3 +70,4 @@
         <button user="<?= $user->getId() ?>" id="submit-btn" class="btn btn-primary success mt-4" data-bs-toggle="modal" data-bs-target="#myModal">Modifier</button>
     <?php }?>
 </div>
+</div>
