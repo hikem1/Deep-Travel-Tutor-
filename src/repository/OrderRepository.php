@@ -26,5 +26,13 @@ class OrderRepository extends MainRepository
         $data = $query->fetchAll(PDO::FETCH_CLASS, Order::class);
         return $data;
     }
+
+    public function getCountOrdersByUserId(int $id): int{
+        $query = $this->pdo->prepare('SELECT COUNT(*) FROM `order` WHERE order.user_id = :id');
+        $query->bindValue(':id', $id);
+        $query->execute();
+        $data = $query->fetchColumn();
+        return $data;
+    }
 }
 
