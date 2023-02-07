@@ -84,12 +84,17 @@ include_once '../../partial/header.php';
                 </div>
                 <div class="position-relative">
                     <div class="badge-notification"><?= $orderRepo->getCountOrdersByUserId($user->getId())?></div>
-                    <i class="fa-solid fa-bag-shopping fa-2xl"></i>
+                    <i id="order-icon" class="fa-solid fa-bag-shopping fa-2xl"></i>
                 </div>
             </div>
         </div>
-        <div class="order-container">
+        <div class="order-container d-flex">
+            <div class="order-content">
 
+            </div>
+            <div class="left-drop d-flex">
+                <i class="fa-solid fa-chevron-left m-auto"></i>
+            </div>
         </div>
     </div>
 </div>

@@ -127,6 +127,10 @@ body{
     box-shadow: -2px -8px 12px -5px rgba(0,0,0,0.5);
 }
 
+#order-icon{
+    cursor: pointer;
+}
+
 .badge-notification{
     position: absolute;
     right: -10px;
@@ -141,10 +145,30 @@ body{
 }
 
 .order-container{
-    width: 500px;
-    height: 500px;
+    width: 0px;
+    display: flex;
+    height: 611px;
     margin-left: -2rem;
     background-color:rgba(30,30,40);
+    transition-duration: 0.2s;
+}
+
+.order-content{
+    width: 100%;
+}
+
+.left-drop{
+    width: 25px;
+    height: 100%;
+    background-color:rgba(28,28,38);
+    box-shadow: -10px 5px 7px -9px rgba(0,0,0,0.9);
+    cursor: pointer;
+    color: #c9c9c9;
+}
+
+.show-order-container{
+    width: 500px;
+    transition-duration: 0.2s;
 }
 
 

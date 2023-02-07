@@ -3,7 +3,7 @@
         'name' => 'hikem/deep_travel_tutor',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2b85a55a7cf183e29d5cd3b8975c93ef2a166981',
+        'reference' => '90e86a0778b4069d1b7fa48a27eb9bf2a2461505',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'hikem/deep_travel_tutor' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2b85a55a7cf183e29d5cd3b8975c93ef2a166981',
+            'reference' => '90e86a0778b4069d1b7fa48a27eb9bf2a2461505',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
