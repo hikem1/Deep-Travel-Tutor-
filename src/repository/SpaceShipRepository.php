@@ -9,6 +9,7 @@ class SpaceShipRepository
     private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
     private string $username = 'root';
     private string $pass = '';
+    private string $tableName = "spaceship";
     public function __construct()
     {
         $this->pdo = new PDO($this->url, $this->username, $this->pass);
@@ -24,4 +25,11 @@ class SpaceShipRepository
         $spaceship->setId($this->pdo->lastInsertId());
         return $spaceship;
     }
+    public function findAll(){
+        $query = $this->pdo->query(" SELECT * FROM ". $this->tableName);
+      return  $query->fetchAll (PDO::FETCH_CLASS, SpaceShip::class);
+
+    }
 }
+
+
