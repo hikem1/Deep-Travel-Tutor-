@@ -17,6 +17,7 @@ $sessionRepo = new SessionRepository();
 
 $user = $userRepo->findOneById($id);
 $orders = $orderRepo->findByUserId($id);
+//$tickets = $ticketRepo->findByOrderId();
 
 $page = 'admin';
 include_once '../../partial/header.php';
@@ -88,8 +89,29 @@ include_once '../../partial/header.php';
                 </div>
             </div>
         </div>
+
+
         <div class="order-container d-flex">
-            <div class="order-content">
+            <div class="orders-content">
+                    <p class="">Commandes</p>
+                <?php foreach ($orders as $order){?>
+                    <div class="order-content">
+                        <div>
+                            <span>N° :</span>
+                            <span class="fw-bold white"><?= $order->getId() ?></span>
+                        </div>
+                        <div>
+                            <span>Destination :</span>
+                            <span>Destination :</span>
+                        </div>
+                        <div>
+                            <span>Session du :</span>
+                        </div>
+                        <div>
+                            <span>Montant :</span>
+                        </div>
+                    </div>
+                <?php }?>
 
             </div>
             <div class="left-drop d-flex">
