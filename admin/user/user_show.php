@@ -16,8 +16,7 @@ $destinationRepo = new DestinationRepository();
 $sessionRepo = new SessionRepository();
 
 $user = $userRepo->findOneById($id);
-$orders = $orderRepo->findByUserId($id);
-//$tickets = $ticketRepo->findByOrderId();
+$orders = $orderRepo->getOrderAmountByUserId($id);
 
 $page = 'admin';
 include_once '../../partial/header.php';
@@ -98,17 +97,15 @@ include_once '../../partial/header.php';
                     <div class="order-content">
                         <div>
                             <span>N° :</span>
-                            <span class="fw-bold white"><?= $order->getId() ?></span>
+                            <span class="fw-bold white"><?= $order['id'] ?></span>
                         </div>
                         <div>
-                            <span>Destination :</span>
-                            <span>Destination :</span>
-                        </div>
-                        <div>
-                            <span>Session du :</span>
+                            <span>Nombre de tickets :</span>
+                            <span class="fw-bold white"><?= $order['ticketsAmount']?></span>
                         </div>
                         <div>
                             <span>Montant :</span>
+                            <span class="fw-bold white"><?= $order['priceAmount'] . ' €'?></span>
                         </div>
                     </div>
                 <?php }?>
