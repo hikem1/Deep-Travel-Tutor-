@@ -25,6 +25,8 @@ loginToggleBtn.onclick = () => {
     loginFormCont.classList.add('active-input');
 }
 
+// verifie si les 2 passwords sont égaux et si ils sont pas vide et soumet le formulaire
+// sinon une erreur est affiché en rouge ligne 35 et 36
 signUpBtn.addEventListener('click', () => {
     if(passConfirmInput.value === passInput.value && passInput.value != ''){
         signUpForm.submit();
@@ -35,6 +37,10 @@ signUpBtn.addEventListener('click', () => {
     }
 })
 
+
+// vérifie le formulaire d'inscription est valide, si oui un attribut "validity= valid" est envoyé en html
+// de cette façon le JS vérifie si cette l'attribut est valid et définis le formulaire de connexion
+// visible et celui d'inscription invisible et inversement.
 if(signUpForm.getAttribute('validity') === 'valid'){
     loginFormCont.classList.add('active-input');
     signUpFormCont.classList.remove('active-input');
