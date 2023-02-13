@@ -3,15 +3,12 @@ namespace App\repository;
 
 use App\models\Ticket;
 use \PDO;
-class TicketRepository
+class TicketRepository extends MainRepository
 {
-    private PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
-    private string $username = 'root';
-    private string $pass = '';
+
     public function __construct()
     {
-        $this->pdo = new PDO($this->url, $this->username, $this->pass);
+        parent::__construct(Ticket::class);
     }
 
     public function addTicket(int $orderId, int $sessionId): int

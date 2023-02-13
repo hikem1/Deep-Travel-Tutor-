@@ -24,6 +24,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
         <script src="/ressources/js/header.js" defer></script>
         <script src="/ressources/js/modalConfirm.js" defer></script>
         <script src="/ressources/js/login.js" defer></script>
+        <script src="/ressources/js/account.js" defer></script>
         <link rel="stylesheet" href="/assets/footer.css">
         <?='<link rel="stylesheet" href="/assets/'.$page.'.css">'?>
         <?php if($page === 'accueil'){?>
@@ -33,6 +34,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
         <title>Deep Travel</title>
     </head>
     <body>
+    <div class="main">
 
 <!-- ________________________________________________________sidebar______________________________________________ -->
 

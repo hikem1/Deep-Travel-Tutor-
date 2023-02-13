@@ -3,18 +3,13 @@ namespace App\repository;
 
 use App\models\SpaceShip;
 use \PDO;
-class SpaceShipRepository
+class SpaceShipRepository extends MainRepository
 {
-    private PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
-    private string $username = 'root';
-    private string $pass = '';
-    private string $tableName = "spaceship";
+
     public function __construct()
     {
-        $this->pdo = new PDO($this->url, $this->username, $this->pass);
+        parent::__construct(SpaceShip::class);
     }
-
     public function addSpaceShip(SpaceShip $spaceship): SpaceShip
     {
         $query = $this->pdo->prepare('INSERT INTO `spaceship` VALUE(null, ?, ?, ?)');
