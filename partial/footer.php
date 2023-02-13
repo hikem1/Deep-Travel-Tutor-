@@ -58,5 +58,6 @@
             <p class="copyright-footer fw-bold text-center text-white p-2 m-0">©Copyright Deep Travel 2022</p>
         </div>
     </footer>
+    </div>
     </body>
 </html>

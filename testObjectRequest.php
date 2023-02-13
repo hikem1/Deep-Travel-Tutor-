@@ -7,7 +7,7 @@ use App\models\Ticket;
 use App\repository\OrderRepository;
 use App\repository\UserRepository;
 use App\repository\TicketRepository;
-
+use App\repository\SpaceShipRepository;
 
 //require_once './src/repository/SessionRepository.php';
 //require_once './src/repository/SpaceShipRepository.php';
@@ -17,11 +17,13 @@ use App\repository\TicketRepository;
 //require_once './src/repository/UserRepository.php';
 
 //$sessionRepo = new SessionRepository();
-//$spaceShipRepo = new SpaceShipRepository();
+$spaceShipRepo = new SpaceShipRepository();
+$spaceShips = $spaceShipRepo->findAll();
+var_dump($spaceShips);
 //$destinationRepo = new DestinationRepository();
-$ticketRepo = new TicketRepository();
-$orderRepo = new OrderRepository();
-$userRepo = new UserRepository();
+//$ticketRepo = new TicketRepository();
+//$orderRepo = new OrderRepository();
+//$userRepo = new UserRepository();
 
 //$destination = $destinationRepo->findOneById(1);
 //$spaceShip = $spaceShipRepo->findOneById($destination->getSpaceShipId());
@@ -55,3 +57,4 @@ $userRepo = new UserRepository();
 //
 //    $ticketRepo->addTicket(random_int(1,100),random_int(1,21));
 //}
+

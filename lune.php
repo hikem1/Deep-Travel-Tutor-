@@ -1,5 +1,8 @@
 <?php
+session_start();
+require 'vendor/autoload.php';
 $page = 'destinations';
+
 $destinationId = 1;
 include './partial/destinations/_destinationGetObjectBlock.php';
 include './partial/header.php';

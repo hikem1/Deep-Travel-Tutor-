@@ -1,9 +1,8 @@
 <?php
 $page = "vaisseau";
 include "./partial/header.php"
-
-
 ?>
+
  <div class="figures-vaisseaux">
           <div class="contour">
             <h2>moya</h2>
@@ -178,3 +177,6 @@ include "./partial/header.php"
                           </div>
                         </div>
                         <script src="script.js" defer></script>
+<?php
+include "./partial/footer.php"
+?>

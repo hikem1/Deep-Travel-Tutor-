@@ -7,7 +7,9 @@
 	justify-content: space-around;
 
 } */
-
+footer{
+	background-color: black;
+}
 ul{
 	list-style: none;
 	padding: 0px;

@@ -1,4 +1,7 @@
 <?php
+session_start();
+require 'vendor/autoload.php';
+
 $page = 'destinations';
 $destinationId = 2;
 include './partial/destinations/_destinationGetObjectBlock.php';
