@@ -51,11 +51,11 @@ include './partial/header.php';
         <h2 class="title <?= ($destinationObject->getId()%2 == 1) ? 'title-left' : 'title-right'?>">" <?= $destinationObject->getName()?> "</h2>
         <div class="info vaisseaux <?= ($destinationObject->getId()%2 == 1) ? 'vaisseaux-left' : 'vaisseaux-right'?>">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestias sequi ducimus enim exercitationem corporis ratione corrupti aliquid obcaecati, minima, rerum sed voluptatibus atque voluptatum nesciunt labore assumenda iste officia ipsum! Nobis non officia illo, ex voluptatibus rem cum reprehenderit aliquid, impedit consectetur magni veniam architecto sint laboriosam iure assumenda.</p>
-            <a class="link-left" href="#">Le vaisseaux</a>
+            <a class="link-left" href="/lesVaisseaux.php">Le vaisseaux</a>
         </div>
         <div class="info activities <?= ($destinationObject->getId()%2 == 1) ? 'activities-left' : 'activities-right'?>">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestias sequi ducimus enim exercitationem corporis ratione corrupti aliquid obcaecati, minima, rerum sed voluptatibus atque voluptatum nesciunt labore assumenda iste officia ipsum! Nobis non officia illo, ex voluptatibus rem cum reprehenderit aliquid, impedit consectetur magni veniam architecto sint laboriosam iure assumenda.</p>
-            <a class="link-right" href="#">Les activités</a>
+            <a class="link-right" href="/vie-a-bord.php">Les activités</a>
         </div>
         <?php
         include './partial/destinations/_destinationSessionTable.php'
