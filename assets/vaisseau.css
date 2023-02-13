@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    color: aliceblue;
+}
+button{
+    background-color: crimson;
+    padding: 16px;
+    margin: 10%;
+}
+
+a{
+    color: white;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 3rem;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #11111359;
+    padding: 9px;
+}
+.figures-vaisseaux{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* background-image: url("terre.png");
+      background-size: cover; */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.infos{
+    display: flex;
+    justify-content: end;
+    
+}
+.time{
+    display: flex;
+    justify-content: end;
+    
+}
+.figure-vaisseau{
+    display: grid;
+    position: relative;
+}
+.figure-vaisseau-bis{
+    display: flex;
+    justify-content: center;   
+}
+.container-2{
+    display: flex;
+    justify-content: space-around;
+}
+.détail-vaisseaux{
+    display: flex;
+    flex-direction:column;
+}
+.bar{
+    display: flex;
+    flex-direction:column; 
+}
+.btn-lien {
+    display: flex;
+    float: right; 
+}
+.btn-lien2{
+    display: flex;
+    float: left; 
+}
+.contour{
+    border: 5px solid yellow;
+    background-image: url("./img/vaisseau/lune.jpg");
+    background-size: cover;
+}
+.contour1{
+    border: 5px solid yellow;
+    background-image: url("./img/vaisseau/mars.jpg");
+
+}
+.contour2{
+    border: 5px solid yellow;
+    background-image: url("./img/vaisseau/venus.jpg");
+}
+.contour3{
+    border: 5px solid yellow;
+    background-image: url("./img/vaisseau/mercure.jpg");
+}
+.moya{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.arcadia{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.Serenity{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+.Avalon{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    place-self: center;
+}
+
+@media (max-width: 370px){
+.infos {
+    display: flex;
+    justify-content: center;
+}
+.moya{
+    width: 19rem;
+}
+.arcadia{
+    width: 19rem;
+}
+.Serenity{
+    width: 19rem;
+}
+.Avalon{
+    width: 19rem;
+}
+img{
+    WIDTH: 100%;
+    height: 100%;
+}
+}
