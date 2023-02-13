@@ -34,5 +34,20 @@ class OrderRepository extends MainRepository
         $data = $query->fetchColumn();
         return $data;
     }
+
+    public function getOrderAmountByUserId(int $id): array{
+        $query = $this->pdo->prepare('SELECT `order`.`id`, COUNT(`ticket`.`id`) AS ticketsAmount, SUM(`destination`.`unitPrice`) AS priceAmount
+                                            FROM `order`
+                                            INNER JOIN `ticket` ON `ticket`.`order_id` = `order`.`id`
+                                            INNER JOIN `session` ON `session`.`id` = `ticket`.`session_id`
+                                            INNER JOIN `destination` ON `destination`.`id` = `session`.`destination_id`
+                                            WHERE `order`.`user_id` = :id
+                                            GROUP BY `order`.`id`
+                                            ORDER BY `order`.`id`');
+        $query->bindValue(':id', $id);
+        $query->execute();
+        $data = $query->fetchAll();
+        return $data;
+    }
 }
 
