@@ -5,6 +5,7 @@ use App\models\SpaceShip;
 use \PDO;
 class SpaceShipRepository extends MainRepository
 {
+
     public function __construct()
     {
         parent::__construct(SpaceShip::class);
@@ -19,4 +20,11 @@ class SpaceShipRepository extends MainRepository
         $spaceship->setId($this->pdo->lastInsertId());
         return $spaceship;
     }
+    public function findAll(){
+        $query = $this->pdo->query(" SELECT * FROM ". $this->tableName);
+      return  $query->fetchAll (PDO::FETCH_CLASS, SpaceShip::class);
+
+    }
 }
+
+
