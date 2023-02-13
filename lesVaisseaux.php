@@ -41,10 +41,10 @@ include "./partial/header.php"
             </div>
   
             <div class="btn-lien">
-              <button><a href=""> lien destination </a></button>
+              <button><a href="/lune.php"> lien destination </a></button>
             </div>
             <div class="btn-lien2">
-              <button><a href="">lien vie à bord </a></button>
+              <button><a href="/vie-a-bord.php">lien vie à bord </a></button>
             </div>
           </div>
         </div>
@@ -84,10 +84,10 @@ include "./partial/header.php"
                     </div>
                   </div>
                   <div class="btn-lien">
-                    <button><a href=""> lien destination </a></button>
+                    <button><a href="/mars.php"> lien destination </a></button>
                   </div>
                   <div class="btn-lien2">
-                    <button><a href="">lien vie à bord </a></button>
+                    <button><a href="/vie-a-bord.php">lien vie à bord </a></button>
                   </div>
                 </div>
                 <div class="figures-vaisseaux">
@@ -126,10 +126,10 @@ include "./partial/header.php"
                             </div>
                           </div>
                           <div class="btn-lien">
-                            <button><a href=""> lien destination </a></button>
+                            <button><a href="/venus.php"> lien destination </a></button>
                           </div>
                           <div class="btn-lien2">
-                            <button><a href="">lien vie à bord </a></button>
+                            <button><a href="/vie-a-bord.php">lien vie à bord </a></button>
                           </div>
                         </div>
                         <div class="figures-vaisseaux">
@@ -168,10 +168,10 @@ include "./partial/header.php"
                                 </div>
                               </div>
                               <div class="btn-lien">
-                                <button><a href=""> lien destination </a></button>
+                                <button><a href="/mercure.php"> lien destination </a></button>
                               </div>
                               <div class="btn-lien2">
-                                <button><a href="">lien vie à bord </a></button>
+                                <button><a href="/vie-a-bord.php">lien vie à bord </a></button>
                               </div>
                             </div>
                           </div>
