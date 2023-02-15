@@ -327,7 +327,7 @@ function rotate() {
 function render(){
 
   mmi.update(); // mise à jour des positions de chaque planetes par rapport au viewport (pour les événement clique...)
-  rotate(); // rotaion pour chaque planetes
+  rotate(); // rotation pour chaque planetes
   renderer.render( scene, camera ); // rendu graphique avec tous les elements 3D + camera
   requestAnimationFrame( render ); // appel de la fonction render en boucle pour l'animation
   

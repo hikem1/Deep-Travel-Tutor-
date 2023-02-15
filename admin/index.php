@@ -33,7 +33,7 @@ include_once '../partial/header.php';
             </tr>
             <tr>
                 <td>Sessions</td>
-                <td  class="d-flex"><a class="m-auto action-icon bg-blue"href=""><i class="fa-solid fa-eye fa-xl"></i></a><a class="m-auto action-icon bg-blue"href=""><i class="fa-sharp fa-solid fa-circle-plus fa-xl"></i></a></td>
+                <td  class="d-flex"><a class="m-auto action-icon bg-blue"href="./session/session_index.php"><i class="fa-solid fa-eye fa-xl"></i></a><a class="m-auto action-icon bg-blue" href="./session/session_add.php"><i class="fa-sharp fa-solid fa-circle-plus fa-xl"></i></a></td>
             </tr>
             <tr>
                 <td>Commande</td>
