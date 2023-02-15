@@ -22,6 +22,8 @@ abstract class MainRepository
     }
 
     /**
+     * @param int $limit
+     * @param int $offset
      * @return array
      */
     public function findAll(int $limit, int $offset): array

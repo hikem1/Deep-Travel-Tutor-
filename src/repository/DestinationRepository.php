@@ -23,4 +23,11 @@ class DestinationRepository extends MainRepository
         return $destination;
     }
 
+    public function findDestinationsList(): array
+    {
+        $query = $this->pdo->query('SELECT destination.name FROM `destination` WHERE destination.name != "" GROUP BY destination.name');
+        $data = $query->fetchAll();
+        return $data;
+    }
+
 }

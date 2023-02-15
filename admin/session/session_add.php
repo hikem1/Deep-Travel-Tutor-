@@ -2,12 +2,12 @@
 require_once '../adminAuthentification.php';
 require '../../vendor/autoload.php';
 
-use App\models\User;
-use App\repository\UserRepository;
+use App\models\Session;
+use App\repository\SessionRepository;
 
-$userRepo = new UserRepository();
+$userRepo = new SessionRepository();
 
-if(isset($_POST) && !empty($_POST)){
+/*if(isset($_POST) && !empty($_POST)){
     if($_POST['pass'] === $_POST['pass-confirm']){
         if(!$userRepo->findIfExist($_POST['email'])){
             $newUser = new User();
@@ -31,14 +31,14 @@ if(isset($_POST) && !empty($_POST)){
     else{
         $newUserError = 'vos mot de passes ne correspondent pas !';
     }
-}
+}*/
 
 $page = 'admin';
 include_once '../../partial/header.php';
 ?>
 
 <?php
-include_once './user_formTemplate.php';
+include_once './session_formTemplate.php';
 ?>
 
 
