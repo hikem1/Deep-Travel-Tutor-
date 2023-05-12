@@ -40,7 +40,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
 
         <div id="mySidenav" class="sidenav">
             <div id="header-sidenav">
-                <a href="/accueil.php"><img class="logo" src="/assets/img/logoDetoureComp.png" alt=""></a>
+                <a href="/index.php"><img class="logo" src="/assets/img/logoDetoureComp.png" alt=""></a>
                 <i id="close-btn" class="fa fa-lightbulb fa-xmark fa-3x icon" aria-hidden="true"></i>
             </div>
             <nav id="sidenav-links">
@@ -63,7 +63,7 @@ if(isset($_SESSION) && !empty($_SESSION)){
                         <?php }?>
                     </ul>
                 </div>
-                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="/accueil.php">Acceuil</a>
+                <div class="sidenav-link"><i class="fa fa-chevron-right" aria-hidden="true"></i><a class="links" href="/index.php">Acceuil</a>
                 </div>
                 <div class="">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -90,9 +90,9 @@ if(isset($_SESSION) && !empty($_SESSION)){
 <!-- ______________________________________________________header_____________________________________________________ -->
 
         <header>
-            <a href="/accueil.php"><img class="logo icon" src="/assets/img/logoDetoureComp.png" alt=""></a>
+            <a href="/index.php"><img class="logo icon" src="/assets/img/logoDetoureComp.png" alt=""></a>
             <nav>
-                <a class="menu-link" href="/accueil.php" >Acceuil</a>
+                <a class="menu-link" href="/index.php" >Acceuil</a>
                 <a class="menu-link" id="dropdownMenuButton1" data-bs-toggle="dropdown" ">Destinations</a>
                 <div class="dropdown">
                     <ul class="dropdown-menu bg-black border border-dark" aria-labelledby="dropdownMenuButton1">

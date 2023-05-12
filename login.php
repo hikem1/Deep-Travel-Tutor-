@@ -21,7 +21,7 @@ if(isset($_POST)){
                         $_SESSION['login'] = $login;
                         $_SESSION['password'] = $user->getPass();
                         $_SESSION['role'] = $user->getRole();
-                        header('location: accueil.php');
+                        header('location: ./index.php');
 
                     } else {
                         $ErrorSignIn = 'utilisateur ou password inconnu';

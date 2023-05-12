@@ -28,16 +28,11 @@ const sceneLoader = new THREE.TextureLoader()
 scene.background = sceneLoader.load('/ressources/js/three_deep_travel_project/AdobeStock_340851338.jpg')
 
 // ________________________________________________________________________ environment functions
+// ---------------- RENDU ----------------
 function createRenderer() {
-  
-  // ---------------- RENDU ----------------
-  
   renderer = new THREE.WebGLRenderer( { antialias : true } );
-  // renderer.setSize( window.innerWidth, (window.innerHeight-headerHeight) );
-  
-  // envoi de l'element HTML sur la page HTML
+  // envoi de l'element "canvas" sur la page HTML
   mainEl.appendChild( renderer.domElement ); 
-  
 }
 
 function createCamera() {

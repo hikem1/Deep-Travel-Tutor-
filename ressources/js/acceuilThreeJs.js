@@ -297,8 +297,6 @@ function planetsLayoutResponsive() {
   camera.updateProjectionMatrix();
 }
 
-
-
 function rotate() {
 
     // rotation MOON//////////////////////

@@ -31,8 +31,7 @@ class OrderRepository extends MainRepository
         $query = $this->pdo->prepare('SELECT COUNT(*) FROM `order` WHERE order.user_id = :id');
         $query->bindValue(':id', $id);
         $query->execute();
-        $data = $query->fetchColumn();
-        return $data;
+        return $query->fetchColumn();
     }
 
     public function getOrderAmountByUserId(int $id): array{

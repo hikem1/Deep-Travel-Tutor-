@@ -15,7 +15,6 @@ abstract class MainRepository
 
     public function __construct(string $className)
     {
-
         $this->pdo = new PDO($this->url, $this->username, $this->pass);
         $this->className = $className;
         $this->toLowerCaseClassName = strtolower((new \ReflectionClass(new $className()))->getShortName());

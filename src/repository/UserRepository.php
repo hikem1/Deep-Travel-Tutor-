@@ -48,6 +48,7 @@ class UserRepository extends MainRepository
         $query->bindParam(':email', $email);
         $query->execute();
         $data = $query->fetch();
+        var_dump($data);
         return (bool)$data ;
     }
 
