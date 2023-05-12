@@ -18,7 +18,7 @@
                 </div>
                 <div class="footer-col col-md-6 col-lg-2 py-3">
                     <h4 class="mb-4">plan du site</h4>
-                    <img class="plan" src="/assets\img/ParkMap_July_wGateway_2022.jpg" alt="plan" style="margin:2px;"></a></li>
+                    <img class="plan" src="./assets/img/ParkMap_July_wGateway_2022.jpg" alt="plan" style="margin:2px;"></a></li>
                 </div>
                 <div class="footer-col col-md-6 col-lg-2 py-3">
                     <h4 class="mb-4">Les vaisseaux</h4>
@@ -49,7 +49,7 @@
                 <div class="footer-col col-md-6 col-lg-2 py-3">
                     <h4 class="mb-4">Paiement</h4>
                     <ul>
-                       <li><a href="#"><img class="paiement" src="/assets\img/moyens-paiements.png" alt="img1"></a></li>
+                       <li><a href="#"><img class="paiement" src="./assets/img/moyens-paiements.png" alt="img1"></a></li>
                     </ul>
                 </div>
             </div>
