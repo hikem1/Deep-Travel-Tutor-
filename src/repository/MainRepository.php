@@ -7,9 +7,9 @@ abstract class MainRepository
 {
 
     protected PDO $pdo;
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=deep_travel_space';
-    private string $username = 'root';
-    private string $pass = '';
+    private string $url = 'mysql:host=mariadb;dbname=fabien';
+    private string $username = 'fabien';
+    private string $pass = 'cZ5gC6yR7oF3eC2h';
     private string $className;
     private string $toLowerCaseClassName;
 
